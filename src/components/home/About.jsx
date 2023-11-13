@@ -1,4 +1,4 @@
-import "./../../index.css";
+import '../../assets/css/about.css'
 
 export const About = () => {
   const imagePath = "/img/";
@@ -45,8 +45,7 @@ export const About = () => {
 
           <ul className="about__list">
             <li className="about__item">
-              <b>Tools :</b> HTML, CSS, JavaScript, PHP, Git,
-              Dart.
+              <b>Tools :</b> HTML, CSS, JavaScript, PHP, Git, Dart.
             </li>
             <li className="about__item">
               <b>Framework :</b> Bootstrap, Tailwind CSS, Laravel, React JS,

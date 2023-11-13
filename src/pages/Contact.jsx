@@ -1,4 +1,4 @@
-import "./../index.css";
+
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Footer } from "../layouts/Footer";

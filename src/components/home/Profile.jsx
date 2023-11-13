@@ -1,4 +1,4 @@
-import "./../../index.css";
+import "./../../assets/css/home.css";
 
 export const Profile = () => {
   const imagePath = "/img/";

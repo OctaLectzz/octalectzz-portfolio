@@ -1,4 +1,4 @@
-import "./../../index.css";
+import "./../../assets/css/project.css";
 import { Card } from "../Card";
 import { Link } from "react-router-dom";
 
@@ -48,7 +48,7 @@ export const Project = () => {
     justifyContent: "center",
     width: "25vh",
     height: "6vh",
-    margin: "auto",
+    margin: "10px auto",
   };
 
   return (

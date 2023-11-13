@@ -1,6 +1,6 @@
+import "./../assets/css/navbar.css";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./../index.css";
 import { Theme } from "../components/Theme";
 
 export const Navbar = () => {

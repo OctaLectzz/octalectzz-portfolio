@@ -1,3 +1,5 @@
+import './assets/css/theme.css'
+import './assets/css/index.css'
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ScrollUp } from "./components/Scroll";

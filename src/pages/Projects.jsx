@@ -1,4 +1,4 @@
-import "./../index.css";
+
 import { Footer } from "../layouts/Footer";
 import { Navbar } from "../layouts/Navbar";
 import { Card } from "../components/Card";

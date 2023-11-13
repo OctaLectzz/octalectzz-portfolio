@@ -1,10 +1,10 @@
-import "./../../index.css";
+import '../../assets/css/experience.css'
 
 export const Service = () => {
   return (
     <section className="services section" id="services">
       <h2 className="section__title-2">
-        <span>Services.</span>
+        <span>Experience.</span>
       </h2>
 
       <div className="services__container container grid">
@@ -17,7 +17,7 @@ export const Service = () => {
               <i className="ri-layout-4-line"></i>
             </div>
 
-            <h2 className="services__title">Web Design</h2>
+            <h2 className="services__title">Fullstack Developer</h2>
 
             <p className="services__description">
               Beautiful and elegant designs with interfaces that are intuitive,
