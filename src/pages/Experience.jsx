@@ -6,6 +6,7 @@ export const Experience = () => {
   return (
     <>
       <Navbar />
+
       <section className="skill container section" id="skill">
         <h2 className="section__title-2">
           <span>Experience.</span>
@@ -28,6 +29,18 @@ export const Experience = () => {
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
       <Footer />
     </>
   );

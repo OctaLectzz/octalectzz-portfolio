@@ -4,12 +4,13 @@ import { About } from "../components/home/About";
 import { Profile } from "../components/home/Profile";
 import { Skill } from "../components/home/Skill";
 import { Project } from "../components/home/Project";
-import { ContactMe } from "../components/home/ContactMe";
+import { ContactMe } from "../components/home/Contact";
 
 export const Home = () => {
   return (
     <>
       <Navbar />
+
       <main className="main">
         {/* PROFILE */}
         <Profile />
@@ -26,6 +27,7 @@ export const Home = () => {
         {/* CONTACT */}
         <ContactMe />
       </main>
+
       <Footer />
     </>
   );
