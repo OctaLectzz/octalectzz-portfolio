@@ -1,4 +1,3 @@
-import "./assets/css/index.css";
 import "./assets/css/theme.css";
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
