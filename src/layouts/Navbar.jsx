@@ -48,9 +48,9 @@ export const Navbar = () => {
 
               <li className="nav__item" onClick={hideMenu}>
                 <Link
-                  href="#about"
+                  to="/experience"
                   className={
-                    location.pathname === "/about"
+                    location.pathname === "/experience"
                       ? "nav__link active-link"
                       : "nav__link"
                   }
@@ -61,9 +61,9 @@ export const Navbar = () => {
 
               <li className="nav__item" onClick={hideMenu}>
                 <Link
-                  href="#services"
+                  to="/skills"
                   className={
-                    location.pathname === "/services"
+                    location.pathname === "/skills"
                       ? "nav__link active-link"
                       : "nav__link"
                   }

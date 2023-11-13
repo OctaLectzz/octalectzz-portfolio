@@ -1,0 +1,81 @@
+/* skill SECTION */
+.skill-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: var(--container-color);
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+#skill {
+  position: relative;
+}
+
+.skill-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+.ex__article {
+  display: flex;
+  width: 9rem;
+  justify-content: space-around;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+  margin: auto;
+}
+
+
+@media screen and (max-width: 1400px) {
+  .skill-containers {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section {
+    height: fit-content;
+    margin: 0 5%;
+  }
+  .skill-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ex__article {
+    font-size: 0.8rem;
+    width: 8rem;
+  }
+  .skill-containers {
+    flex-wrap: wrap;
+  }
+  .skill-sub-title {
+    font-size: 1.25rem;
+  }
+}
