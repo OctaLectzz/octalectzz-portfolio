@@ -1,12 +1,12 @@
-export const Card = (props) => {
-  const Image = props.Image;
-  const Type = props.Type;
-  const Title = props.Title;
-  const Description = props.Description;
-  const LinkSourceCode = props.LinkSourceCode;
-  const LinkDemoApp = props.LinkDemoApp;
-  const Badges = props.Badges;
-
+export const Card = ({
+  Image,
+  Type,
+  Title,
+  Description,
+  LinkSourceCode,
+  LinkDemoApp,
+  Badges,
+}) => {
   const cursor = {
     cursor: "pointer",
   };
@@ -32,18 +32,7 @@ export const Card = (props) => {
 
         <p className="projects__description">{Description}</p>
 
-        <div className="badge__header">
-          {Badges.map((badge, index) => (
-            <a
-              key={index}
-              href={badge.href}
-              target="_blank"
-              className={badge.className}
-            >
-              {badge.text}
-            </a>
-          ))}
-        </div>
+        <div className="badge__header">{Badges}</div>
       </div>
 
       <div className="projects__buttons">

@@ -1,134 +1,68 @@
+import React from "react";
+
 import "../assets/css/skill.css";
-import { SkillHome as Skill } from "../components/Skill";
-import { Footer } from "../layouts/Footer";
 import { Navbar } from "../layouts/Navbar";
+import { Footer } from "../layouts/Footer";
+import allSkill from "../data/skills.json";
 
 export const Skills = () => {
-  const imagePath = "img/skills/";
-
   return (
     <>
       <Navbar />
-      <section className="skill container section" id="skill">
-        <h2 className="section__title-2">
-          <span>Skills.</span>
-        </h2>
 
-        {/* Frontend */}
-        <div className="skill-containers">
-          <div className="details-container">
-            <h2 className="skill-sub-title">Frontend Development</h2>
-            <div className="article-container">
-              <Skill
-                Name="HTML"
-                Icon={imagePath + "HTML.png"}
-                Experience="Experienced"
-              />
-              <Skill
-                Name="CSS"
-                Icon={imagePath + "CSS.png"}
-                Experience="Experienced"
-              />
-              <Skill
-                Name="Javascript"
-                Icon={imagePath + "Javascript.png"}
-                Experience="Intermediate"
-              />
-              <Skill
-                Name="React JS"
-                Icon={imagePath + "React.png"}
-                Experience="Intermediate"
-              />
-              <Skill
-                Name="Vue JS"
-                Icon={imagePath + "Vue.png"}
-                Experience="Intermediate"
-              />
-              <Skill
-                Name="Quasar"
-                Icon={imagePath + "Quasar.png"}
-                Experience="Intermediate"
-              />
-            </div>
-          </div>
-          {/* Backend */}
-          <div className="details-container">
-            <h2 className="skill-sub-title">Backend Development</h2>
-            <div className="article-container">
-              <Skill
-                Name="PHP"
-                Icon={imagePath + "PHP.png"}
-                Experience="Intermediate"
-              />
-              <Skill
-                Name="Node JS"
-                Icon={imagePath + "NodeJS.png"}
-                Experience="Beginner"
-              />
-              <Skill
-                Name="Laravel"
-                Icon={imagePath + "Laravel.png"}
-                Experience="Experienced"
-              />
-              <Skill
-                Name="Firebase"
-                Icon={imagePath + "Firebase.png"}
-                Experience="Beginner"
-              />
-              <Skill
-                Name="Express JS"
-                Icon={imagePath + "ExpressJS.png"}
-                Experience="Beginner"
-              />
-              <article className="ex__article">
-                <div>
-                  <h3></h3>
-                  <p></p>
+      <section className="skillContainer" id="experience">
+        {/* FRONTEND DEVELOPMENT */}
+        <h2 className="title">FrontEnd Development :</h2>
+        <div className="content">
+          <div className="skills">
+            {allSkill.Frontend.map((skill, id) => {
+              return (
+                <div key={id} className="skill">
+                  <div className="skillImageContainer">
+                    <img src={skill.imageSrc} alt={skill.title} width={80} />
+                  </div>
+                  <p className="title__skill">{skill.title}</p>
                 </div>
-              </article>
-            </div>
+              );
+            })}
           </div>
-          {/* Other */}
-          <div className="details-container">
-            <h2 className="skill-sub-title">Other</h2>
-            <div className="article-container">
-              <Skill
-                Name="MySQL"
-                Icon={imagePath + "MySQL.png"}
-                Experience="Intermediate"
-              />
-              <Skill
-                Name="Git"
-                Icon={imagePath + "Git.png"}
-                Experience="Beginner"
-              />
-              <Skill
-                Name="Github"
-                Icon={imagePath + "Github.png"}
-                Experience="Intermediate"
-              />
-              <Skill
-                Name="Canva"
-                Icon={imagePath + "Canva.png"}
-                Experience="Beginner"
-              />
-              <Skill
-                Name="After Effect"
-                Icon={imagePath + "After Effect.png"}
-                Experience="Beginner"
-              />
-              <Skill
-                Name="Figma"
-                Icon={imagePath + "Figma.png"}
-                Experience="Beginner"
-              />
-            </div>
+        </div>
+
+        {/* BACKEND DEVELOPMENT */}
+        <h2 className="title">Backend Development :</h2>
+        <div className="content">
+          <div className="skills">
+            {allSkill.Backend.map((skill, id) => {
+              return (
+                <div key={id} className="skill">
+                  <div className="skillImageContainer">
+                    <img src={skill.imageSrc} alt={skill.title} width={80} />
+                  </div>
+                  <p className="title__skill">{skill.title}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* OTHERS */}
+        <h2 className="title">Others :</h2>
+        <div className="content">
+          <div className="skills">
+            {allSkill.Others.map((skill, id) => {
+              return (
+                <div key={id} className="skill">
+                  <div className="skillImageContainer">
+                    <img src={skill.imageSrc} alt={skill.title} width={80} />
+                  </div>
+                  <p className="title__skill">{skill.title}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
-      <br />
-      <br />
-      <br />
+
       <Footer />
     </>
   );

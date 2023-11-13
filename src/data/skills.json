@@ -1,0 +1,110 @@
+{
+  "Frontend": [
+    {
+      "title": "HTML",
+      "imageSrc": "img/skills/HTML.png"
+    },
+    {
+      "title": "CSS",
+      "imageSrc": "img/skills/CSS.png"
+    },
+    {
+      "title": "Javascript",
+      "imageSrc": "img/skills/Javascript.png"
+    },
+    {
+      "title": "Bootstrap",
+      "imageSrc": "img/skills/Bootstrap.png"
+    },
+    {
+      "title": "Tailwind CSS",
+      "imageSrc": "img/skills/Tailwind.png"
+    },
+    {
+      "title": "React",
+      "imageSrc": "img/skills/React.png"
+    },
+    {
+      "title": "Vue JS",
+      "imageSrc": "img/skills/Vue.png"
+    },
+    {
+      "title": "Quasar",
+      "imageSrc": "img/skills/Quasar.png"
+    }
+  ],
+
+  "Backend": [
+    {
+      "title": "PHP",
+      "imageSrc": "img/skills/PHP.png"
+    },
+    {
+      "title": "Node JS",
+      "imageSrc": "img/skills/NodeJS.png"
+    },
+    {
+      "title": "Laravel",
+      "imageSrc": "img/skills/Laravel.png"
+    },
+    {
+      "title": "Firebase",
+      "imageSrc": "img/skills/Firebase.png"
+    },
+    {
+      "title": "Express JS",
+      "imageSrc": "img/skills/ExpressJS.png"
+    }
+  ],
+
+  "Others": [
+    {
+      "title": "MySQL",
+      "imageSrc": "img/skills/MySQL.png"
+    },
+    {
+      "title": "Git",
+      "imageSrc": "img/skills/Git.png"
+    },
+    {
+      "title": "Github",
+      "imageSrc": "img/skills/Github.png"
+    },
+    {
+      "title": "Postman",
+      "imageSrc": "img/skills/Postman.png"
+    },
+    {
+      "title": "Canva",
+      "imageSrc": "img/skills/Canva.png"
+    },
+    {
+      "title": "Figma",
+      "imageSrc": "img/skills/Figma.png"
+    },
+    {
+      "title": "After Effect",
+      "imageSrc": "img/skills/After Effect.png"
+    },
+    {
+      "title": "Adobe Lightroom",
+      "imageSrc": "img/skills/Adobe Lightroom.png"
+    },
+    {
+      "title": "Alight Motion",
+      "imageSrc": "img/skills/Alight Motion.png"
+    },
+    {
+      "title": "Capcut",
+      "imageSrc": "img/skills/Capcut.png"
+    },
+    {
+      "title": "Netlify",
+      "imageSrc": "img/skills/Netlify.png"
+    },
+    {
+      "title": "Vercel",
+      "imageSrc": "img/skills/Vercel.png"
+    }
+  ]
+}

@@ -75,3 +75,74 @@
     font-size: 1.25rem;
   }
 }
+
+
+/* Skill Page */
+:root {
+  /* Colours */
+  --color-text: #fff;
+  --color-primary: #576cbc;
+  --color-secondary: #02194671;
+  --color-dark: #0b2447;
+  --color-bg: #04152d;
+
+  /* Fonts */
+  --font-roboto: "Roboto";
+}
+
+.skillContainer {
+  color: var(--text-color-light);
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title {
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+  margin-top: 70px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 14px;
+}
+
+.skills {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 37px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+}
+
+.skillImageContainer {
+  background-color: var(--black-color);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+}
+
+.title__skill {
+  color: var(--title-color);
+}
+
+@media screen and (max-width: 830px) {
+
+}

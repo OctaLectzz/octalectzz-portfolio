@@ -1,4 +1,3 @@
-
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Footer } from "../layouts/Footer";
@@ -47,6 +46,7 @@ export const Contact = () => {
   return (
     <>
       <Navbar />
+
       <section className="contact section" id="contact">
         <div className="contact__container grid">
           <div className="contact__data">
@@ -191,6 +191,7 @@ export const Contact = () => {
           </div>
         </div>
       </section>
+
       <Footer />
     </>
   );

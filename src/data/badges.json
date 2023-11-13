@@ -1,0 +1,37 @@
+{
+  "HTML": {
+    "href": "https://id.wikipedia.org/wiki/HTML",
+    "className": "HTML__badge",
+    "text": "HTML"
+  },
+  "CSS": {
+    "href": "https://id.wikipedia.org/wiki/CSS",
+    "className": "CSS__badge",
+    "text": "CSS"
+  },
+  "PHP": {
+    "href": "https://www.php.net/",
+    "className": "PHP__badge",
+    "text": "PHP"
+  },
+  "MySQL": {
+    "href": "https://www.mysql.com/",
+    "className": "MySQL__badge",
+    "text": "MySQL"
+  },
+  "BOOTSTRAP": {
+    "href": "https://getbootstrap.com/",
+    "className": "BOOTSTRAP__badge",
+    "text": "BOOTSTRAP"
+  },
+  "LARAVEL": {
+    "href": "https://laravel.com/",
+    "className": "LARAVEL__badge",
+    "text": "LARAVEL"
+  },
+  "REACT": {
+    "href": "https://react.dev/",
+    "className": "REACT__badge",
+    "text": "REACT JS"
+  }
+}
