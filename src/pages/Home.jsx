@@ -17,7 +17,7 @@ export const Home = () => {
         {/* ABOUT */}
         <About />
 
-        {/* SERVICES */}
+        {/* SKILLS */}
         <Skill />
 
         {/* PROJECTS */}
