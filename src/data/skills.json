@@ -21,7 +21,7 @@
       "imageSrc": "img/skills/Tailwind.png"
     },
     {
-      "title": "React",
+      "title": "React JS",
       "imageSrc": "img/skills/React.png"
     },
     {
@@ -40,16 +40,16 @@
       "imageSrc": "img/skills/PHP.png"
     },
     {
-      "title": "Node JS",
-      "imageSrc": "img/skills/NodeJS.png"
-    },
-    {
       "title": "Laravel",
       "imageSrc": "img/skills/Laravel.png"
     },
     {
       "title": "Firebase",
       "imageSrc": "img/skills/Firebase.png"
+    },
+    {
+      "title": "Node JS",
+      "imageSrc": "img/skills/NodeJS.png"
     },
     {
       "title": "Express JS",

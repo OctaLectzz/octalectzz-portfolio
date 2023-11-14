@@ -92,7 +92,7 @@
 
 .skillContainer {
   color: var(--text-color-light);
-  margin-top: 150px;
+  margin-top: 120px;
   margin-bottom: 150px;
   margin-left: 10%;
   margin-right: 10%;
@@ -116,7 +116,7 @@
 }
 
 .skills {
-  width: 90%;
+  width: 89%;
   display: flex;
   flex-wrap: wrap;
   gap: 37px;
@@ -130,19 +130,27 @@
 }
 
 .skillImageContainer {
-  background-color: var(--black-color);
-  border-radius: 100%;
+  background-color: rgb(188, 188, 188);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 120px;
   height: 120px;
+  transition: background-color .4s, transform .4s;
+  cursor: pointer;
+}
+.skillImageContainer:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 146, 224, 0.416)
+}
+.dark-theme .skillImageContainer {
+  background-color: var(--black-color);
+}
+.dark-theme .skillImageContainer:hover {
+  background-color: rgba(0, 255, 255, 0.257);
 }
 
 .title__skill {
   color: var(--title-color);
-}
-
-@media screen and (max-width: 830px) {
-
 }
