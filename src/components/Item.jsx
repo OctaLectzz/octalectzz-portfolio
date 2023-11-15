@@ -1,4 +1,4 @@
-export const SkillHome = (props) => {
+export const Item = (props) => {
   const Name = props.Name;
   const Icon = props.Icon;
   const Experience = props.Experience;

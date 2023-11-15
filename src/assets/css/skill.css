@@ -50,7 +50,6 @@
   margin: auto;
 }
 
-
 @media screen and (max-width: 1400px) {
   .skill-containers {
     flex-wrap: wrap;
@@ -75,7 +74,6 @@
     font-size: 1.25rem;
   }
 }
-
 
 /* Skill Page */
 :root {
@@ -116,10 +114,10 @@
 }
 
 .skills {
-  width: 89%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 37px;
+  gap: 25px;
 }
 
 .skill {
@@ -135,14 +133,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
-  transition: background-color .4s, transform .4s;
+  width: 70px;
+  height: 70px;
+  transition: background-color 0.4s, transform 0.4s;
   cursor: pointer;
+}
+.image__skill {
+  width: 50px;
 }
 .skillImageContainer:hover {
   transform: scale(1.1);
-  background-color: rgba(0, 146, 224, 0.416)
+  background-color: rgba(0, 146, 224, 0.416);
 }
 .dark-theme .skillImageContainer {
   background-color: var(--black-color);
@@ -153,4 +154,37 @@
 
 .title__skill {
   color: var(--title-color);
+  font-size: 10px;
+}
+
+/* For small devices */
+@media screen and (max-width: 340px) {
+}
+
+/* For large devices */
+@media screen and (min-width: 1150px) {
+  .skillImageContainer {
+    background-color: rgb(188, 188, 188);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    transition: background-color 0.4s, transform 0.4s;
+    cursor: pointer;
+  }
+  .image__skill {
+    width: 80px;
+  }
+  .skills {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 37px;
+  }
+  .title__skill {
+    color: var(--title-color);
+    font-size: 15px;
+  }
 }

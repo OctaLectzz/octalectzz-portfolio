@@ -9,7 +9,7 @@ export const Project = () => {
   const buttonStyle = {
     display: "flex",
     justifyContent: "center",
-    width: "25vh",
+    width: "35vh",
     height: "6vh",
     margin: "10px auto",
   };

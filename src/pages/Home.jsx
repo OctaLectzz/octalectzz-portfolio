@@ -1,4 +1,4 @@
-import { Profile } from "../components/home/Profile";
+import { Profile } from "../components/home/Hero";
 import { About } from "../components/home/About";
 import { Skill } from "../components/home/Skill";
 import { Project } from "../components/home/Project";

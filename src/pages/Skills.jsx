@@ -8,6 +8,13 @@ export const Skills = () => {
       <h2 className="section__title-2">
         <span>My Skills :</span>
       </h2>
+      <div className="subtitle">
+        <span>
+          "Elevating Possibilities: A Snapshot of My Proficiencies and
+          Expertise."
+        </span>
+      </div>
+
       {/* FRONTEND DEVELOPMENT */}
       <h2 className="title">FrontEnd Development :</h2>
       <div className="content">
@@ -16,7 +23,11 @@ export const Skills = () => {
             return (
               <div key={id} className="skill">
                 <div className="skillImageContainer">
-                  <img src={skill.imageSrc} alt={skill.title} width={80} />
+                  <img
+                    src={skill.imageSrc}
+                    alt={skill.title}
+                    className="image__skill"
+                  />
                 </div>
                 <p className="title__skill">{skill.title}</p>
               </div>
@@ -33,7 +44,11 @@ export const Skills = () => {
             return (
               <div key={id} className="skill">
                 <div className="skillImageContainer">
-                  <img src={skill.imageSrc} alt={skill.title} width={80} />
+                  <img
+                    src={skill.imageSrc}
+                    alt={skill.title}
+                    className="image__skill"
+                  />
                 </div>
                 <p className="title__skill">{skill.title}</p>
               </div>
@@ -50,7 +65,11 @@ export const Skills = () => {
             return (
               <div key={id} className="skill">
                 <div className="skillImageContainer">
-                  <img src={skill.imageSrc} alt={skill.title} width={80} />
+                  <img
+                    src={skill.imageSrc}
+                    alt={skill.title}
+                    className="image__skill"
+                  />
                 </div>
                 <p className="title__skill">{skill.title}</p>
               </div>

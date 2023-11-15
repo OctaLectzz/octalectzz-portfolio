@@ -8,6 +8,12 @@ export const Projects = () => {
       <h2 className="section__title-1">
         <span>My Projects :</span>
       </h2>
+      <div className="subtitle">
+        <span>
+          "Showcasing my diverse projects in one place – a testament to
+          creativity, innovation, and passion."
+        </span>
+      </div>
 
       <div className="projects__container container grid">
         {projects.map((project) => (

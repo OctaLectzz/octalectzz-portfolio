@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../../assets/css/skill.css";
-import { SkillHome } from "../Skill";
+import { Item } from "../Item";
 
 export const Skill = () => {
   const imagePath = "img/skills/";
@@ -8,7 +8,7 @@ export const Skill = () => {
   const buttonStyle = {
     display: "flex",
     justifyContent: "center",
-    width: "25vh",
+    width: "35vh",
     height: "6vh",
     margin: "10px auto",
   };
@@ -24,32 +24,32 @@ export const Skill = () => {
         <div className="details-container">
           <h2 className="skill-sub-title">Frontend Development</h2>
           <div className="article-container">
-            <SkillHome
+            <Item
               Name="HTML"
               Icon={imagePath + "HTML.png"}
               Experience="Experienced"
             />
-            <SkillHome
+            <Item
               Name="CSS"
               Icon={imagePath + "CSS.png"}
               Experience="Experienced"
             />
-            <SkillHome
+            <Item
               Name="Javascript"
               Icon={imagePath + "Javascript.png"}
               Experience="Intermediate"
             />
-            <SkillHome
+            <Item
               Name="React JS"
               Icon={imagePath + "React.png"}
               Experience="Intermediate"
             />
-            <SkillHome
+            <Item
               Name="Vue JS"
               Icon={imagePath + "Vue.png"}
               Experience="Intermediate"
             />
-            <SkillHome
+            <Item
               Name="Quasar"
               Icon={imagePath + "Quasar.png"}
               Experience="Intermediate"
@@ -60,27 +60,27 @@ export const Skill = () => {
         <div className="details-container">
           <h2 className="skill-sub-title">Backend Development</h2>
           <div className="article-container">
-            <SkillHome
+            <Item
               Name="PHP"
               Icon={imagePath + "PHP.png"}
               Experience="Intermediate"
             />
-            <SkillHome
+            <Item
               Name="Node JS"
               Icon={imagePath + "NodeJS.png"}
               Experience="Beginner"
             />
-            <SkillHome
+            <Item
               Name="Laravel"
               Icon={imagePath + "Laravel.png"}
               Experience="Experienced"
             />
-            <SkillHome
+            <Item
               Name="Firebase"
               Icon={imagePath + "Firebase.png"}
               Experience="Beginner"
             />
-            <SkillHome
+            <Item
               Name="Express JS"
               Icon={imagePath + "ExpressJS.png"}
               Experience="Beginner"
@@ -97,32 +97,32 @@ export const Skill = () => {
         <div className="details-container">
           <h2 className="skill-sub-title">Other</h2>
           <div className="article-container">
-            <SkillHome
+            <Item
               Name="MySQL"
               Icon={imagePath + "MySQL.png"}
               Experience="Intermediate"
             />
-            <SkillHome
+            <Item
               Name="Git"
               Icon={imagePath + "Git.png"}
               Experience="Beginner"
             />
-            <SkillHome
+            <Item
               Name="Github"
               Icon={imagePath + "Github.png"}
               Experience="Intermediate"
             />
-            <SkillHome
+            <Item
               Name="Canva"
               Icon={imagePath + "Canva.png"}
               Experience="Beginner"
             />
-            <SkillHome
+            <Item
               Name="After Effect"
               Icon={imagePath + "After Effect.png"}
               Experience="Beginner"
             />
-            <SkillHome
+            <Item
               Name="Figma"
               Icon={imagePath + "Figma.png"}
               Experience="Beginner"
@@ -131,7 +131,7 @@ export const Skill = () => {
         </div>
       </div>
       <Link to="/skills" className="button" style={buttonStyle}>
-        <i className="ri-arrow-right-up-fill"></i> Show more...
+        <i className="ri-arrow-right-up-fill"></i> Show details...
       </Link>
     </section>
   );
