@@ -32,16 +32,16 @@ export const About = () => {
 
         <div className="about__info">
           <p className="about__description">
-            Hi everyone, My full name is <b>Octavyan Putra Ramadhan</b>. I am a
-            student of <b>SMK Muhammadiyah 1 Sukoharjo</b>. I live in Sukoharjo,
-            Central Java, Indonesia. I was born in Sukoharjo On{" "}
-            <b>04 October 2006</b>.
+            Hi everyone, My full name is <b>Octavyan Putra Ramadhan</b>. {/* I am a
+            student of <b>SMK Muhammadiyah 1 Sukoharjo</b>. */} I live in Sukoharjo,
+            Central Java, Indonesia.{/* I was born in Sukoharjo On{" "}
+            <b>04 October 2006</b>. */} My hobbies are <b>Playing Games</b> and <b>Reading Comic</b>.
           </p>
-          <p className="about__description">
+          {/* <p className="about__description">
             My hobbies are <b>Playing Games</b> and <b>Reading Comic</b>. I
             started to enter the IT world in 2021. I want to be a{" "}
             <b>Fullstack Web Developer</b>.
-          </p>
+          </p> */}
 
           <ul className="about__list">
             <li className="about__item">

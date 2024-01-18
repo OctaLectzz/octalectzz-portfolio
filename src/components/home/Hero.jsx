@@ -1,6 +1,6 @@
 import "./../../assets/css/home.css";
 
-export const Profile = () => {
+export const Hero = () => {
   const imagePath = "/img/";
 
   return (
@@ -43,7 +43,7 @@ export const Profile = () => {
             <a
               href="https://web.facebook.com/octavyan.r"
               target="_blank"
-              className="contact__social-link"
+              className="home__social-link"
             >
               <i className="ri-facebook-circle-line"></i>
             </a>

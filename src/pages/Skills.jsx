@@ -4,7 +4,7 @@ import allSkill from "../data/skills.json";
 
 export const Skills = () => {
   return (
-    <section className="skillContainer" id="experience">
+    <section className="skillContainer" id="skill">
       <h2 className="section__title-2">
         <span>My Skills :</span>
       </h2>

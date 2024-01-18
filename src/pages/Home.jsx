@@ -1,4 +1,4 @@
-import { Profile } from "../components/home/Hero";
+import { Hero } from "../components/home/Hero";
 import { About } from "../components/home/About";
 import { Skill } from "../components/home/Skill";
 import { Project } from "../components/home/Project";
@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <main className="main">
       {/* PROFILE */}
-      <Profile />
+      <Hero />
 
       {/* ABOUT */}
       <About />

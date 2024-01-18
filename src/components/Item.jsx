@@ -1,8 +1,4 @@
-export const Item = (props) => {
-  const Name = props.Name;
-  const Icon = props.Icon;
-  const Experience = props.Experience;
-
+export const Item = ({ Name, Icon, Experience }) => {
   return (
     <article className="ex__article">
       <img src={Icon} alt="Skill icon" className="icon" />
