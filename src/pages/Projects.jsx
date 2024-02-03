@@ -1,6 +1,6 @@
-import { Card } from "../components/Card";
-import projects from "../data/projects.json";
-import { setBadges } from "../components/Badge";
+import projects from "/src/data/projects.json";
+import { Card } from "/src/components/Card";
+import { Badge } from "/src/components/Badge";
 
 export const Projects = () => {
   return (
@@ -25,7 +25,7 @@ export const Projects = () => {
             Description={project.Description}
             LinkSourceCode={project.LinkSourceCode}
             LinkDemoApp={project.LinkDemoApp}
-            Badges={setBadges(project.Badges)}
+            Badges={Badge(project.Badges)}
           />
         ))}
       </div>

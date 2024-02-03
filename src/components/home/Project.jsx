@@ -1,7 +1,7 @@
-import "./../../assets/css/project.css";
-import { Card } from "../Card";
+import "/src/assets/css/home/project.css";
 import { Link } from "react-router-dom";
-import { setBadges } from "../Badge";
+import { Card } from "/src/components/Card";
+import { Badge } from "/src/components/Badge";
 
 export const Project = () => {
   const projectImg = "/img/projects/";
@@ -28,7 +28,7 @@ export const Project = () => {
           Title="Simple CMS"
           Description="A website for spreading news, created using the Bootstrap and Laravel 9 framework."
           LinkSourceCode="https://github.com/OctaLectzz/octa-project-bootcamp"
-          Badges={setBadges(["LARAVEL", "BOOTSTRAP", "MySQL"])}
+          Badges={Badge(["LARAVEL", "BOOTSTRAP", "MySQL"])}
         />
 
         {/* WheelsRent */}
@@ -38,7 +38,7 @@ export const Project = () => {
           Title="WheelsRent"
           Description="A car rental website that allows users to easily rent cars online. Built using Laravel 10 framework and Bootstrap."
           LinkSourceCode="https://github.com/OctaLectzz/WheelsRent"
-          Badges={setBadges(["LARAVEL", "BOOTSTRAP", "MySQL"])}
+          Badges={Badge(["LARAVEL", "BOOTSTRAP", "MySQL"])}
         />
 
         {/* Lotus */}
@@ -48,7 +48,7 @@ export const Project = () => {
           Title="Lotus"
           Description="A news website that allows users or admins to add, edit and delete posts. Built using Laravel API and React JS."
           LinkSourceCode="https://github.com/OctaLectzz/CMS-Project"
-          Badges={setBadges(["LARAVEL", "REACT", "BOOTSTRAP", "MySQL"])}
+          Badges={Badge(["LARAVEL", "REACT", "BOOTSTRAP", "MySQL"])}
         />
       </div>
       <Link to="/projects" className="button" style={buttonStyle}>

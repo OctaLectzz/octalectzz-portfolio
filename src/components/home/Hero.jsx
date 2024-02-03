@@ -1,4 +1,4 @@
-import "./../../assets/css/home.css";
+import "/src/assets/css/home/home.css";
 
 export const Hero = () => {
   const imagePath = "/img/";

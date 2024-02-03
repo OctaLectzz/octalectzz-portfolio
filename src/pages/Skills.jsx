@@ -1,6 +1,6 @@
+// import "/src/assets/css/home/skill.css";
 import React from "react";
-import "../assets/css/skill.css";
-import allSkill from "../data/skills.json";
+import skill from "/src/data/skills.json";
 
 export const Skills = () => {
   return (
@@ -19,7 +19,7 @@ export const Skills = () => {
       <h2 className="title">FrontEnd Development :</h2>
       <div className="content">
         <div className="skills">
-          {allSkill.Frontend.map((skill, id) => {
+          {skill.Frontend.map((skill, id) => {
             return (
               <div key={id} className="skill">
                 <div className="skillImageContainer">
@@ -40,7 +40,7 @@ export const Skills = () => {
       <h2 className="title">Backend Development :</h2>
       <div className="content">
         <div className="skills">
-          {allSkill.Backend.map((skill, id) => {
+          {skill.Backend.map((skill, id) => {
             return (
               <div key={id} className="skill">
                 <div className="skillImageContainer">
@@ -61,7 +61,7 @@ export const Skills = () => {
       <h2 className="title">Others :</h2>
       <div className="content">
         <div className="skills">
-          {allSkill.Others.map((skill, id) => {
+          {skill.Others.map((skill, id) => {
             return (
               <div key={id} className="skill">
                 <div className="skillImageContainer">

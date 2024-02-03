@@ -1,7 +1,7 @@
 import React from "react";
-import badges from "../data/badges.json";
+import badges from "/src/data/badges.json";
 
-export const setBadges = (badgeArray) => {
+export const Badge = (badgeArray) => {
   return badgeArray.map((badgeName) => {
     const badge = badges[badgeName];
     return (

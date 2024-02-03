@@ -1,7 +1,7 @@
-import "./../assets/css/navbar.css";
+import "/src/assets/css/navbar.css";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Theme } from "../components/Theme";
+import { Theme } from "/src/components/Theme";
 
 export const Navbar = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -48,9 +48,9 @@ export const Navbar = () => {
 
               <li className="nav__item" onClick={hideMenu}>
                 <Link
-                  to="/experience"
+                  to="/experiences"
                   className={
-                    location.pathname === "/experience"
+                    location.pathname === "/experiences"
                       ? "nav__link active-link"
                       : "nav__link"
                   }

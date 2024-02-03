@@ -1,8 +1,9 @@
-import { Hero } from "../components/home/Hero";
-import { About } from "../components/home/About";
-import { Skill } from "../components/home/Skill";
-import { Project } from "../components/home/Project";
-import { ContactMe } from "../components/home/Contact";
+import { Hero } from "/src/components/home/Hero";
+import { About } from "/src/components/home/About";
+import { Skill } from "/src/components/home/Skill";
+import { Project } from "/src/components/home/Project";
+import { Experience } from "/src/components/home/Experience";
+import { ContactMe } from "/src/components/home/Contact";
 
 export const Home = () => {
   return (
@@ -18,6 +19,9 @@ export const Home = () => {
 
       {/* PROJECTS */}
       <Project />
+
+      {/* EXPERIENCES */}
+      <Experience />
 
       {/* CONTACT */}
       <ContactMe />

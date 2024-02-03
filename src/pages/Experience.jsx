@@ -1,4 +1,6 @@
-// import "../assets/css/experience.css";
+import "/src/assets/css/experience.css";
+import experiences from "/src/data/experiences.json";
+import { WorkTimeline, EducationTimeline } from "/src/components/Timeline";
 
 export const Experience = () => {
   return (
@@ -6,43 +8,39 @@ export const Experience = () => {
       <h2 className="section__title-2">
         <span>Experience :</span>
       </h2>
-      <h1>COMING SOON!</h1>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
+      {/* Works */}
+      <div className="experience__work">
+        <div className="experience__title">
+          <h2>Works</h2>
+        </div>
+        {experiences.Works.map((experience) => (
+          <WorkTimeline
+            key={experience.Date}
+            Date={experience.Date}
+            Place={experience.Place}
+            Status={experience.Status}
+            Role={experience.Role}
+            Description={experience.Description}
+          />
+        ))}
+      </div>
+
+      {/* Education */}
+      <div className="experience__education">
+        <div className="experience__education-title">
+          <h2>Education</h2>
+        </div>
+        {experiences.Education.map((experience) => (
+          <EducationTimeline
+            key={experience.School}
+            School={experience.School}
+            Date={experience.Date}
+            Major={experience.Major}
+            Description={experience.Description}
+          />
+        ))}
+      </div>
     </section>
   );
 };

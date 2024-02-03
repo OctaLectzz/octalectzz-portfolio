@@ -1,0 +1,48 @@
+{
+  "Works": [
+    {
+      "Date": "03 February 2023 - 12 May 2023",
+      "Place": "Tebar Digital Kreasi",
+      "Status": "Intership",
+      "Role": "Web Programmer",
+      "Description": "During my internship at Tebar Digital Kreasi from February to May 2023, I delved into the realm of web development as a Web Programmer intern. Collaborating closely with seasoned developers, I honed my skills in PHP, Javascript, Laravel, and React JS while contributing to real-world projects. From crafting interactive user interfaces to optimizing website performance, the experience provided invaluable insights into agile development methodologies and emphasized the significance of teamwork in achieving project objectives. This internship not only solidified my understanding of web programming concepts but also paved the way for my future endeavors as a proficient web developer."
+    },
+    {
+      "Date": "01 August 2023 - 01 October 2023",
+      "Place": "Timewebid",
+      "Status": "Intership",
+      "Role": "Web Programmer",
+      "Description": "During my internship at Timewebid from August 1st to October 1st, 2023, I actively engaged as a Web Programmer, contributing to various projects and gaining hands-on experience in web development. I collaborated with the team to develop and maintain web applications, implementing innovative solutions and adhering to industry best practices. Through this internship, I honed my skills in Laravel, API, Vue JS, Quasar, and learned to work efficiently within a professional environment, further solidifying my passion for web development."
+    },
+    {
+      "Date": "01 November 2023 - Present",
+      "Place": "Timewebid",
+      "Status": "Part Time",
+      "Role": "Web Developer",
+      "Description": "Since November 1st, 2023, I have been serving as a part-time Web Developer at Timewebid, where I continue to apply my expertise in web development while balancing academic commitments. In this role, I contribute to the development and enhancement of web applications, collaborating with the team to deliver high-quality solutions that meet client requirements. Working part-time has allowed me to deepen my understanding of web technologies, refine my coding skills, and gain valuable real-world experience in the dynamic field of web development."
+    },
+    {
+      "Date": "01 January 2024 - Present",
+      "Place": "Digimizu",
+      "Status": "Intership",
+      "Role": "Copywriter",
+      "Description": "Since January 1st, 2024, I have embarked on an enriching internship journey as a Copywriter at Digimizu, a role I continue to fulfill to date. Within this period, I have honed my skills in crafting compelling and persuasive written content tailored to diverse audiences. Collaborating closely with the marketing team, I have contributed to the development of engaging marketing materials, including website copy, social media posts, and promotional campaigns. This internship at Digimizu has provided me with invaluable hands-on experience in the field of copywriting, allowing me to refine my writing style, creativity, and strategic communication abilities."
+    }
+  ],
+
+  "Education": [
+    {
+      "School": "SMK Muhammadiyah 01 Sukoharjo",
+      "Date": "1 July 2021 - Present",
+      "Major": "Pengembangan Perangkat Lunak dan Gim (PPLG)",
+      "Description": "Since July 2021, I have been engaged with SMK Muhammadiyah 01 Sukoharjo, dedicating efforts to the development of software and games (PPLG). Within this environment, I actively participate in crafting innovative software solutions and designing engaging and educational games. Through collaborative teamwork, I have contributed to the creation of quality products that enrich learning experiences and add value to students and the education community at large."
+    }
+  ],
+
+  "Certificate": [
+    {
+      "title": "MySQL",
+      "imageSrc": "img/skills/MySQL.png"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
+import "/src/assets/css/home/skill.css";
 import { Link } from "react-router-dom";
-import "../../assets/css/skill.css";
-import { Item } from "../Item";
+import { Item } from "/src/components/Item";
 
 export const Skill = () => {
   const imagePath = "img/skills/";
