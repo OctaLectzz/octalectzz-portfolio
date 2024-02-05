@@ -1,10 +1,10 @@
-// import "/src/assets/css/home/skill.css";
+import "/src/assets/css/pages/skill.css";
 import React from "react";
 import skill from "/src/data/skills.json";
 
 export const Skills = () => {
   return (
-    <section className="skillContainer" id="skill">
+    <section className="skills__container" id="skill">
       <h2 className="section__title-2">
         <span>My Skills :</span>
       </h2>
@@ -16,20 +16,20 @@ export const Skills = () => {
       </div>
 
       {/* FRONTEND DEVELOPMENT */}
-      <h2 className="title">FrontEnd Development :</h2>
-      <div className="content">
-        <div className="skills">
+      <h2 className="skills__type">FrontEnd Development :</h2>
+      <div className="skills__skills__content">
+        <div className="skills__column">
           {skill.Frontend.map((skill, id) => {
             return (
-              <div key={id} className="skill">
-                <div className="skillImageContainer">
+              <div key={id} className="skills__list">
+                <div className="skills__Image-container">
                   <img
                     src={skill.imageSrc}
                     alt={skill.title}
-                    className="image__skill"
+                    className="skills__image"
                   />
                 </div>
-                <p className="title__skill">{skill.title}</p>
+                <p className="skills__title">{skill.title}</p>
               </div>
             );
           })}
@@ -37,20 +37,20 @@ export const Skills = () => {
       </div>
 
       {/* BACKEND DEVELOPMENT */}
-      <h2 className="title">Backend Development :</h2>
-      <div className="content">
-        <div className="skills">
+      <h2 className="skills__type">Backend Development :</h2>
+      <div className="skills__content">
+        <div className="skills__column">
           {skill.Backend.map((skill, id) => {
             return (
               <div key={id} className="skill">
-                <div className="skillImageContainer">
+                <div className="skills__Image-container">
                   <img
                     src={skill.imageSrc}
                     alt={skill.title}
-                    className="image__skill"
+                    className="skills__image"
                   />
                 </div>
-                <p className="title__skill">{skill.title}</p>
+                <p className="skills__title">{skill.title}</p>
               </div>
             );
           })}
@@ -58,20 +58,20 @@ export const Skills = () => {
       </div>
 
       {/* OTHERS */}
-      <h2 className="title">Others :</h2>
-      <div className="content">
-        <div className="skills">
+      <h2 className="skills__type">Others :</h2>
+      <div className="skills__content">
+        <div className="skills__column">
           {skill.Others.map((skill, id) => {
             return (
               <div key={id} className="skill">
-                <div className="skillImageContainer">
+                <div className="skills__Image-container">
                   <img
                     src={skill.imageSrc}
                     alt={skill.title}
-                    className="image__skill"
+                    className="skills__image"
                   />
                 </div>
-                <p className="title__skill">{skill.title}</p>
+                <p className="skills__title">{skill.title}</p>
               </div>
             );
           })}

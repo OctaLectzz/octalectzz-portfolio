@@ -1,4 +1,4 @@
-import "/src/assets/css/home/project.css";
+import "/src/assets/css/pages/project.css";
 import { Link } from "react-router-dom";
 import { Card } from "/src/components/Card";
 import { Badge } from "/src/components/Badge";

@@ -21,7 +21,7 @@ export const Contact = () => {
         (result) => {
           console.log(result.text);
           // Show success message
-          setContactMessage("Message sent successfully dekk✅");
+          setContactMessage("Message sent successfully✅");
 
           // Remove message after five seconds
           setTimeout(() => {
@@ -69,8 +69,8 @@ export const Contact = () => {
             action=""
             ref={form}
             onSubmit={sendEmail}
-            className="contact__form"
             id="contact-form"
+            className="contact__form"
           >
             <div className="contact__group">
               <div className="contact__box">
@@ -106,10 +106,10 @@ export const Contact = () => {
               <input
                 type="text"
                 name="user_subject"
-                className="contact__input"
                 id="subject"
-                required
+                className="contact__input"
                 placeholder="Subject"
+                required
               />
               <label htmlFor="subject" className="contact__label">
                 Subject
@@ -121,8 +121,8 @@ export const Contact = () => {
                 name="user_message"
                 id="message"
                 className="contact__input"
-                required
                 placeholder="Message"
+                required
               ></textarea>
               <label htmlFor="message" className="contact__label">
                 Message

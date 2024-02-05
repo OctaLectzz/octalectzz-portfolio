@@ -1,4 +1,4 @@
-import "/src/assets/css/home/skill.css";
+import "/src/assets/css/pages/skill.css";
 import { Link } from "react-router-dom";
 import { Item } from "/src/components/Item";
 
@@ -20,10 +20,10 @@ export const Skill = () => {
       </h2>
 
       {/* Frontend */}
-      <div className="skill-containers">
-        <div className="details-container">
-          <h2 className="skill-sub-title">Frontend Development</h2>
-          <div className="article-container">
+      <div className="skill__containers">
+        <div className="skill__details">
+          <h2 className="skill__subtitle">Frontend Development</h2>
+          <div className="skill__list">
             <Item
               Name="HTML"
               Icon={imagePath + "HTML.png"}
@@ -56,10 +56,11 @@ export const Skill = () => {
             />
           </div>
         </div>
+
         {/* Backend */}
-        <div className="details-container">
-          <h2 className="skill-sub-title">Backend Development</h2>
-          <div className="article-container">
+        <div className="skill__details">
+          <h2 className="skill__subtitle">Backend Development</h2>
+          <div className="skill__list">
             <Item
               Name="PHP"
               Icon={imagePath + "PHP.png"}
@@ -93,10 +94,11 @@ export const Skill = () => {
             </article>
           </div>
         </div>
+
         {/* Other */}
-        <div className="details-container">
-          <h2 className="skill-sub-title">Other</h2>
-          <div className="article-container">
+        <div className="skill__details">
+          <h2 className="skill__subtitle">Other</h2>
+          <div className="skill__list">
             <Item
               Name="MySQL"
               Icon={imagePath + "MySQL.png"}

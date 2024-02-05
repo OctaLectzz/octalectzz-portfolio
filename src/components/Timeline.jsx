@@ -22,19 +22,19 @@ export const WorkTimeline = ({ Date, Place, Status, Role, Description }) => {
       <TimelineItem>
         <TimelineSeparator>
           <TimelineDot
-            className="experience__dot"
+            className="experiences__dot"
             style={{ backgroundColor: "var(--black-color)" }}
           />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <div className="experience__title">
+          <div className="experiences__title">
             {Date} | {Place}
           </div>
-          <div className="experience__subtitle">
+          <div className="experiences__subtitle">
             {Status} - {Role}
           </div>
-          <p className="experience__description">{Description}</p>
+          <p className="experiences__description">{Description}</p>
         </TimelineContent>
       </TimelineItem>
     </Timeline>
@@ -45,7 +45,7 @@ export const WorkTimeline = ({ Date, Place, Status, Role, Description }) => {
 export const EducationTimeline = ({ School, Date, Major, Description }) => {
   return (
     <>
-      <div className="experience__education-left"></div>
+      <div className="experiences__education-left"></div>
       <Timeline
         sx={{
           [`& .${timelineContentClasses.root}`]: {
@@ -55,13 +55,13 @@ export const EducationTimeline = ({ School, Date, Major, Description }) => {
       >
         <TimelineItem>
           <TimelineOppositeContent color="textSecondary">
-            <div className="experience__title">{School} | {Date}</div>
-            <div className="experience__subtitle">{Major}</div>
-            <p className="experience__description">{Description}</p>
+            <div className="experiences__title">{School} | {Date}</div>
+            <div className="experiences__subtitle">{Major}</div>
+            <p className="experiences__description">{Description}</p>
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot
-              className="experience__dot"
+              className="experiences__dot"
               style={{ backgroundColor: "var(--black-color)" }}
             />
             <TimelineConnector />

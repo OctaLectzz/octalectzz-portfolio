@@ -1,4 +1,4 @@
-import "/src/assets/css/experience.css";
+import "/src/assets/css/pages/experience.css";
 import experiences from "/src/data/experiences.json";
 import { WorkTimeline, EducationTimeline } from "/src/components/Timeline";
 
@@ -10,8 +10,8 @@ export const Experience = () => {
       </h2>
 
       {/* Works */}
-      <div className="experience__work">
-        <div className="experience__title">
+      <div className="experiences__work">
+        <div className="experiences__title">
           <h2>Works</h2>
         </div>
         {experiences.Works.map((experience) => (
@@ -27,8 +27,8 @@ export const Experience = () => {
       </div>
 
       {/* Education */}
-      <div className="experience__education">
-        <div className="experience__education-title">
+      <div className="experiences__education">
+        <div className="experiences__education-title">
           <h2>Education</h2>
         </div>
         {experiences.Education.map((experience) => (

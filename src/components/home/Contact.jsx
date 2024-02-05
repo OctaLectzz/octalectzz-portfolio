@@ -1,8 +1,8 @@
-import "/src/assets/css/home/contact.css";
+import "/src/assets/css/pages/contact.css";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-export const ContactMe = () => {
+export const Contact = () => {
   const imagePath = "/img/";
   const [contactMessage, setContactMessage] = useState("");
 

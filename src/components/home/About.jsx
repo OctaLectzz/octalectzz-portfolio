@@ -1,4 +1,4 @@
-import "/src/assets/css/home/about.css";
+import "/src/assets/css/pages/about.css";
 
 export const About = () => {
   const imagePath = "/img/";

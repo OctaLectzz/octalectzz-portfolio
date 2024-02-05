@@ -98,86 +98,48 @@
   border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
+  transition: box-shadow 0.4s;
+}
+.badge:hover {
+  box-shadow: 1px 1px 4px #000;
 }
 
-.HTML__badge:hover {
-  background-color: var(--first-color);
-  color: var(--first-color);
-  background-color: rgba(209, 127, 20, 0.25);
-  border: 1px solid var(--first-color);
-}
 .HTML__badge {
   background-color: var(--first-color);
   border-color: var(--first-color);
   color: #d0d0d0;
 }
 
-.CSS__badge:hover {
-  background-color: #001a8f;
-  color: #001a8f;
-  background-color: rgba(52, 152, 219, 0.25);
-  border: 1px solid #001a8f;
-}
 .CSS__badge {
   background-color: #001a8f;
   border-color: #001a8f;
   color: #d0d0d0;
 }
 
-.PHP__badge:hover {
-  background-color: #3498db;
-  color: #3498db;
-  background-color: rgba(52, 152, 219, 0.25);
-  border: 1px solid #3498db;
-}
 .PHP__badge {
   background-color: #2980b9;
   border-color: #2980b9;
   color: #d0d0d0;
 }
 
-.BOOTSTRAP__badge:hover {
-  background-color: #ba34db;
-  color: #841c9e;
-  background-color: rgba(152, 52, 219, 0.25);
-  border: 1px solid #ba34db;
-}
 .BOOTSTRAP__badge {
   background-color: #ba34db;
   border-color: #ba34db;
   color: #d0d0d0;
 }
 
-.MySQL__badge:hover {
-  background-color: #db6934;
-  color: #db6934;
-  background-color: rgba(207, 121, 8, 0.25);
-  border: 1px solid;
-}
 .MySQL__badge {
   background-color: #db6934;
   border-color: #db6934;
   color: #d0d0d0;
 }
 
-.LARAVEL__badge:hover {
-  background-color: red;
-  color: red;
-  background-color: rgba(207, 8, 8, 0.25);
-  border: 1px solid;
-}
 .LARAVEL__badge {
   background-color: red;
   border-color: red;
   color: #d0d0d0;
 }
 
-.REACT__badge:hover {
-  background-color: #00a5a5;
-  color: #00a5a5;
-  background-color: rgba(8, 167, 207, 0.25);
-  border: 1px solid;
-}
 .REACT__badge {
   background-color: #00a5a5;
   border-color: #00a5a5;
