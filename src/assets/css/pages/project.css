@@ -85,12 +85,40 @@
   background-color: var(--white-color);
 }
 
+.projects__collab {
+  margin-top: 10px;
+}
+
+.projects__collab-title {
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+.projects__collab-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.projects__collab-img {
+  margin-left: 10px;
+  width: 80px;
+}
+
+.projects__timewebid {
+  margin-left: 5px;
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+  text-decoration: underline;
+}
+
 /* Badge */
 .badge__header {
   margin-top: 10px;
 }
 .badge {
   display: inline-block;
+  color: #d0d0d0;
   font-size: 10px;
   font-weight: bold;
   padding: 4px 5px;
@@ -103,47 +131,39 @@
 .badge:hover {
   box-shadow: 1px 1px 4px #000;
 }
+.dark-theme .badge:hover {
+  box-shadow: 1px 1px 4px #ffffff77;
+}
 
 .HTML__badge {
   background-color: var(--first-color);
-  border-color: var(--first-color);
-  color: #d0d0d0;
 }
-
 .CSS__badge {
   background-color: #001a8f;
-  border-color: #001a8f;
-  color: #d0d0d0;
 }
-
 .PHP__badge {
   background-color: #2980b9;
-  border-color: #2980b9;
-  color: #d0d0d0;
 }
-
 .BOOTSTRAP__badge {
   background-color: #ba34db;
-  border-color: #ba34db;
-  color: #d0d0d0;
 }
-
+.TAILWIND__badge {
+  background-color: #01003b;
+}
 .MySQL__badge {
   background-color: #db6934;
-  border-color: #db6934;
-  color: #d0d0d0;
 }
-
 .LARAVEL__badge {
   background-color: red;
-  border-color: red;
-  color: #d0d0d0;
 }
-
 .REACT__badge {
   background-color: #00a5a5;
-  border-color: #00a5a5;
-  color: #d0d0d0;
+}
+.VUE__badge {
+  background-color: #014f13;
+}
+.QUASAR__badge {
+  background-color: #00237b;
 }
 
 /* For medium devices */
@@ -177,5 +197,15 @@
   }
   .projects__button {
     right: 1.25rem;
+  }
+  .projects__collab {
+    margin-top: -50px;
+  }
+  .projects__collab-title {
+    font-size: var(--h3-font-size);
+  }
+  .projects__collab-img {
+    margin-left: 10px;
+    width: 100px;
   }
 }

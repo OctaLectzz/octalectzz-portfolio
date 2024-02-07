@@ -27,6 +27,7 @@ export const Project = () => {
           Type="Website"
           Title="Simple CMS"
           Description="A website for spreading news, created using the Bootstrap and Laravel 9 framework."
+          LinkDemoApp="https://cmspost.000webhostapp.com/"
           LinkSourceCode="https://github.com/OctaLectzz/octa-project-bootcamp"
           Badges={Badge(["LARAVEL", "BOOTSTRAP", "MySQL"])}
         />
@@ -37,18 +38,20 @@ export const Project = () => {
           Type="Website"
           Title="WheelsRent"
           Description="A car rental website that allows users to easily rent cars online. Built using Laravel 10 framework and Bootstrap."
+          LinkDemoApp="https://wheelsrents.000webhostapp.com/"
           LinkSourceCode="https://github.com/OctaLectzz/WheelsRent"
           Badges={Badge(["LARAVEL", "BOOTSTRAP", "MySQL"])}
         />
 
-        {/* Lotus */}
+        {/* PPLG 2 Class */}
         <Card
-          Image={projectImg + "Lotus.png"}
+          Image={projectImg + "PPLG 2 Class.png"}
           Type="Website"
-          Title="Lotus"
-          Description="A news website that allows users or admins to add, edit and delete posts. Built using Laravel API and React JS."
-          LinkSourceCode="https://github.com/OctaLectzz/CMS-Project"
-          Badges={Badge(["LARAVEL", "REACT", "BOOTSTRAP", "MySQL"])}
+          Title="PPLG 2 Class"
+          Description="A website for the PPLG 2 class at SMK Muhammadiyah 1 Sukoharjo, there is an anonymous message on it."
+          LinkDemoApp="https://pepeelgedua.vercel.app/"
+          LinkSourceCode="https://github.com/OctaLectzz/pplg2-class"
+          Badges={Badge(["REACT", "TAILWIND"])}
         />
       </div>
       <Link to="/projects" className="button" style={buttonStyle}>

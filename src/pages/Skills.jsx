@@ -17,7 +17,7 @@ export const Skills = () => {
 
       {/* FRONTEND DEVELOPMENT */}
       <h2 className="skills__type">FrontEnd Development :</h2>
-      <div className="skills__skills__content">
+      <div className="skills__content">
         <div className="skills__column">
           {skill.Frontend.map((skill, id) => {
             return (
@@ -42,7 +42,7 @@ export const Skills = () => {
         <div className="skills__column">
           {skill.Backend.map((skill, id) => {
             return (
-              <div key={id} className="skill">
+              <div key={id} className="skills__list">
                 <div className="skills__Image-container">
                   <img
                     src={skill.imageSrc}
@@ -63,7 +63,7 @@ export const Skills = () => {
         <div className="skills__column">
           {skill.Others.map((skill, id) => {
             return (
-              <div key={id} className="skill">
+              <div key={id} className="skills__list">
                 <div className="skills__Image-container">
                   <img
                     src={skill.imageSrc}

@@ -24,6 +24,11 @@
     "className": "BOOTSTRAP__badge",
     "text": "BOOTSTRAP"
   },
+  "TAILWIND": {
+    "href": "https://tailwindcss.com/",
+    "className": "TAILWIND__badge",
+    "text": "TAILWIND CSS"
+  },
   "LARAVEL": {
     "href": "https://laravel.com/",
     "className": "LARAVEL__badge",
@@ -33,5 +38,15 @@
     "href": "https://react.dev/",
     "className": "REACT__badge",
     "text": "REACT JS"
+  },
+  "VUE": {
+    "href": "https://vuejs.org/",
+    "className": "VUE__badge",
+    "text": "VUE JS"
+  },
+  "QUASAR": {
+    "href": "https://quasar.dev/",
+    "className": "QUASAR__badge",
+    "text": "QUASAR"
   }
 }
