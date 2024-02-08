@@ -160,7 +160,7 @@ export const Contact = () => {
 
             <div className="contact__social-links">
               <a
-                href="https://wa.me/6289670352908"
+                href="https://wa.me/62895605210002"
                 target="_blank"
                 className="contact__social-link"
               >
