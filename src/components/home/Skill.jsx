@@ -86,7 +86,7 @@ export const Skill = () => {
               Icon={imagePath + "ExpressJS.png"}
               Experience="Beginner"
             />
-            <article className="ex__article">
+            <article className="skill__icon">
               <div>
                 <h3></h3>
                 <p></p>
