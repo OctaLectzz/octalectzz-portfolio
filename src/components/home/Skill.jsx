@@ -132,6 +132,7 @@ export const Skill = () => {
           </div>
         </div>
       </div>
+
       <Link to="/skills" className="button" style={buttonStyle}>
         <i className="ri-arrow-right-up-fill"></i> Show details...
       </Link>

@@ -112,6 +112,51 @@
   text-decoration: underline;
 }
 
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .projects__container {
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects__container {
+    grid-template-columns: repeat(2, 350px);
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1150px) {
+  .projects__container {
+    grid-template-columns: repeat(3, 352px);
+    padding-block: 3rem 1rem;
+  }
+  .projects__card {
+    padding: 1.25rem 1.25rem 2.5rem;
+  }
+  .projects__image {
+    margin-bottom: 1rem;
+  }
+  .projects__content {
+    margin-bottom: 2rem;
+  }
+  .projects__button {
+    right: 1.25rem;
+  }
+  .projects__collab {
+    margin-top: -50px;
+  }
+  .projects__collab-title {
+    font-size: var(--h3-font-size);
+  }
+  .projects__collab-img {
+    margin-left: 10px;
+    width: 100px;
+  }
+}
+
+
 /* Badge */
 .badge__header {
   margin-top: 10px;
@@ -164,48 +209,4 @@
 }
 .QUASAR__badge {
   background-color: #00237b;
-}
-
-/* For medium devices */
-@media screen and (min-width: 576px) {
-  .projects__container {
-    grid-template-columns: 350px;
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .projects__container {
-    grid-template-columns: repeat(2, 350px);
-  }
-}
-
-/* For large devices */
-@media screen and (min-width: 1150px) {
-  .projects__container {
-    grid-template-columns: repeat(3, 352px);
-    padding-block: 3rem 1rem;
-  }
-  .projects__card {
-    padding: 1.25rem 1.25rem 2.5rem;
-  }
-  .projects__image {
-    margin-bottom: 1rem;
-  }
-  .projects__content {
-    margin-bottom: 2rem;
-  }
-  .projects__button {
-    right: 1.25rem;
-  }
-  .projects__collab {
-    margin-top: -50px;
-  }
-  .projects__collab-title {
-    font-size: var(--h3-font-size);
-  }
-  .projects__collab-img {
-    margin-left: 10px;
-    width: 100px;
-  }
 }

@@ -54,6 +54,7 @@ export const Project = () => {
           Badges={Badge(["REACT", "TAILWIND"])}
         />
       </div>
+
       <Link to="/projects" className="button" style={buttonStyle}>
         <i className="ri-arrow-right-up-fill"></i> Show more...
       </Link>

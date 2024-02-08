@@ -10,11 +10,9 @@ export const Projects = () => {
         <span>My Projects :</span>
       </h2>
       <div className="subtitle">
-        <span>
-          "Showcasing my diverse projects in one place – a testament to
-          creativity, innovation, and passion."
-        </span>
+        <span>"Showcasing my diverse projects in one place – a testament to creativity, innovation, and passion."</span>
       </div>
+
       <div className="projects__container container grid">
         {projects.MyProjects.map((project) => (
           <Card
@@ -35,22 +33,16 @@ export const Projects = () => {
         <span>Collaboration Projects :</span>
       </h2>
       <div className="subtitle" style={{ marginBottom: "50px" }}>
-        <span>
-          "Highlighting the Diversity of Collaborative Projects – A Testament to
-          Collaboration, Innovation, and Dedication."
-        </span>
+        <span>"Highlighting the Diversity of Collaborative Projects – A Testament toCollaboration, Innovation, and Dedication."</span>
       </div>
 
       {/* TimeWebId */}
       <div className="projects__container container grid">
         <div className="projects__collab-title">
           <div className="projects__collab-logo">
-            Projects with <a href="https://timewebid.com" target="_blank" rel="noopener noreferrer" className="projects__timewebid">TimeWebId</a>
-            <img
-              src="/img/projects/TimeWebId/Logo.png"
-              alt="TimeWebId"
-              className="projects__collab-img"
-            />
+            Projects with 
+            <a href="https://timewebid.com" target="_blank" rel="noopener noreferrer" className="projects__timewebid">TimeWebId</a>
+            <img src="/img/projects/TimeWebId/Logo.png" alt="TimeWebId" className="projects__collab-img" />
           </div>
         </div>
       </div>

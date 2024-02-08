@@ -51,6 +51,7 @@ export const Experience = () => {
           ))}
         </div>
       </div>
+
       <Link to="/experiences" className="button" style={buttonStyle}>
         <i className="ri-arrow-right-up-fill"></i> Show details...
       </Link>

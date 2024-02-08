@@ -5,29 +5,23 @@ import skill from "/src/data/skills.json";
 export const Skills = () => {
   return (
     <section className="skills__container" id="skill">
+      {/* Title */}
       <h2 className="section__title-2">
         <span>My Skills :</span>
       </h2>
       <div className="subtitle">
-        <span>
-          "Elevating Possibilities: A Snapshot of My Proficiencies and
-          Expertise."
-        </span>
+        <span>"Elevating Possibilities: A Snapshot of My Proficiencies and Expertise."</span>
       </div>
 
       {/* FRONTEND DEVELOPMENT */}
-      <h2 className="skills__type">FrontEnd Development :</h2>
+      <h2 className="skills__type">Frontend Development :</h2>
       <div className="skills__content">
         <div className="skills__column">
           {skill.Frontend.map((skill, id) => {
             return (
               <div key={id} className="skills__list">
                 <div className="skills__Image-container">
-                  <img
-                    src={skill.imageSrc}
-                    alt={skill.title}
-                    className="skills__image"
-                  />
+                  <img src={skill.imageSrc} alt={skill.title} className="skills__image" />
                 </div>
                 <p className="skills__title">{skill.title}</p>
               </div>
@@ -44,11 +38,7 @@ export const Skills = () => {
             return (
               <div key={id} className="skills__list">
                 <div className="skills__Image-container">
-                  <img
-                    src={skill.imageSrc}
-                    alt={skill.title}
-                    className="skills__image"
-                  />
+                  <img src={skill.imageSrc} alt={skill.title} className="skills__image" />
                 </div>
                 <p className="skills__title">{skill.title}</p>
               </div>
@@ -65,11 +55,7 @@ export const Skills = () => {
             return (
               <div key={id} className="skills__list">
                 <div className="skills__Image-container">
-                  <img
-                    src={skill.imageSrc}
-                    alt={skill.title}
-                    className="skills__image"
-                  />
+                  <img src={skill.imageSrc} alt={skill.title} className="skills__image" />
                 </div>
                 <p className="skills__title">{skill.title}</p>
               </div>

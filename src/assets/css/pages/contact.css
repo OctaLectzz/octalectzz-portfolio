@@ -306,6 +306,9 @@
   }
 }
 
+
+
+
 /* Contact Page */
 .contacts__container {
   grid-template-columns: repeat(2, max-content);
@@ -396,6 +399,9 @@
   border-radius: 0.75rem;
   padding: 1.5rem;
   z-index: 1;
+}
+.dark-theme .contacts__form-input {
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .contacts__form-tag {

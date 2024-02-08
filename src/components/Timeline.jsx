@@ -20,20 +20,16 @@ export const WorkTimeline = ({ Date, Place, Status, Role, Description }) => {
       }}
     >
       <TimelineItem>
+        {/* List */}
         <TimelineSeparator>
-          <TimelineDot
-            className="experiences__dot"
-            style={{ backgroundColor: "var(--black-color)" }}
-          />
+          <TimelineDot className="experiences__dot" style={{ backgroundColor: "var(--black-color)" }} />
           <TimelineConnector />
         </TimelineSeparator>
+
+        {/* Content */}
         <TimelineContent>
-          <div className="experiences__title">
-            {Date} | {Place}
-          </div>
-          <div className="experiences__subtitle">
-            {Status} - {Role}
-          </div>
+          <div className="experiences__title">{Date} | {Place}</div>
+          <div className="experiences__subtitle">{Status} - {Role}</div>
           <p className="experiences__description">{Description}</p>
         </TimelineContent>
       </TimelineItem>
@@ -54,16 +50,16 @@ export const EducationTimeline = ({ School, Date, Major, Description }) => {
         }}
       >
         <TimelineItem>
+          {/* Content */}
           <TimelineOppositeContent color="textSecondary">
             <div className="experiences__title">{School} | {Date}</div>
             <div className="experiences__subtitle">{Major}</div>
             <p className="experiences__description">{Description}</p>
           </TimelineOppositeContent>
+
+          {/* List */}
           <TimelineSeparator>
-            <TimelineDot
-              className="experiences__dot"
-              style={{ backgroundColor: "var(--black-color)" }}
-            />
+            <TimelineDot className="experiences__dot" style={{ backgroundColor: "var(--black-color)" }} />
             <TimelineConnector />
           </TimelineSeparator>
         </TimelineItem>

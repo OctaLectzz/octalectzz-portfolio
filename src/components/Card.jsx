@@ -1,27 +1,10 @@
-export const Card = ({
-  Image,
-  Type,
-  Title,
-  Description,
-  LinkSourceCode,
-  LinkDemoApp,
-  Badges,
-}) => {
-  const cursor = {
-    cursor: "pointer",
-  };
-
+export const Card = ({ Image, Type, Title, Description, LinkSourceCode, LinkDemoApp, Badges }) => {
   return (
     <article className="projects__card">
       <div className="projects__image">
         <img src={Image} alt="image" className="projects__img" />
 
-        <a
-          href={LinkDemoApp}
-          target="_blank"
-          className="projects__button button"
-          style={cursor}
-        >
+        <a href={LinkDemoApp} target="_blank" className="projects__button button" style={{ cursor: 'pointer' }}>
           <i className="ri-arrow-right-up-line"></i>
         </a>
       </div>
@@ -36,21 +19,11 @@ export const Card = ({
       </div>
 
       <div className="projects__buttons">
-        <a
-          href={LinkSourceCode}
-          target="_blank"
-          className="projects__link"
-          style={cursor}
-        >
+        <a href={LinkSourceCode} target="_blank" className="projects__link" style={{ cursor: 'pointer' }}>
           <i className="ri-github-line"></i> Source Code
         </a>
 
-        <a
-          href={LinkDemoApp}
-          target="_blank"
-          className="projects__link"
-          style={cursor}
-        >
+        <a href={LinkDemoApp} target="_blank" className="projects__link" style={{ cursor: 'pointer' }}>
           <i className="ri-dribbble-line"></i> Demo App
         </a>
       </div>

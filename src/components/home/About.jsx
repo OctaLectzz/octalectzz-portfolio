@@ -10,26 +10,18 @@ export const About = () => {
           <span>About Me.</span>
         </h2>
 
+        {/* Photo */}
         <div className="about__perfil">
           <div className="about__image">
-            <img
-              src={imagePath + "About Profile.jpg"}
-              alt="image"
-              className="about__img"
-            />
-
+            <img src={imagePath + "About Profile.jpg"} alt="profile image" className="about__img" />
             <div className="about__shadow"></div>
-
             <div className="geometric-box"></div>
-            <img
-              src={imagePath + "random-lines.svg"}
-              alt=""
-              className="about__line"
-            />
+            <img src={imagePath + "random-lines.svg"} alt="" className="about__line" />
             <div className="about__box"></div>
           </div>
         </div>
 
+        {/* Description */}
         <div className="about__info">
           <p className="about__description">
             Hi everyone, My full name is <b>Octavyan Putra Ramadhan</b>. {/* I am a
@@ -48,12 +40,10 @@ export const About = () => {
               <b>Tools :</b> HTML, CSS, JavaScript, PHP, Git, Dart.
             </li>
             <li className="about__item">
-              <b>Framework :</b> Bootstrap, Tailwind CSS, Laravel, React JS,
-              Flutter, Vue JS, Quasar.
+              <b>Framework :</b> Bootstrap, Tailwind CSS, Laravel, React JS, Flutter, Vue JS, Quasar.
             </li>
             <li className="about__item">
-              <b>Other :</b> Canva, After Effect, Adobe Lightroom, Figma, Alight
-              Motion, Capcut.
+              <b>Other :</b> Canva, After Effect, Adobe Lightroom, Figma, Alight Motion, Capcut.
             </li>
           </ul>
 
@@ -62,11 +52,7 @@ export const About = () => {
               <i className="ri-send-plane-line"></i> Contact Me
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/octalectzz"
-              target="_blank"
-              className="button__ghost"
-            >
+            <a href="https://www.linkedin.com/in/octalectzz" target="_blank" className="button__ghost">
               <i className="ri-linkedin-line"></i>
             </a>
           </div>

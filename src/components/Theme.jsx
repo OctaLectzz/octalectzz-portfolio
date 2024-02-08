@@ -26,9 +26,7 @@ export const Theme = () => {
 
   return (
     <div id="theme-button" className="change-theme" onClick={toggleTheme}>
-      <i
-        className={`ri ${theme === "dark" ? "ri-moon-line" : "ri-sun-line"}`}
-      ></i>
+      <i className={`ri ${theme === "dark" ? "ri-moon-line" : "ri-sun-line"}`}></i>
     </div>
   );
 };

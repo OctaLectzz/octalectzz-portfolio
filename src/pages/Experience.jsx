@@ -5,9 +5,13 @@ import { WorkTimeline, EducationTimeline } from "/src/components/Timeline";
 export const Experience = () => {
   return (
     <section className="experience container section" id="experience">
+      {/* Title */}
       <h2 className="section__title-2">
         <span>Experience :</span>
       </h2>
+      <div className="subtitle">
+        <span>"Embark on a journey through my experiences, where every moment has shaped me into the professional I am today."</span>
+      </div>
 
       {/* Works */}
       <div className="experiences__work">
