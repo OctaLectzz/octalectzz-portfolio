@@ -45,4 +45,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Preview
 
-<img src="/public/preview.png" width="400" alt="Laravel Logo">
+<img src="/public/preview.png" alt="Laravel Logo">
