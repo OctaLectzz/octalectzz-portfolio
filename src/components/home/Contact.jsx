@@ -82,12 +82,12 @@ export const Contact = () => {
 
             <div className="contact__social-links">
               {/* WhatsApp */}
-              <a href="https://wa.me/62895605210002" target="_blank" rel="noopener noreferrer" className="contact__social-link">
+              <a href="https://wa.me/6289690220404" target="_blank" rel="noopener noreferrer" className="contact__social-link">
                 <i className="ri-whatsapp-line"></i>
               </a>
 
               {/* Instagram */}
-              <a href="https://www.instagram.com/octalectzz/" target="_blank" rel="noopener noreferrer" className="contact__social-link">
+              <a href="https://www.instagram.com/octalectzz" target="_blank" rel="noopener noreferrer" className="contact__social-link">
                 <i className="ri-instagram-line"></i>
               </a>
 

@@ -18,7 +18,7 @@ export const Footer = () => {
             </a>
 
             {/* Instagram */}
-            <a href="https://www.instagram.com/octalectzz/" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+            <a href="https://www.instagram.com/octalectzz" target="_blank" rel="noopener noreferrer" className="footer__social-link">
               <i className="ri-instagram-line"></i>
             </a>
 

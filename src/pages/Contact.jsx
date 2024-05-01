@@ -39,9 +39,9 @@ export const Contact = () => {
             <div className="contacts__card">
               <i className="ri-whatsapp-line contacts__card-icon"></i>
               <h3 className="contacts__card-title">WhatsApp</h3>
-              <span className="contacts__card-data">0895-6052-10002</span>
+              <span className="contacts__card-data">0896-9022-0404</span>
 
-              <a href="https://api.whatsapp.com/send?phone=62895605210002&text=Hello, Octa Keren Pinter dan Baik hati" target="_blank" rel="noopener noreferrer" className="contacts__button">
+              <a href="https://api.whatsapp.com/send?phone=6289690220404&text=Hello, Octa Keren Pinter dan Baik hati" target="_blank" rel="noopener noreferrer" className="contacts__button">
                 Write me <i className="ri-arrow-right-line contacts__button-icon"></i>
               </a>
             </div>

@@ -21,7 +21,7 @@ export const Hero = () => {
           {/* Social Media */}
           <div className="home__social">
             {/* Instagram */}
-            <a href="https://www.instagram.com/octalectzz/" target="_blank" rel="noopener noreferrer" className="home__social-link">
+            <a href="https://www.instagram.com/octalectzz" target="_blank" rel="noopener noreferrer" className="home__social-link">
               <i className="ri-instagram-line"></i>
             </a>
 
