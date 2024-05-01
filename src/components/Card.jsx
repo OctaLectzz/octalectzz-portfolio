@@ -28,5 +28,5 @@ export const Card = ({ Image, Type, Title, Description, LinkSourceCode, LinkDemo
         </a>
       </div>
     </article>
-  );
-};
+  )
+}

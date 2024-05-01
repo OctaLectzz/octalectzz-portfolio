@@ -1,6 +1,5 @@
-import "/src/assets/css/pages/skill.css";
-import React from "react";
-import skill from "/src/data/skills.json";
+import '/src/assets/css/pages/skill.css'
+import skill from '/src/data/skills.json'
 
 export const Skills = () => {
   return (
@@ -10,7 +9,7 @@ export const Skills = () => {
         <span>My Skills :</span>
       </h2>
       <div className="subtitle">
-        <span>"Elevating Possibilities: A Snapshot of My Proficiencies and Expertise."</span>
+        <span>&quot;Elevating Possibilities: A Snapshot of My Proficiencies and Expertise.&quot;</span>
       </div>
 
       {/* FRONTEND DEVELOPMENT */}
@@ -25,7 +24,7 @@ export const Skills = () => {
                 </div>
                 <p className="skills__title">{skill.title}</p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -42,7 +41,7 @@ export const Skills = () => {
                 </div>
                 <p className="skills__title">{skill.title}</p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -59,10 +58,10 @@ export const Skills = () => {
                 </div>
                 <p className="skills__title">{skill.title}</p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

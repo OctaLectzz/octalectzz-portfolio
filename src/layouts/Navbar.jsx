@@ -1,19 +1,19 @@
-import "/src/assets/css/navbar.css";
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Theme } from "/src/components/Theme";
+import '/src/assets/css/navbar.css'
+import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { Theme } from '/src/components/Theme'
 
 export const Navbar = () => {
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
-  const location = useLocation();
+  const [isMenuVisible, setIsMenuVisible] = useState(false)
+  const location = useLocation()
 
   const showMenu = () => {
-    setIsMenuVisible(true);
-  };
+    setIsMenuVisible(true)
+  }
 
   const hideMenu = () => {
-    setIsMenuVisible(false);
-  };
+    setIsMenuVisible(false)
+  }
 
   return (
     <>
@@ -26,29 +26,37 @@ export const Navbar = () => {
           </a>
 
           {/* Menu */}
-          <div className={`nav__menu ${isMenuVisible ? "show-menu" : ""}`} id="nav-menu">
+          <div className={`nav__menu ${isMenuVisible ? 'show-menu' : ''}`} id="nav-menu">
             <span className="nav__title">Menu</span>
             <h3 className="nav__name">OctaLectzz</h3>
 
             <ul className="nav__list">
               {/* Home */}
               <li className="nav__item" onClick={hideMenu}>
-                <Link to="/" className={location.pathname === "/" ? "nav__link active-link" : "nav__link"}>Home</Link>
+                <Link to="/" className={location.pathname === '/' ? 'nav__link active-link' : 'nav__link'}>
+                  Home
+                </Link>
               </li>
 
               {/* Experiences */}
               <li className="nav__item" onClick={hideMenu}>
-                <Link to="/experiences" className={location.pathname === "/experiences" ? "nav__link active-link" : "nav__link"}>Experience</Link>
+                <Link to="/experiences" className={location.pathname === '/experiences' ? 'nav__link active-link' : 'nav__link'}>
+                  Experience
+                </Link>
               </li>
 
               {/* Skills */}
               <li className="nav__item" onClick={hideMenu}>
-                <Link to="/skills" className={location.pathname === "/skills" ? "nav__link active-link" : "nav__link"}>Skills</Link>
+                <Link to="/skills" className={location.pathname === '/skills' ? 'nav__link active-link' : 'nav__link'}>
+                  Skills
+                </Link>
               </li>
 
               {/* Projects */}
               <li className="nav__item" onClick={hideMenu}>
-                <Link to="/projects" className={location.pathname === "/projects" ? "nav__link active-link" : "nav__link"}>Projects</Link>
+                <Link to="/projects" className={location.pathname === '/projects' ? 'nav__link active-link' : 'nav__link'}>
+                  Projects
+                </Link>
               </li>
 
               {/* Contact */}
@@ -77,5 +85,5 @@ export const Navbar = () => {
         </nav>
       </header>
     </>
-  );
-};
+  )
+}

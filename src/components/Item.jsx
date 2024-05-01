@@ -7,5 +7,5 @@ export const Item = ({ Name, Icon, Experience }) => {
         <p>{Experience}</p>
       </div>
     </article>
-  );
-};
+  )
+}

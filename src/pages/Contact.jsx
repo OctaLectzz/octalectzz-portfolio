@@ -1,14 +1,14 @@
-import "/src/assets/css/pages/contact.css";
-import { useState, useRef } from "react";
-import { sendEmail } from "/src/components/SendEmail";
+import '/src/assets/css/pages/contact.css'
+import { useState, useRef } from 'react'
+import { sendEmail } from '/src/components/SendEmail'
 
 export const Contact = () => {
-  const form = useRef();
-  const [contactMessage, setContactMessage] = useState("");
+  const form = useRef()
+  const [contactMessage, setContactMessage] = useState('')
 
   const handleSubmit = (e) => {
-    sendEmail(e, setContactMessage, form);
-  };
+    sendEmail(e, setContactMessage, form)
+  }
 
   return (
     <section className="contact section" id="contact">
@@ -17,7 +17,7 @@ export const Contact = () => {
         <span>Get in Touch :</span>
       </h2>
       <div className="subtitle">
-        <span>"I will read all emails. Send me any message you want and I'll get back to you."</span>
+        <span>&quot;I will read all emails. Send me any message you want and I&apos;ll get back to you.&quot;</span>
       </div>
 
       <div className="contacts__container container grid">
@@ -32,8 +32,7 @@ export const Contact = () => {
               <span className="contacts__card-data">octalectzz@gmail.com</span>
 
               <a href="mailto:octalectzz@gmail.com.com" target="_blank" rel="noopener noreferrer" className="contacts__button">
-                Write me{" "}
-                <i className="ri-arrow-right-line contacts__button-icon"></i>
+                Write me <i className="ri-arrow-right-line contacts__button-icon"></i>
               </a>
             </div>
 
@@ -43,8 +42,7 @@ export const Contact = () => {
               <span className="contacts__card-data">0895-6052-10002</span>
 
               <a href="https://api.whatsapp.com/send?phone=62895605210002&text=Hello, Octa Keren Pinter dan Baik hati" target="_blank" rel="noopener noreferrer" className="contacts__button">
-                Write me{" "}
-                <i className="ri-arrow-right-line contacts__button-icon"></i>
+                Write me <i className="ri-arrow-right-line contacts__button-icon"></i>
               </a>
             </div>
 
@@ -54,8 +52,7 @@ export const Contact = () => {
               <span className="contacts__card-data">@octalectzz</span>
 
               <a href="https://t.me/octalectzz" target="_blank" rel="noopener noreferrer" className="contacts__button">
-                Write me{" "}
-                <i className="ri-arrow-right-line contacts__button-icon"></i>
+                Write me <i className="ri-arrow-right-line contacts__button-icon"></i>
               </a>
             </div>
           </div>
@@ -92,5 +89,5 @@ export const Contact = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

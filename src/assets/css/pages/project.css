@@ -40,7 +40,7 @@
 }
 
 .projects__subtitle::after {
-  content: "";
+  content: '';
   width: 20px;
   height: 1px;
   background-color: var(--text-color);
@@ -109,6 +109,9 @@
   margin-left: 5px;
   color: var(--title-color);
   font-size: var(--h2-font-size);
+  text-decoration: none;
+}
+.projects__timewebid:hover {
   text-decoration: underline;
 }
 
@@ -127,7 +130,7 @@
 }
 
 /* For large devices */
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1115px) {
   .projects__container {
     grid-template-columns: repeat(3, 352px);
     padding-block: 3rem 1rem;
@@ -155,7 +158,6 @@
     width: 100px;
   }
 }
-
 
 /* Badge */
 .badge__header {

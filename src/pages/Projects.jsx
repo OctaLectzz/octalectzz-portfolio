@@ -1,6 +1,6 @@
-import projects from "/src/data/projects.json";
-import { Card } from "/src/components/Card";
-import { Badge } from "/src/components/Badge";
+import projects from '/src/data/projects.json'
+import { Card } from '/src/components/Card'
+import { Badge } from '/src/components/Badge'
 
 export const Projects = () => {
   return (
@@ -10,9 +10,8 @@ export const Projects = () => {
         <span>My Projects :</span>
       </h2>
       <div className="subtitle">
-        <span>"Showcasing my diverse projects in one place – a testament to creativity, innovation, and passion."</span>
+        <span>&quot;Showcasing my diverse projects in one place - a testament to creativity, innovation, and passion.&quot;</span>
       </div>
-
       <div className="projects__container container grid">
         {projects.MyProjects.map((project) => (
           <Card
@@ -29,19 +28,21 @@ export const Projects = () => {
       </div>
 
       {/* Collaboration Projects */}
-      <h2 className="section__title-1" style={{ marginTop: "100px" }}>
+      <h2 className="section__title-1" style={{ marginTop: '100px' }}>
         <span>Collaboration Projects :</span>
       </h2>
-      <div className="subtitle" style={{ marginBottom: "50px" }}>
-        <span>"Highlighting the Diversity of Collaborative Projects – A Testament toCollaboration, Innovation, and Dedication."</span>
+      <div className="subtitle" style={{ marginBottom: '50px' }}>
+        <span>&quot;Highlighting the Diversity of Collaborative Projects - A Testament to Collaboration, Innovation, and Dedication.&quot;</span>
       </div>
 
       {/* TimeWebId */}
       <div className="projects__container container grid">
         <div className="projects__collab-title">
           <div className="projects__collab-logo">
-            Projects with 
-            <a href="https://timewebid.com" target="_blank" rel="noopener noreferrer" className="projects__timewebid">TimeWebId</a>
+            Projects with
+            <a href="https://timewebid.com" target="_blank" rel="noopener noreferrer" className="projects__timewebid">
+              TimeWebId
+            </a>
             <img src="/img/projects/TimeWebId/Logo.png" alt="TimeWebId" className="projects__collab-img" />
           </div>
         </div>
@@ -61,5 +62,5 @@ export const Projects = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}

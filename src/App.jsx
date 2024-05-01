@@ -1,63 +1,63 @@
 // React
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // CSS
-import "./assets/css/theme.css";
+import './assets/css/theme.css'
 
 // Components
-import { ScrollUp } from "./components/Scroll";
+import { ScrollUp } from './components/Scroll'
 
 // Layouts
-import { Navbar } from "./layouts/Navbar";
-import { Footer } from "./layouts/Footer";
+import { Navbar } from './layouts/Navbar'
+import { Footer } from './layouts/Footer'
 
 // Pages
-import { Home } from "./pages/Home";
-import { Experience } from "./pages/Experience";
-import { Skills } from "./pages/Skills";
-import { Projects } from "./pages/Projects";
-import { Contact } from "./pages/Contact";
+import { Home } from './pages/Home'
+import { Experience } from './pages/Experience'
+import { Skills } from './pages/Skills'
+import { Projects } from './pages/Projects'
+import { Contact } from './pages/Contact'
 
 const HomePage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
-  return <Home />;
-};
+  return <Home />
+}
 
 const ExperiencePage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
-  return <Experience />;
-};
+  return <Experience />
+}
 
 const ProjectsPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
-  return <Projects />;
-};
+  return <Projects />
+}
 
 const SkillsPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
-  return <Skills />;
-};
+  return <Skills />
+}
 
 const ContactPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
-  return <Contact />;
-};
+  return <Contact />
+}
 
 function App() {
   return (
@@ -80,7 +80,7 @@ function App() {
       {/* SCROLL UP */}
       <ScrollUp />
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -72,7 +72,7 @@
 }
 
 .about__description::after {
-  content: "";
+  content: '';
   width: 20px;
   height: 1px;
   background-color: var(--title-color);
@@ -108,13 +108,13 @@
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .about__container {
-    grid-template-columns: 350px;
+    grid-template-columns: 650px;
     justify-content: center;
   }
 }
 
 /* For large devices */
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1115px) {
   .about__container {
     grid-template-columns: 440px 525px;
     gap: 1rem 9rem;

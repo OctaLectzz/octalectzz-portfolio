@@ -57,7 +57,7 @@
 }
 
 /* For large devices */
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1115px) {
   .footer__container {
     padding-block: 4rem;
     grid-template-columns: repeat(2, max-content);

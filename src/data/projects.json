@@ -4,8 +4,8 @@
       "Image": "/img/projects/Students List.png",
       "Type": "Website",
       "Title": "Students List",
-      "Description": "A website that displays a list of students in a school. This website was created using HTML and CSS",
-      "LinkDemoApp": "https://lectzz-bisa-glory.netlify.app/",
+      "Description": "Students List is an online platform designed to streamline student management processes.",
+      "LinkDemoApp": "https://lectzz-bisa-glory.netlify.app",
       "LinkSourceCode": "https://github.com/OctaLectzz/Daftar-Siswa",
       "Badges": ["HTML", "CSS"]
     },
@@ -13,8 +13,8 @@
       "Image": "/img/projects/M-one Tech Internet Service.png",
       "Type": "Website",
       "Title": "M-one Tech Internet Service",
-      "Description": "Website to serve the purchase of internet packages at affordable prices. Created using HTML dan Bootstrap CSS.",
-      "LinkDemoApp": "https://m-one-tech-octavyan.netlify.app/",
+      "Description": "M-one Tech Internet Service is a reliable network provider website offering seamless connectivity solutions.",
+      "LinkDemoApp": "https://m-one-tech-octavyan.netlify.app",
       "LinkSourceCode": "https://github.com/OctaLectzz/M-One-Tech-Internet-Service",
       "Badges": ["HTML", "BOOTSTRAP"]
     },
@@ -22,8 +22,8 @@
       "Image": "/img/projects/Portfolio Example.png",
       "Type": "Website",
       "Title": "Portfolio Example",
-      "Description": "This is an example of a Portfolio Website using the Bootstrap framework. Created using HTML dan Bootstrap.",
-      "LinkDemoApp": "https://portfolio-octavyan-xipplg2.netlify.app/",
+      "Description": "Portfolio Example is a versatile website platform designed for showcasing creative work and professional achievements.",
+      "LinkDemoApp": "https://portfolio-octavyan-xipplg2.netlify.app",
       "LinkSourceCode": "https://github.com/OctaLectzz/Portfolio",
       "Badges": ["HTML", "BOOTSTRAP"]
     },
@@ -31,8 +31,8 @@
       "Image": "/img/projects/Simple TodoList.png",
       "Type": "App",
       "Title": "Simple TodoList",
-      "Description": "Application to remember or save a list of activities that you want to do or have done. Created using PHP and MySQL",
-      "LinkDemoApp": "http://todolectzz.wuaze.com/",
+      "Description": "The TodoList app is a practical tool designed to help users organize their tasks and manage their daily activities effectively.",
+      "LinkDemoApp": "http://todolectzz.wuaze.com",
       "LinkSourceCode": "https://github.com/OctaLectzz/TodoList",
       "Badges": ["PHP", "MySQL"]
     },
@@ -40,36 +40,54 @@
       "Image": "/img/projects/Simple CMS.png",
       "Type": "Website",
       "Title": "Simple CMS",
-      "Description": "A website for spreading news, created using the Bootstrap and Laravel 9 framework.",
-      "LinkDemoApp": "https://cmspost.000webhostapp.com/",
+      "Description": "Simple CMS is a straightforward news and blog post website that focuses on delivering concise and relevant content.",
+      "LinkDemoApp": "https://cmspost.000webhostapp.com",
       "LinkSourceCode": "https://github.com/OctaLectzz/octa-project-bootcamp",
-      "Badges": ["LARAVEL", "BOOTSTRAP", "MySQL"]
-    },
-    {
-      "Image": "/img/projects/WheelsRent.png",
-      "Type": "Website",
-      "Title": "WheelsRent",
-      "Description": "A car rental website that allows users to easily rent cars online. Built using Laravel 10 framework and Bootstrap.",
-      "LinkDemoApp": "https://wheelsrents.000webhostapp.com/",
-      "LinkSourceCode": "https://github.com/OctaLectzz/WheelsRent",
       "Badges": ["LARAVEL", "BOOTSTRAP", "MySQL"]
     },
     {
       "Image": "/img/projects/Lotus.png",
       "Type": "Website",
       "Title": "Lotus",
-      "Description": "A news website that allows users or admins to add, edit and delete posts. Built using Laravel API and React JS.",
+      "Description": "Lotus is a dynamic online platform offering a diverse range of news and blog posts. With its sleek design and intuitive interface.",
       "LinkSourceCode": "https://github.com/OctaLectzz/CMS-Project",
       "Badges": ["LARAVEL", "REACT", "BOOTSTRAP", "MySQL"]
+    },
+    {
+      "Image": "/img/projects/WheelsRent.png",
+      "Type": "Website",
+      "Title": "WheelsRent",
+      "Description": "WheelsRent offers a seamless online car rental service, providing a wide selection of user-friendly cars for travel.",
+      "LinkDemoApp": "https://wheelsrent.winecoders.com",
+      "LinkSourceCode": "https://github.com/OctaLectzz/WheelsRent",
+      "Badges": ["LARAVEL", "BOOTSTRAP", "MySQL"]
     },
     {
       "Image": "/img/projects/PPLG 2 Class.png",
       "Type": "Website",
       "Title": "PPLG 2 Class",
       "Description": "A website for the PPLG 2 class at SMK Muhammadiyah 1 Sukoharjo, there is an anonymous message on it.",
-      "LinkDemoApp": "https://pepeelgedua.vercel.app/",
+      "LinkDemoApp": "https://pepeelgedua.vercel.app",
       "LinkSourceCode": "https://github.com/OctaLectzz/pplg2-class",
       "Badges": ["REACT", "TAILWIND"]
+    },
+    {
+      "Image": "/img/projects/LumineFrame.png",
+      "Type": "Website & App",
+      "Title": "LumineFrame",
+      "Description": "LumineFrame is a captivating online platform dedicated to showcasing stunning photo galleries.",
+      "LinkDemoApp": "https://lumineframe.winecoders.com",
+      "LinkSourceCode": "https://github.com/OctaLectzz/lumineframe-fe",
+      "Badges": ["LARAVEL", "QUASAR", "MySQL"]
+    },
+    {
+      "Image": "/img/projects/Laundry System.png",
+      "Type": "Website & App",
+      "Title": "Laundry System",
+      "Description": "The Laundry System website simplifies your laundry routine. Schedule pickups, track orders, and get useful tips all in one place.",
+      "LinkDemoApp": "https://camelia.laundry.winecoders.com",
+      "LinkSourceCode": "https://github.com/OctaLectzz/laundry-fe",
+      "Badges": ["LARAVEL", "QUASAR", "MySQL"]
     }
   ],
 
@@ -79,7 +97,7 @@
       "Type": "Website",
       "Title": "Database Tower Transmisi PLN UIP3B Sulawesi",
       "Description": "This Projects serves as a valuable resource for stakeholders involved in the management, maintenance, and development of the transmission infrastructure in Sulawesi.",
-      "LinkDemoApp": "https://tower.p3bsulawesi.co.id/",
+      "LinkDemoApp": "https://tower.p3bsulawesi.co.id",
       "Badges": ["LARAVEL", "MySQL", "VUE", "QUASAR"]
     },
     {
@@ -87,7 +105,7 @@
       "Type": "App",
       "Title": "EasyCareHub",
       "Description": "EasyCareHub is a cutting-edge MCO (Managed Care Organization) application designed to streamline and enhance healthcare management processes for both providers and patients.",
-      "LinkDemoApp": "https://cek.timewebid.com/",
+      "LinkDemoApp": "https://cek.timewebid.com",
       "Badges": ["LARAVEL", "MySQL", "VUE", "QUASAR"]
     },
     {
@@ -95,7 +113,7 @@
       "Type": "Website",
       "Title": "Edukarya",
       "Description": "Edukarya is an integrated platform that serves as both an event management hub and an educational resource center, offering a wide range of learning materials and facilitating participation in events across various disciplines.",
-      "LinkDemoApp": "https://university.timewebid.com/",
+      "LinkDemoApp": "https://university.timewebid.com",
       "Badges": ["LARAVEL", "MySQL", "VUE", "QUASAR"]
     }
   ]

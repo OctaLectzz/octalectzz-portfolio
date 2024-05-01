@@ -1,17 +1,17 @@
-import "/src/assets/css/pages/experience.css";
-import experiences from "/src/data/experiences.json";
-import { Link } from "react-router-dom";
-import { WorkTimeline, EducationTimeline } from "/src/components/Timeline";
+import '/src/assets/css/pages/experience.css'
+import { Link } from 'react-router-dom'
+import experiences from '/src/data/experiences.json'
+import { WorkTimeline, EducationTimeline } from '/src/components/Timeline'
 
 export const Experience = () => {
   const buttonStyle = {
-    marginTop: "-50px",
-    display: "flex",
-    justifyContent: "center",
-    width: "35vh",
-    height: "6vh",
-    margin: "10px auto",
-  };
+    marginTop: '-50px',
+    display: 'flex',
+    justifyContent: 'center',
+    width: '35vh',
+    height: '6vh',
+    margin: '10px auto'
+  }
 
   return (
     <section className="experiences section" id="experiences">
@@ -26,13 +26,7 @@ export const Experience = () => {
             <h2>Works</h2>
           </div>
           {experiences.Works.map((experience) => (
-            <WorkTimeline
-              key={experience.Date}
-              Date={experience.Date}
-              Place={experience.Place}
-              Status={experience.Status}
-              Role={experience.Role}
-            />
+            <WorkTimeline key={experience.Date} Date={experience.Date} Place={experience.Place} Status={experience.Status} Role={experience.Role} />
           ))}
         </div>
 
@@ -42,12 +36,7 @@ export const Experience = () => {
             <h2>Education</h2>
           </div>
           {experiences.Education.map((experience) => (
-            <EducationTimeline
-              key={experience.School}
-              School={experience.School}
-              Date={experience.Date}
-              Major={experience.Major}
-            />
+            <EducationTimeline key={experience.School} School={experience.School} Date={experience.Date} Major={experience.Major} />
           ))}
         </div>
       </div>
@@ -56,5 +45,5 @@ export const Experience = () => {
         <i className="ri-arrow-right-up-fill"></i> Show details...
       </Link>
     </section>
-  );
-};
+  )
+}

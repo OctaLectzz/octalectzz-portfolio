@@ -1,18 +1,18 @@
-import "/src/assets/css/pages/project.css";
-import { Link } from "react-router-dom";
-import { Card } from "/src/components/Card";
-import { Badge } from "/src/components/Badge";
+import '/src/assets/css/pages/project.css'
+import { Link } from 'react-router-dom'
+import { Card } from '/src/components/Card'
+import { Badge } from '/src/components/Badge'
 
 export const Project = () => {
-  const projectImg = "/img/projects/";
+  const projectImg = '/img/projects/'
 
   const buttonStyle = {
-    display: "flex",
-    justifyContent: "center",
-    width: "35vh",
-    height: "6vh",
-    margin: "10px auto",
-  };
+    display: 'flex',
+    justifyContent: 'center',
+    width: '35vh',
+    height: '6vh',
+    margin: '10px auto'
+  }
 
   return (
     <section className="projects section" id="projects">
@@ -23,35 +23,35 @@ export const Project = () => {
       <div className="projects__container container grid">
         {/* Simple CMS */}
         <Card
-          Image={projectImg + "Simple CMS.png"}
+          Image={projectImg + 'LumineFrame.png'}
           Type="Website"
-          Title="Simple CMS"
-          Description="A website for spreading news, created using the Bootstrap and Laravel 9 framework."
-          LinkDemoApp="https://cmspost.000webhostapp.com/"
-          LinkSourceCode="https://github.com/OctaLectzz/octa-project-bootcamp"
-          Badges={Badge(["LARAVEL", "BOOTSTRAP", "MySQL"])}
+          Title="LumineFrame"
+          Description="LumineFrame is a captivating online platform dedicated to showcasing stunning photo galleries."
+          LinkDemoApp="https://lumineframe.winecoders.com"
+          LinkSourceCode="https://github.com/OctaLectzz/lumineframe-fe"
+          Badges={Badge(['LARAVEL', 'QUASAR', 'MySQL'])}
         />
 
         {/* WheelsRent */}
         <Card
-          Image={projectImg + "WheelsRent.png"}
+          Image={projectImg + 'WheelsRent.png'}
           Type="Website"
           Title="WheelsRent"
-          Description="A car rental website that allows users to easily rent cars online. Built using Laravel 10 framework and Bootstrap."
-          LinkDemoApp="https://wheelsrents.000webhostapp.com/"
+          Description="WheelsRent offers a seamless online car rental service, providing a wide selection of user-friendly cars for travel."
+          LinkDemoApp="https://wheelsrent.winecoders.com"
           LinkSourceCode="https://github.com/OctaLectzz/WheelsRent"
-          Badges={Badge(["LARAVEL", "BOOTSTRAP", "MySQL"])}
+          Badges={Badge(['LARAVEL', 'BOOTSTRAP', 'MySQL'])}
         />
 
         {/* PPLG 2 Class */}
         <Card
-          Image={projectImg + "PPLG 2 Class.png"}
+          Image={projectImg + 'PPLG 2 Class.png'}
           Type="Website"
           Title="PPLG 2 Class"
           Description="A website for the PPLG 2 class at SMK Muhammadiyah 1 Sukoharjo, there is an anonymous message on it."
-          LinkDemoApp="https://pepeelgedua.vercel.app/"
+          LinkDemoApp="https://pepeelgedua.vercel.app"
           LinkSourceCode="https://github.com/OctaLectzz/pplg2-class"
-          Badges={Badge(["REACT", "TAILWIND"])}
+          Badges={Badge(['REACT', 'TAILWIND'])}
         />
       </div>
 
@@ -59,5 +59,5 @@ export const Project = () => {
         <i className="ri-arrow-right-up-fill"></i> Show more...
       </Link>
     </section>
-  );
-};
+  )
+}

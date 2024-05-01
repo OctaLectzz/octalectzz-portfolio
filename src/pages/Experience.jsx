@@ -1,6 +1,6 @@
-import "/src/assets/css/pages/experience.css";
-import experiences from "/src/data/experiences.json";
-import { WorkTimeline, EducationTimeline } from "/src/components/Timeline";
+import '/src/assets/css/pages/experience.css'
+import experiences from '/src/data/experiences.json'
+import { WorkTimeline, EducationTimeline } from '/src/components/Timeline'
 
 export const Experience = () => {
   return (
@@ -10,7 +10,7 @@ export const Experience = () => {
         <span>Experience :</span>
       </h2>
       <div className="subtitle">
-        <span>"Embark on a journey through my experiences, where every moment has shaped me into the professional I am today."</span>
+        <span>&quot;Embark on a journey through my experiences, where every moment has shaped me into the professional I am today.&quot;</span>
       </div>
 
       {/* Works */}
@@ -19,14 +19,7 @@ export const Experience = () => {
           <h2>Works</h2>
         </div>
         {experiences.Works.map((experience) => (
-          <WorkTimeline
-            key={experience.Date}
-            Date={experience.Date}
-            Place={experience.Place}
-            Status={experience.Status}
-            Role={experience.Role}
-            Description={experience.Description}
-          />
+          <WorkTimeline key={experience.Date} Date={experience.Date} Place={experience.Place} Status={experience.Status} Role={experience.Role} Description={experience.Description} />
         ))}
       </div>
 
@@ -36,15 +29,9 @@ export const Experience = () => {
           <h2>Education</h2>
         </div>
         {experiences.Education.map((experience) => (
-          <EducationTimeline
-            key={experience.School}
-            School={experience.School}
-            Date={experience.Date}
-            Major={experience.Major}
-            Description={experience.Description}
-          />
+          <EducationTimeline key={experience.School} School={experience.School} Date={experience.Date} Major={experience.Major} Description={experience.Description} />
         ))}
       </div>
     </section>
-  );
-};
+  )
+}

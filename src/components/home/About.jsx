@@ -1,7 +1,7 @@
-import "/src/assets/css/pages/about.css";
+import '/src/assets/css/pages/about.css'
 
 export const About = () => {
-  const imagePath = "/img/";
+  const imagePath = '/img/'
 
   return (
     <section className="about section" id="about">
@@ -13,10 +13,10 @@ export const About = () => {
         {/* Photo */}
         <div className="about__perfil">
           <div className="about__image">
-            <img src={imagePath + "About Profile.jpg"} alt="profile image" className="about__img" />
+            <img src={imagePath + 'About Profile.jpg'} alt="profile image" className="about__img" />
             <div className="about__shadow"></div>
             <div className="geometric-box"></div>
-            <img src={imagePath + "random-lines.svg"} alt="" className="about__line" />
+            <img src={imagePath + 'random-lines.svg'} alt="" className="about__line" />
             <div className="about__box"></div>
           </div>
         </div>
@@ -24,16 +24,12 @@ export const About = () => {
         {/* Description */}
         <div className="about__info">
           <p className="about__description">
-            Hi everyone, My full name is <b>Octavyan Putra Ramadhan</b>. {/* I am a
-            student of <b>SMK Muhammadiyah 1 Sukoharjo</b>. */} I live in Sukoharjo,
-            Central Java, Indonesia.{/* I was born in Sukoharjo On{" "}
-            <b>04 October 2006</b>. */} My hobbies are <b>Playing Games</b> and <b>Reading Comic</b>.
+            Hi everyone, My full name is <b>Octavyan Putra Ramadhan</b>. I live in Sukoharjo, Central Java, Indonesia.I was born in Sukoharjo On <b>04 October 2006</b>. My hobbies are{' '}
+            <b>Playing Games</b> and <b>Reading Comic</b>.
           </p>
-          {/* <p className="about__description">
-            My hobbies are <b>Playing Games</b> and <b>Reading Comic</b>. I
-            started to enter the IT world in 2021. I want to be a{" "}
-            <b>Fullstack Web Developer</b>.
-          </p> */}
+          <p className="about__description">
+            My hobbies are <b>Playing Games</b> and <b>Try new things</b>. I started to enter the IT world in 2021. I want to be a <b>Fullstack Web Developer</b>.
+          </p>
 
           <ul className="about__list">
             <li className="about__item">
@@ -52,12 +48,12 @@ export const About = () => {
               <i className="ri-send-plane-line"></i> Contact Me
             </a>
 
-            <a href="https://www.linkedin.com/in/octalectzz" target="_blank" className="button__ghost">
+            <a href="https://www.linkedin.com/in/octalectzz" target="_blank" rel="noopener noreferrer" className="button__ghost">
               <i className="ri-linkedin-line"></i>
             </a>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
