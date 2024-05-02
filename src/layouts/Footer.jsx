@@ -22,6 +22,11 @@ export const Footer = () => {
               <i className="ri-instagram-line"></i>
             </a>
 
+            {/* Tiktok */}
+            <a href="https://www.tiktok.com/@allaboutflo4" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+              <i className="ri-tiktok-line"></i>
+            </a>
+
             {/* Twitter */}
             <a href="https://twitter.com/lectzz" target="_blank" rel="noopener noreferrer" className="footer__social-link">
               <i className="ri-twitter-line"></i>
@@ -30,6 +35,16 @@ export const Footer = () => {
             {/* Linkedin */}
             <a href="https://www.linkedin.com/in/octalectzz" target="_blank" rel="noopener noreferrer" className="footer__social-link">
               <i className="ri-linkedin-line"></i>
+            </a>
+
+            {/* Youtube */}
+            <a href="https://www.youtube.com/@Lectzz" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+              <i className="ri-youtube-line"></i>
+            </a>
+
+            {/* Pinterest */}
+            <a href="https://pinterest.com/octalectzz" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+              <i className="ri-pinterest-line"></i>
             </a>
           </div>
         </div>

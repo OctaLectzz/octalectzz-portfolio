@@ -154,7 +154,7 @@
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .home__container {
-    grid-template-columns: 650px;
+    grid-template-columns: 500px;
     justify-content: center;
   }
 }

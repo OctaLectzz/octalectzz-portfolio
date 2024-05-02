@@ -10,11 +10,11 @@
 
 .experiences__work {
   max-width: 700px;
-  margin-bottom: 10px;
+  margin-bottom: 80px;
 }
 
 .experiences__education {
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .experiences__education-left {
@@ -103,7 +103,7 @@
   .experiences__education-left {
     max-width: 700px;
     float: left;
-    width: 400px;
+    width: 350px;
     height: 100px;
   }
 }

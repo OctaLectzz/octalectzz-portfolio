@@ -42,7 +42,7 @@
       "Title": "Simple CMS",
       "Description": "Simple CMS is a straightforward news and blog post website that focuses on delivering concise and relevant content.",
       "LinkDemoApp": "https://cmspost.000webhostapp.com",
-      "LinkSourceCode": "https://github.com/OctaLectzz/octa-project-bootcamp",
+      "LinkSourceCode": "https://github.com/OctaLectzz/simple-cms",
       "Badges": ["LARAVEL", "BOOTSTRAP", "MySQL"]
     },
     {
@@ -77,7 +77,7 @@
       "Title": "LumineFrame",
       "Description": "LumineFrame is a captivating online platform dedicated to showcasing stunning photo galleries.",
       "LinkDemoApp": "https://lumineframe.winecoders.com",
-      "LinkSourceCode": "https://github.com/OctaLectzz/lumineframe-fe",
+      "LinkSourceCode": "https://github.com/OctaLectzz/lumineframe",
       "Badges": ["LARAVEL", "QUASAR", "MySQL"]
     },
     {

@@ -21,14 +21,14 @@ export const Project = () => {
       </h2>
 
       <div className="projects__container container grid">
-        {/* Simple CMS */}
+        {/* LumineFrame */}
         <Card
           Image={projectImg + 'LumineFrame.png'}
           Type="Website"
           Title="LumineFrame"
           Description="LumineFrame is a captivating online platform dedicated to showcasing stunning photo galleries."
           LinkDemoApp="https://lumineframe.winecoders.com"
-          LinkSourceCode="https://github.com/OctaLectzz/lumineframe-fe"
+          LinkSourceCode="https://github.com/OctaLectzz/lumineframe"
           Badges={Badge(['LARAVEL', 'QUASAR', 'MySQL'])}
         />
 

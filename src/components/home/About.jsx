@@ -24,11 +24,10 @@ export const About = () => {
         {/* Description */}
         <div className="about__info">
           <p className="about__description">
-            Hi everyone, My full name is <b>Octavyan Putra Ramadhan</b>. I live in Sukoharjo, Central Java, Indonesia.I was born in Sukoharjo On <b>04 October 2006</b>. My hobbies are{' '}
-            <b>Playing Games</b> and <b>Reading Comic</b>.
+            Hi there! I&apos;m <b>Octavyan Putra Ramadhan</b>, a dedicated Fullstack Web Developer. With <b>3 years</b> of experience, I thrive on <b>tackling challenges head-on</b> and <b>delivering innovative solutions</b>.
           </p>
           <p className="about__description">
-            My hobbies are <b>Playing Games</b> and <b>Try new things</b>. I started to enter the IT world in 2021. I want to be a <b>Fullstack Web Developer</b>.
+            My unique blend of <b>Creative Problem Solver</b> and <b>commitment</b> to collaboration make me an asset to any team. Let&apos;s connect and <b>create something extraordinary together!</b>
           </p>
 
           <ul className="about__list">
