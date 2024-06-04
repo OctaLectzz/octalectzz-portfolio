@@ -14,7 +14,7 @@ import { Footer } from './layouts/Footer'
 
 // Pages
 import { Home } from './pages/Home'
-import { Experience } from './pages/Experience'
+import { Experiences } from './pages/Experiences'
 import { Skills } from './pages/Skills'
 import { Projects } from './pages/Projects'
 import { Contact } from './pages/Contact'
@@ -27,12 +27,12 @@ const HomePage = () => {
   return <Home />
 }
 
-const ExperiencePage = () => {
+const ExperiencesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
-  return <Experience />
+  return <Experiences />
 }
 
 const ProjectsPage = () => {
@@ -68,7 +68,7 @@ function App() {
       {/* ROUTE */}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/experiences" element={<ExperiencePage />} />
+        <Route path="/experiences" element={<ExperiencesPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/contact" element={<ContactPage />} />

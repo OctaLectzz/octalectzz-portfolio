@@ -35,10 +35,10 @@ export const About = () => {
               <b>Tools :</b> HTML, CSS, JavaScript, PHP, Git, Dart.
             </li>
             <li className="about__item">
-              <b>Framework :</b> Bootstrap, Tailwind CSS, Laravel, React JS, Flutter, Vue JS, Quasar.
+              <b>Frameworks :</b> Bootstrap, Tailwind CSS, Laravel, React JS, Flutter, Vue JS, Quasar.
             </li>
             <li className="about__item">
-              <b>Other :</b> Canva, After Effect, Adobe Lightroom, Figma, Alight Motion, Capcut.
+              <b>Others :</b> Canva, After Effect, Adobe Lightroom, Figma, Alight Motion, Capcut.
             </li>
           </ul>
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import badges from '/src/data/badges.json'
 
 export const Badge = (badgeArray) => {

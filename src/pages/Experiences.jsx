@@ -2,7 +2,7 @@ import '/src/assets/css/pages/experience.css'
 import experiences from '/src/data/experiences.json'
 import { WorkTimeline, EducationTimeline } from '/src/components/Timeline'
 
-export const Experience = () => {
+export const Experiences = () => {
   return (
     <section className="experience container section" id="experience">
       {/* Title */}
