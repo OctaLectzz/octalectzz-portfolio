@@ -6,15 +6,16 @@ export const Projects = () => {
   return (
     <section className="projects section" id="projects">
       {/* My Projects */}
-      <h2 className="section__title-1">
+      <h2 className="section__title-1" data-aos="fade-right">
         <span>My Projects :</span>
       </h2>
-      <div className="subtitle">
+      <div className="subtitle" data-aos="fade-left">
         <span>&quot;Showcasing my diverse projects in one place - a testament to creativity, innovation, and passion.&quot;</span>
       </div>
       <div className="projects__container container grid">
-        {projects.MyProjects.map((project) => (
+        {projects.MyProjects.map((project, id) => (
           <Card
+            Delay={id * 100}
             key={project.Title}
             Image={project.Image}
             Type={project.Type}
@@ -48,8 +49,9 @@ export const Projects = () => {
         </div>
       </div>
       <div className="projects__container container grid projects__collab">
-        {projects.TimeWebIdProjects.map((project) => (
+        {projects.TimeWebIdProjects.map((project, id) => (
           <Card
+            Delay={id * 100}
             key={project.Title}
             Image={project.Image}
             Type={project.Type}

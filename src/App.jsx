@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './assets/css/theme.css'
 
 // Components
+import { Animation } from './components/Animation'
 import { ScrollUp } from './components/Scroll'
 
 // Layouts
@@ -62,6 +63,12 @@ const ContactPage = () => {
 function App() {
   return (
     <Router>
+      {/* ANIMATION */}
+      <Animation />
+
+      {/* SCROLL UP */}
+      <ScrollUp />
+
       {/* NAVBAR */}
       <Navbar />
 
@@ -76,9 +83,6 @@ function App() {
 
       {/* FOOTER */}
       <Footer />
-
-      {/* SCROLL UP */}
-      <ScrollUp />
     </Router>
   )
 }

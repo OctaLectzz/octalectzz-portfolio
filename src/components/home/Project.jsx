@@ -16,13 +16,14 @@ export const Project = () => {
 
   return (
     <section className="projects section" id="projects">
-      <h2 className="section__title-1">
+      <h2 className="section__title-1" data-aos="zoom-in-up">
         <span>Projects.</span>
       </h2>
 
       <div className="projects__container container grid">
         {/* LumineFrame */}
         <Card
+          Delay="100"
           Image={projectImg + 'LumineFrame.png'}
           Type="Website"
           Title="LumineFrame"
@@ -34,6 +35,7 @@ export const Project = () => {
 
         {/* WheelsRent */}
         <Card
+          Delay="200"
           Image={projectImg + 'WheelsRent.png'}
           Type="Website"
           Title="WheelsRent"
@@ -45,6 +47,7 @@ export const Project = () => {
 
         {/* PPLG 2 Class */}
         <Card
+          Delay="300"
           Image={projectImg + 'PPLG 2 Class.png'}
           Type="Website"
           Title="PPLG 2 Class"

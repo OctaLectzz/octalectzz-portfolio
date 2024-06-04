@@ -15,13 +15,13 @@ export const Skill = () => {
 
   return (
     <section className="skill container section" id="skill">
-      <h2 className="section__title-2">
+      <h2 className="section__title-2" data-aos="zoom-in-up">
         <span>Skills.</span>
       </h2>
 
       {/* Frontend */}
       <div className="skill__containers">
-        <div className="skill__details">
+        <div className="skill__details" data-aos="fade-down">
           <h2 className="skill__subtitle">Frontend Development</h2>
           <div className="skill__list">
             <Item Name="HTML" Icon={imagePath + 'HTML.png'} Experience="Experienced" />
@@ -34,7 +34,7 @@ export const Skill = () => {
         </div>
 
         {/* Backend */}
-        <div className="skill__details">
+        <div className="skill__details" data-aos="fade-down" data-aos-delay="200">
           <h2 className="skill__subtitle">Backend Development</h2>
           <div className="skill__list">
             <Item Name="PHP" Icon={imagePath + 'PHP.png'} Experience="Intermediate" />
@@ -52,7 +52,7 @@ export const Skill = () => {
         </div>
 
         {/* Other */}
-        <div className="skill__details">
+        <div className="skill__details" data-aos="fade-down" data-aos-delay="400">
           <h2 className="skill__subtitle">Other</h2>
           <div className="skill__list">
             <Item Name="MySQL" Icon={imagePath + 'MySQL.png'} Experience="Intermediate" />
