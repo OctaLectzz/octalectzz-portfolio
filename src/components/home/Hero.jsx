@@ -6,9 +6,11 @@ export const Hero = () => {
   return (
     <section className="home section" id="home">
       <div className="home__container container grid">
-        <h1 className="home__name">Octavyan Putra R.</h1>
+        <h1 className="home__name" data-aos="fade-right">
+          Octavyan Putra R.
+        </h1>
 
-        <div className="home__perfil">
+        <div className="home__perfil" data-aos="fade-left">
           {/* Profile Photo */}
           <div className="home__image">
             <img src={imagePath + 'home-profile.jpg'} alt="image" className="home__img" />
@@ -37,7 +39,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="home__info">
+        <div className="home__info" data-aos="fade-right">
           {/* Description */}
           <p className="home__description">
             <b>Fullstack Developer</b>, with knowledge in web development and design, I offer the best projects resulting in quality work.

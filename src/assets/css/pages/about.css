@@ -69,6 +69,7 @@
   position: relative;
   color: var(--title-color);
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .about__description::after {

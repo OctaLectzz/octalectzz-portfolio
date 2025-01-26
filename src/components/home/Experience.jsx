@@ -15,13 +15,13 @@ export const Experience = () => {
 
   return (
     <section className="experiences section" id="experiences">
-      <h2 className="section__title-1">
+      <h2 className="section__title-1" data-aos="fade-down">
         <span>Experiences.</span>
       </h2>
 
       <div className="experiences__container container grid">
         {/* Works */}
-        <div className="experiences__work">
+        <div className="experiences__work" data-aos="fade-down-right">
           <div className="experiences__title">
             <h2>Works</h2>
           </div>
@@ -31,7 +31,7 @@ export const Experience = () => {
         </div>
 
         {/* Education */}
-        <div className="experiences__education">
+        <div className="experiences__education" data-aos="fade-up-left">
           <div className="experiences__education-title">
             <h2>Education</h2>
           </div>

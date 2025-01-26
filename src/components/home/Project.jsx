@@ -16,7 +16,7 @@ export const Project = () => {
 
   return (
     <section className="projects section" id="projects">
-      <h2 className="section__title-1">
+      <h2 className="section__title-1" data-aos="zoom-in-up">
         <span>Projects.</span>
       </h2>
 

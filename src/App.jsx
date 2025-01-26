@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './assets/css/theme.css'
 
 // Components
+import { Animation } from './components/Animation'
 import { ScrollUp } from './components/Scroll'
 
 // Layouts
@@ -14,7 +15,7 @@ import { Footer } from './layouts/Footer'
 
 // Pages
 import { Home } from './pages/Home'
-import { Experience } from './pages/Experience'
+import { Experiences } from './pages/Experiences'
 import { Skills } from './pages/Skills'
 import { Projects } from './pages/Projects'
 import { Contact } from './pages/Contact'
@@ -27,12 +28,12 @@ const HomePage = () => {
   return <Home />
 }
 
-const ExperiencePage = () => {
+const ExperiencesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
-  return <Experience />
+  return <Experiences />
 }
 
 const ProjectsPage = () => {
@@ -62,13 +63,19 @@ const ContactPage = () => {
 function App() {
   return (
     <Router>
+      {/* ANIMATION */}
+      <Animation />
+
+      {/* SCROLL UP */}
+      <ScrollUp />
+
       {/* NAVBAR */}
       <Navbar />
 
       {/* ROUTE */}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/experiences" element={<ExperiencePage />} />
+        <Route path="/experiences" element={<ExperiencesPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -76,9 +83,6 @@ function App() {
 
       {/* FOOTER */}
       <Footer />
-
-      {/* SCROLL UP */}
-      <ScrollUp />
     </Router>
   )
 }

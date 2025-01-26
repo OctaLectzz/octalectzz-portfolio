@@ -41,7 +41,7 @@ export const Navbar = () => {
               {/* Experiences */}
               <li className="nav__item" onClick={hideMenu}>
                 <Link to="/experiences" className={location.pathname === '/experiences' ? 'nav__link active-link' : 'nav__link'}>
-                  Experience
+                  Experiences
                 </Link>
               </li>
 

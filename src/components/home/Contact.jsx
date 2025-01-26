@@ -14,7 +14,7 @@ export const Contact = () => {
   return (
     <section className="contact section" id="contact">
       <div className="contact__container grid">
-        <div className="contact__data">
+        <div className="contact__data" data-aos="fade-right">
           <h2 className="section__title-2">
             <span>Contact Me.</span>
           </h2>
@@ -27,7 +27,7 @@ export const Contact = () => {
           <div className="geometric-box"></div>
         </div>
 
-        <div className="contact__mail">
+        <div className="contact__mail" data-aos="fade-left">
           <h2 className="contact__title">Send Me A Message</h2>
 
           <form action="" ref={form} onSubmit={handleSubmit} className="contact__form" id="contact-form">
@@ -71,7 +71,7 @@ export const Contact = () => {
           </form>
         </div>
 
-        <div className="contact__social">
+        <div className="contact__social" data-aos="fade-up">
           <img src={imagePath + 'curved-arrow.svg'} alt="" className="contact__social-arrow" />
 
           <div className="contact__social-data">

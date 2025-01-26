@@ -1,10 +1,10 @@
-export const Card = ({ Image, Type, Title, Description, LinkSourceCode, LinkDemoApp, Badges }) => {
+export const Card = ({ Delay, Image, Type, Title, Description, LinkSourceCode, LinkDemoApp, Badges }) => {
   return (
-    <article className="projects__card">
+    <article className="projects__card" data-aos="fade-down" data-aos-delay={Delay}>
       <div className="projects__image">
         <img src={Image} alt="image" className="projects__img" />
 
-        <a href={LinkDemoApp} target="_blank" className="projects__button button" style={{ cursor: 'pointer' }}>
+        <a href={LinkDemoApp} target="_blank" rel="noopener noreferrer" className="projects__button button" style={{ cursor: 'pointer' }}>
           <i className="ri-arrow-right-up-line"></i>
         </a>
       </div>
