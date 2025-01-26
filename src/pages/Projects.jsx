@@ -43,7 +43,7 @@ export const Projects = () => {
             <a href="https://timewebid.com" target="_blank" rel="noopener noreferrer" className="projects__timewebid">
               TimeWebId
             </a>
-            <img src="/img/projects/TimeWebId/Logo.png" alt="TimeWebId" className="projects__collab-img" />
+            <img src="/img/projects/TimeWebId/logo.png" alt="TimeWebId" className="projects__collab-img" />
           </div>
         </div>
       </div>

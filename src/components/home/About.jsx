@@ -13,7 +13,7 @@ export const About = () => {
         {/* Photo */}
         <div className="about__perfil">
           <div className="about__image">
-            <img src={imagePath + 'About Profile.jpg'} alt="profile image" className="about__img" />
+            <img src={imagePath + 'about-profile.jpg'} alt="profile image" className="about__img" />
             <div className="about__shadow"></div>
             <div className="geometric-box"></div>
             <img src={imagePath + 'random-lines.svg'} alt="" className="about__line" />

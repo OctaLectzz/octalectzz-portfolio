@@ -2,109 +2,109 @@
   "Frontend": [
     {
       "title": "HTML",
-      "imageSrc": "img/skills/HTML.png"
+      "imageSrc": "img/skills/html.png"
     },
     {
       "title": "CSS",
-      "imageSrc": "img/skills/CSS.png"
+      "imageSrc": "img/skills/css.png"
     },
     {
       "title": "Javascript",
-      "imageSrc": "img/skills/Javascript.png"
+      "imageSrc": "img/skills/javascript.png"
     },
     {
       "title": "Bootstrap",
-      "imageSrc": "img/skills/Bootstrap.png"
+      "imageSrc": "img/skills/bootstrap.png"
     },
     {
       "title": "Tailwind CSS",
-      "imageSrc": "img/skills/Tailwind.png"
+      "imageSrc": "img/skills/tailwind.png"
     },
     {
       "title": "React JS",
-      "imageSrc": "img/skills/React.png"
+      "imageSrc": "img/skills/react.png"
     },
     {
       "title": "Vue JS",
-      "imageSrc": "img/skills/Vue.png"
+      "imageSrc": "img/skills/vue.png"
     },
     {
       "title": "Quasar",
-      "imageSrc": "img/skills/Quasar.png"
+      "imageSrc": "img/skills/quasar.png"
     }
   ],
 
   "Backend": [
     {
       "title": "PHP",
-      "imageSrc": "img/skills/PHP.png"
+      "imageSrc": "img/skills/php.png"
     },
     {
       "title": "Laravel",
-      "imageSrc": "img/skills/Laravel.png"
+      "imageSrc": "img/skills/laravel.png"
     },
     {
       "title": "Firebase",
-      "imageSrc": "img/skills/Firebase.png"
+      "imageSrc": "img/skills/firebase.png"
     },
     {
       "title": "Node JS",
-      "imageSrc": "img/skills/NodeJS.png"
+      "imageSrc": "img/skills/nodejs.png"
     },
     {
       "title": "Express JS",
-      "imageSrc": "img/skills/ExpressJS.png"
+      "imageSrc": "img/skills/expressjs.png"
     }
   ],
 
   "Others": [
     {
       "title": "MySQL",
-      "imageSrc": "img/skills/MySQL.png"
+      "imageSrc": "img/skills/mysql.png"
     },
     {
       "title": "Git",
-      "imageSrc": "img/skills/Git.png"
+      "imageSrc": "img/skills/git.png"
     },
     {
       "title": "Github",
-      "imageSrc": "img/skills/Github.png"
+      "imageSrc": "img/skills/github.png"
     },
     {
       "title": "Postman",
-      "imageSrc": "img/skills/Postman.png"
+      "imageSrc": "img/skills/postman.png"
     },
     {
       "title": "Canva",
-      "imageSrc": "img/skills/Canva.png"
+      "imageSrc": "img/skills/canva.png"
     },
     {
       "title": "Figma",
-      "imageSrc": "img/skills/Figma.png"
+      "imageSrc": "img/skills/figma.png"
     },
     {
       "title": "After Effect",
-      "imageSrc": "img/skills/After Effect.png"
+      "imageSrc": "img/skills/after-effect.png"
     },
     {
       "title": "Adobe Lightroom",
-      "imageSrc": "img/skills/Adobe Lightroom.png"
+      "imageSrc": "img/skills/adobe-lightroom.png"
     },
     {
       "title": "Alight Motion",
-      "imageSrc": "img/skills/Alight Motion.png"
+      "imageSrc": "img/skills/alight-motion.png"
     },
     {
       "title": "Capcut",
-      "imageSrc": "img/skills/Capcut.png"
+      "imageSrc": "img/skills/capcut.png"
     },
     {
       "title": "Netlify",
-      "imageSrc": "img/skills/Netlify.png"
+      "imageSrc": "img/skills/netlify.png"
     },
     {
       "title": "Vercel",
-      "imageSrc": "img/skills/Vercel.png"
+      "imageSrc": "img/skills/vercel.png"
     }
   ]
 }

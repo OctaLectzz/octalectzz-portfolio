@@ -24,12 +24,12 @@ export const Skill = () => {
         <div className="skill__details">
           <h2 className="skill__subtitle">Frontend Development</h2>
           <div className="skill__list">
-            <Item Name="HTML" Icon={imagePath + 'HTML.png'} Experience="Experienced" />
-            <Item Name="CSS" Icon={imagePath + 'CSS.png'} Experience="Experienced" />
-            <Item Name="Javascript" Icon={imagePath + 'Javascript.png'} Experience="Intermediate" />
-            <Item Name="React JS" Icon={imagePath + 'React.png'} Experience="Intermediate" />
-            <Item Name="Vue JS" Icon={imagePath + 'Vue.png'} Experience="Intermediate" />
-            <Item Name="Quasar" Icon={imagePath + 'Quasar.png'} Experience="Intermediate" />
+            <Item Name="HTML" Icon={imagePath + 'html.png'} Experience="Experienced" />
+            <Item Name="CSS" Icon={imagePath + 'css.png'} Experience="Experienced" />
+            <Item Name="Javascript" Icon={imagePath + 'javascript.png'} Experience="Intermediate" />
+            <Item Name="React JS" Icon={imagePath + 'react.png'} Experience="Intermediate" />
+            <Item Name="Vue JS" Icon={imagePath + 'vue.png'} Experience="Intermediate" />
+            <Item Name="Quasar" Icon={imagePath + 'quasar.png'} Experience="Intermediate" />
           </div>
         </div>
 
@@ -37,11 +37,11 @@ export const Skill = () => {
         <div className="skill__details">
           <h2 className="skill__subtitle">Backend Development</h2>
           <div className="skill__list">
-            <Item Name="PHP" Icon={imagePath + 'PHP.png'} Experience="Intermediate" />
-            <Item Name="Node JS" Icon={imagePath + 'NodeJS.png'} Experience="Beginner" />
-            <Item Name="Laravel" Icon={imagePath + 'Laravel.png'} Experience="Experienced" />
-            <Item Name="Firebase" Icon={imagePath + 'Firebase.png'} Experience="Beginner" />
-            <Item Name="Express JS" Icon={imagePath + 'ExpressJS.png'} Experience="Beginner" />
+            <Item Name="PHP" Icon={imagePath + 'php.png'} Experience="Intermediate" />
+            <Item Name="Node JS" Icon={imagePath + 'nodejs.png'} Experience="Beginner" />
+            <Item Name="Laravel" Icon={imagePath + 'laravel.png'} Experience="Experienced" />
+            <Item Name="Firebase" Icon={imagePath + 'firebase.png'} Experience="Beginner" />
+            <Item Name="Express JS" Icon={imagePath + 'expressjs.png'} Experience="Beginner" />
             <article className="skill__icon">
               <div>
                 <h3></h3>
@@ -55,12 +55,12 @@ export const Skill = () => {
         <div className="skill__details">
           <h2 className="skill__subtitle">Other</h2>
           <div className="skill__list">
-            <Item Name="MySQL" Icon={imagePath + 'MySQL.png'} Experience="Intermediate" />
-            <Item Name="Git" Icon={imagePath + 'Git.png'} Experience="Beginner" />
-            <Item Name="Github" Icon={imagePath + 'Github.png'} Experience="Intermediate" />
-            <Item Name="Canva" Icon={imagePath + 'Canva.png'} Experience="Intermediate" />
-            <Item Name="After Effect" Icon={imagePath + 'After Effect.png'} Experience="Beginner" />
-            <Item Name="Figma" Icon={imagePath + 'Figma.png'} Experience="Beginner" />
+            <Item Name="MySQL" Icon={imagePath + 'mysql.png'} Experience="Intermediate" />
+            <Item Name="Git" Icon={imagePath + 'git.png'} Experience="Beginner" />
+            <Item Name="Github" Icon={imagePath + 'github.png'} Experience="Intermediate" />
+            <Item Name="Canva" Icon={imagePath + 'canva.png'} Experience="Intermediate" />
+            <Item Name="After Effect" Icon={imagePath + 'after-effect.png'} Experience="Beginner" />
+            <Item Name="Figma" Icon={imagePath + 'figma.png'} Experience="Beginner" />
           </div>
         </div>
       </div>

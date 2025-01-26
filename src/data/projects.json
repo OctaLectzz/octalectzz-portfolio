@@ -1,7 +1,7 @@
 {
   "MyProjects": [
     {
-      "Image": "/img/projects/Students List.png",
+      "Image": "/img/projects/students-list.png",
       "Type": "Website",
       "Title": "Students List",
       "Description": "Students List is an online platform designed to streamline student management processes.",
@@ -10,7 +10,7 @@
       "Badges": ["HTML", "CSS"]
     },
     {
-      "Image": "/img/projects/M-one Tech Internet Service.png",
+      "Image": "/img/projects/m-one-tech-internet-service.png",
       "Type": "Website",
       "Title": "M-one Tech Internet Service",
       "Description": "M-one Tech Internet Service is a reliable network provider website offering seamless connectivity solutions.",
@@ -19,7 +19,7 @@
       "Badges": ["HTML", "BOOTSTRAP"]
     },
     {
-      "Image": "/img/projects/Portfolio Example.png",
+      "Image": "/img/projects/portfolio-example.png",
       "Type": "Website",
       "Title": "Portfolio Example",
       "Description": "Portfolio Example is a versatile website platform designed for showcasing creative work and professional achievements.",
@@ -28,7 +28,7 @@
       "Badges": ["HTML", "BOOTSTRAP"]
     },
     {
-      "Image": "/img/projects/Simple TodoList.png",
+      "Image": "/img/projects/simple-todolist.png",
       "Type": "App",
       "Title": "Simple TodoList",
       "Description": "The TodoList app is a practical tool designed to help users organize their tasks and manage their daily activities effectively.",
@@ -37,16 +37,15 @@
       "Badges": ["PHP", "MySQL"]
     },
     {
-      "Image": "/img/projects/Simple CMS.png",
+      "Image": "/img/projects/simple-cms.png",
       "Type": "Website",
       "Title": "Simple CMS",
       "Description": "Simple CMS is a straightforward news and blog post website that focuses on delivering concise and relevant content.",
       "LinkDemoApp": "https://cmspost.000webhostapp.com",
-      "LinkSourceCode": "https://github.com/OctaLectzz/simple-cms",
       "Badges": ["LARAVEL", "BOOTSTRAP", "MySQL"]
     },
     {
-      "Image": "/img/projects/Lotus.png",
+      "Image": "/img/projects/lotus.png",
       "Type": "Website",
       "Title": "Lotus",
       "Description": "Lotus is a dynamic online platform offering a diverse range of news and blog posts. With its sleek design and intuitive interface.",
@@ -54,46 +53,57 @@
       "Badges": ["LARAVEL", "REACT", "BOOTSTRAP", "MySQL"]
     },
     {
-      "Image": "/img/projects/WheelsRent.png",
+      "Image": "/img/projects/wheelsrent.png",
       "Type": "Website",
       "Title": "WheelsRent",
       "Description": "WheelsRent offers a seamless online car rental service, providing a wide selection of user-friendly cars for travel.",
       "LinkDemoApp": "https://wheelsrent.winecoders.com",
-      "LinkSourceCode": "https://github.com/OctaLectzz/WheelsRent",
       "Badges": ["LARAVEL", "BOOTSTRAP", "MySQL"]
     },
     {
-      "Image": "/img/projects/PPLG 2 Class.png",
+      "Image": "/img/projects/pplg-2-class.png",
       "Type": "Website",
       "Title": "PPLG 2 Class",
       "Description": "A website for the PPLG 2 class at SMK Muhammadiyah 1 Sukoharjo, there is an anonymous message on it.",
       "LinkDemoApp": "https://pepeelgedua.vercel.app",
-      "LinkSourceCode": "https://github.com/OctaLectzz/pplg2-class",
       "Badges": ["REACT", "TAILWIND"]
     },
     {
-      "Image": "/img/projects/LumineFrame.png",
+      "Image": "/img/projects/lumineframe.png",
       "Type": "Website & App",
       "Title": "LumineFrame",
       "Description": "LumineFrame is a captivating online platform dedicated to showcasing stunning photo galleries.",
       "LinkDemoApp": "https://lumineframe.winecoders.com",
-      "LinkSourceCode": "https://github.com/OctaLectzz/lumineframe",
-      "Badges": ["LARAVEL", "QUASAR", "MySQL"]
+      "Badges": ["LARAVEL", "VUE", "QUASAR", "MySQL"]
     },
     {
-      "Image": "/img/projects/Laundry System.png",
+      "Image": "/img/projects/laundry-system.png",
       "Type": "Website & App",
       "Title": "Laundry System",
       "Description": "The Laundry System website simplifies your laundry routine. Schedule pickups, track orders, and get useful tips all in one place.",
       "LinkDemoApp": "https://camelia.laundry.winecoders.com",
-      "LinkSourceCode": "https://github.com/OctaLectzz/laundry-fe",
-      "Badges": ["LARAVEL", "QUASAR", "MySQL"]
+      "Badges": ["LARAVEL", "VUE", "QUASAR", "MySQL"]
+    },
+    {
+      "Image": "/img/projects/marketplace.png",
+      "Type": "Website & App",
+      "Title": "Marketplace",
+      "Description": "This marketplace offers a wide range of product or service categories, complete with search functionality, customer reviews, and integrated payment methods.",
+      "LinkDemoApp": "https://marketplace.winecoders.com",
+      "Badges": ["LARAVEL", "VUE", "QUASAR", "MySQL"]
+    },
+    {
+      "Image": "/img/projects/attendance-management-system.png",
+      "Type": "Website & App",
+      "Title": "Attendance Management System",
+      "Description": "This system features automated check-ins, real-time tracking of clock-in and clock-out times, detailed reporting, and integration with biometric devices.",
+      "Badges": ["LARAVEL", "VUE", "QUASAR", "MySQL"]
     }
   ],
 
   "TimeWebIdProjects": [
     {
-      "Image": "/img/projects/TimeWebId/Database Tower Transmisi PLN UIP3B Sulawesi.png",
+      "Image": "/img/projects/TimeWebId/database-tower-transmisi-pln-uip3b-sulawesi.png",
       "Type": "Website",
       "Title": "Database Tower Transmisi PLN UIP3B Sulawesi",
       "Description": "This Projects serves as a valuable resource for stakeholders involved in the management, maintenance, and development of the transmission infrastructure in Sulawesi.",
@@ -101,7 +111,7 @@
       "Badges": ["LARAVEL", "MySQL", "VUE", "QUASAR"]
     },
     {
-      "Image": "/img/projects/TimeWebId/EasyCareHub.png",
+      "Image": "/img/projects/TimeWebId/easycarehub.png",
       "Type": "App",
       "Title": "EasyCareHub",
       "Description": "EasyCareHub is a cutting-edge MCO (Managed Care Organization) application designed to streamline and enhance healthcare management processes for both providers and patients.",
@@ -109,7 +119,7 @@
       "Badges": ["LARAVEL", "MySQL", "VUE", "QUASAR"]
     },
     {
-      "Image": "/img/projects/TimeWebId/Edukarya.png",
+      "Image": "/img/projects/TimeWebId/edukarya.png",
       "Type": "Website",
       "Title": "Edukarya",
       "Description": "Edukarya is an integrated platform that serves as both an event management hub and an educational resource center, offering a wide range of learning materials and facilitating participation in events across various disciplines.",

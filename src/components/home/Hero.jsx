@@ -11,7 +11,7 @@ export const Hero = () => {
         <div className="home__perfil">
           {/* Profile Photo */}
           <div className="home__image">
-            <img src={imagePath + 'Home Profile.jpg'} alt="image" className="home__img" />
+            <img src={imagePath + 'home-profile.jpg'} alt="image" className="home__img" />
             <div className="home__shadow"></div>
             <img src={imagePath + 'curved-arrow.svg'} alt="" className="home__arrow" />
             <img src={imagePath + 'random-lines.svg'} alt="" className="home__line" />

@@ -15,6 +15,13 @@
       "Description": "During my internship at Timewebid from August 1st to October 1st, 2023, I actively engaged as a Web Programmer, contributing to various projects and gaining hands-on experience in web development. I collaborated with the team to develop and maintain web applications, implementing innovative solutions and adhering to industry best practices. Through this internship, I honed my skills in Laravel, API, Vue JS, Quasar, and learned to work efficiently within a professional environment, further solidifying my passion for web development."
     },
     {
+      "Date": "01 November 2023 - 30 Juni 2024",
+      "Place": "Timewebid",
+      "Status": "Part Time",
+      "Role": "Web Developer",
+      "Description": "Since November 1st, 2023, I have been serving as a part-time Web Developer at Timewebid, where I continue to apply my expertise in web development while balancing academic commitments. In this role, I contribute to the development and enhancement of web applications, collaborating with the team to deliver high-quality solutions that meet client requirements. Working part-time has allowed me to deepen my understanding of web technologies, refine my coding skills, and gain valuable real-world experience in the dynamic field of web development."
+    },
+    {
       "Date": "01 January 2024 - 09 March 2024",
       "Place": "Digimizu",
       "Status": "Intership",
@@ -22,11 +29,18 @@
       "Description": "Since January 1st, 2024, I have embarked on an enriching internship journey as a Copywriter at Digimizu, a role I continue to fulfill to date. Within this period, I have honed my skills in crafting compelling and persuasive written content tailored to diverse audiences. Collaborating closely with the marketing team, I have contributed to the development of engaging marketing materials, including website copy, social media posts, and promotional campaigns. This internship at Digimizu has provided me with invaluable hands-on experience in the field of copywriting, allowing me to refine my writing style, creativity, and strategic communication abilities."
     },
     {
-      "Date": "01 November 2023 - Present",
-      "Place": "Timewebid",
+      "Date": "01 July 2024 - 30 September 2024",
+      "Place": "Dodol IT",
+      "Status": "Full Time",
+      "Role": "Fullstack Developer",
+      "Description": "I worked as a Full Stack Developer at Dodol IT from July 1, 2024, to September 30, 2024. During this time, I was responsible for designing, developing, and maintaining both front-end and back-end components of web applications. I collaborated with cross-functional teams to deliver scalable solutions, troubleshoot issues, and ensure high performance and user satisfaction."
+    },
+    {
+      "Date": "02 January 2025 - Present",
+      "Place": "SobatGurunTech",
       "Status": "Part Time",
-      "Role": "Web Developer",
-      "Description": "Since November 1st, 2023, I have been serving as a part-time Web Developer at Timewebid, where I continue to apply my expertise in web development while balancing academic commitments. In this role, I contribute to the development and enhancement of web applications, collaborating with the team to deliver high-quality solutions that meet client requirements. Working part-time has allowed me to deepen my understanding of web technologies, refine my coding skills, and gain valuable real-world experience in the dynamic field of web development."
+      "Role": "Fullstack Developer",
+      "Description": "I have been working part-time as a Full Stack Developer at SobatGurunTech since January 2, 2025, while pursuing my college education. My role involves developing and maintaining web applications, handling both front-end and back-end tasks, and contributing to team projects to deliver efficient and user-friendly solutions."
     }
   ],
 
@@ -36,6 +50,12 @@
       "Date": "01 July 2021 - 08 May 2024",
       "Major": "Pengembangan Perangkat Lunak dan Gim (PPLG)",
       "Description": "Since July 2021, I have been engaged with SMK Muhammadiyah 01 Sukoharjo, dedicating efforts to the development of software and games (PPLG). Within this environment, I actively participate in crafting innovative software solutions and designing engaging and educational games. Through collaborative teamwork, I have contributed to the creation of quality products that enrich learning experiences and add value to students and the education community at large."
+    },
+    {
+      "School": "Universitas Sahid Surakarta",
+      "Date": "26 October 2024 - Present",
+      "Major": "Teknik Informatika",
+      "Description": "I am currently a student at Universitas Sahid Surakarta, enrolled in the Informatics Engineering program under the Faculty of Science, Technology, and Health. I began my studies on October 26, 2024, and am dedicated to expanding my knowledge and skills in the field of technology and innovation."
     }
   ],
 

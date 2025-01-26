@@ -23,7 +23,7 @@ export const Project = () => {
       <div className="projects__container container grid">
         {/* LumineFrame */}
         <Card
-          Image={projectImg + 'LumineFrame.png'}
+          Image={projectImg + 'lumineframe.png'}
           Type="Website"
           Title="LumineFrame"
           Description="LumineFrame is a captivating online platform dedicated to showcasing stunning photo galleries."
@@ -34,7 +34,7 @@ export const Project = () => {
 
         {/* WheelsRent */}
         <Card
-          Image={projectImg + 'WheelsRent.png'}
+          Image={projectImg + 'wheelsrent.png'}
           Type="Website"
           Title="WheelsRent"
           Description="WheelsRent offers a seamless online car rental service, providing a wide selection of user-friendly cars for travel."
@@ -45,7 +45,7 @@ export const Project = () => {
 
         {/* PPLG 2 Class */}
         <Card
-          Image={projectImg + 'PPLG 2 Class.png'}
+          Image={projectImg + 'pplg-2-class.png'}
           Type="Website"
           Title="PPLG 2 Class"
           Description="A website for the PPLG 2 class at SMK Muhammadiyah 1 Sukoharjo, there is an anonymous message on it."
