@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cta": "Let's Talk"
+  },
+  "hero": {
+    "eyebrow": "Available for new projects",
+    "title": "Crafting digital experiences with code & creativity",
+    "subtitle": "Hi, I'm Octavyan Putra Ramadhan — a Fullstack Developer building modern, performant web products with a love for motion and detail.",
+    "ctaPrimary": "View Projects",
+    "ctaSecondary": "Download CV",
+    "role": "Fullstack Developer",
+    "location": "Based in Indonesia"
+  },
+  "home": {
+    "aboutTitle": "About Me",
+    "aboutBody": "I design and build products end-to-end — from pixel-perfect interfaces to robust APIs. I care deeply about craft, motion, and user experience. Currently focused on Next.js, TanStack, and modern animation systems.",
+    "statsProjects": "Projects shipped",
+    "statsClients": "Happy clients",
+    "statsYears": "Years of experience",
+    "statsCommits": "Commits this year",
+    "servicesTitle": "What I Do",
+    "servicesSubtitle": "Capabilities I bring to every collaboration",
+    "featuredTitle": "Featured Work",
+    "featuredSubtitle": "A selection of recent projects",
+    "viewAll": "View all projects"
+  },
+  "exp": {
+    "heroTitle": "Experience & Journey",
+    "heroSubtitle": "A timeline of roles, education and certifications that shaped my craft.",
+    "timeline": "Work Timeline",
+    "education": "Education",
+    "certificates": "Certificates",
+    "viewCert": "View certificate"
+  },
+  "skills": {
+    "heroTitle": "Skills & Toolbox",
+    "heroSubtitle": "The technologies, frameworks and tools I use to bring ideas to life.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & DevOps",
+    "design": "Design"
+  },
+  "projects": {
+    "heroTitle": "Selected Projects",
+    "heroSubtitle": "A curated archive of products, experiments and open-source work.",
+    "searchPlaceholder": "Search projects, tags, stack...",
+    "all": "All",
+    "empty": "No projects match your search.",
+    "live": "Live",
+    "code": "Code"
+  },
+  "contact": {
+    "heroTitle": "Let's build something great",
+    "heroSubtitle": "Have a project in mind? Drop a message — I usually reply within 24 hours.",
+    "name": "Your name",
+    "email": "Email address",
+    "message": "Tell me about your project",
+    "send": "Send message",
+    "sent": "Message sent — talk soon!",
+    "or": "or reach me directly"
+  },
+  "footer": {
+    "tagline": "Designing & engineering modern web experiences.",
+    "rights": "All rights reserved.",
+    "madeWith": "Crafted with"
+  }
+}

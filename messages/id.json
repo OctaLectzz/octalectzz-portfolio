@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "experience": "Pengalaman",
+    "skills": "Keahlian",
+    "projects": "Proyek",
+    "contact": "Kontak",
+    "cta": "Hubungi Saya"
+  },
+  "hero": {
+    "eyebrow": "Tersedia untuk proyek baru",
+    "title": "Membangun pengalaman digital dengan kode & kreativitas",
+    "subtitle": "Halo, saya Octavyan Putra Ramadhan — Fullstack Developer yang membangun produk web modern dan performan dengan cinta pada detail dan animasi.",
+    "ctaPrimary": "Lihat Proyek",
+    "ctaSecondary": "Unduh CV",
+    "role": "Fullstack Developer",
+    "location": "Berbasis di Indonesia"
+  },
+  "home": {
+    "aboutTitle": "Tentang Saya",
+    "aboutBody": "Saya merancang dan membangun produk dari ujung ke ujung — dari antarmuka yang rapi hingga API yang andal. Saya peduli pada kualitas, animasi, dan pengalaman pengguna. Saat ini fokus pada Next.js, TanStack, dan sistem animasi modern.",
+    "statsProjects": "Proyek selesai",
+    "statsClients": "Klien puas",
+    "statsYears": "Tahun pengalaman",
+    "statsCommits": "Commit tahun ini",
+    "servicesTitle": "Yang Saya Lakukan",
+    "servicesSubtitle": "Kemampuan yang saya bawa ke setiap kolaborasi",
+    "featuredTitle": "Karya Pilihan",
+    "featuredSubtitle": "Sejumlah proyek terbaru",
+    "viewAll": "Lihat semua proyek"
+  },
+  "exp": {
+    "heroTitle": "Pengalaman & Perjalanan",
+    "heroSubtitle": "Lini masa peran, pendidikan, dan sertifikasi yang membentuk keahlian saya.",
+    "timeline": "Lini Masa Pekerjaan",
+    "education": "Pendidikan",
+    "certificates": "Sertifikat",
+    "viewCert": "Lihat sertifikat"
+  },
+  "skills": {
+    "heroTitle": "Keahlian & Perangkat",
+    "heroSubtitle": "Teknologi, framework, dan tools yang saya gunakan untuk mewujudkan ide.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & DevOps",
+    "design": "Desain"
+  },
+  "projects": {
+    "heroTitle": "Proyek Pilihan",
+    "heroSubtitle": "Arsip terpilih dari produk, eksperimen, dan kontribusi open-source.",
+    "searchPlaceholder": "Cari proyek, tag, teknologi...",
+    "all": "Semua",
+    "empty": "Tidak ada proyek yang cocok.",
+    "live": "Demo",
+    "code": "Kode"
+  },
+  "contact": {
+    "heroTitle": "Mari bangun sesuatu yang hebat",
+    "heroSubtitle": "Punya proyek? Kirim pesan — saya biasanya balas dalam 24 jam.",
+    "name": "Nama Anda",
+    "email": "Alamat email",
+    "message": "Ceritakan tentang proyek Anda",
+    "send": "Kirim pesan",
+    "sent": "Pesan terkirim — sampai jumpa!",
+    "or": "atau hubungi langsung"
+  },
+  "footer": {
+    "tagline": "Merancang & membangun pengalaman web modern.",
+    "rights": "Hak cipta dilindungi.",
+    "madeWith": "Dibuat dengan"
+  }
+}
