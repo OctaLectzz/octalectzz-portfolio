@@ -1,11 +1,12 @@
 'use client'
 
 import { BeamsBackground, GridBackground, MeshBackground } from '@/components/backgrounds'
+import { Eyebrow } from '@/components/common/eyebrow'
+import { PrimaryButton } from '@/components/common/primary-button'
+import { Container, Section } from '@/components/common/section'
 import { Reveal } from '@/components/reveal'
-import { Container, Section } from '@/components/section'
 import { SocialLinks } from '@/components/social-links'
 import { Input } from '@/components/ui/input'
-import { MagneticButton } from '@/components/ui/magnetic-button'
 import { Textarea } from '@/components/ui/textarea'
 import { motion } from 'framer-motion'
 import { Clock, Mail, MapPin, Send } from 'lucide-react'
@@ -34,9 +35,7 @@ export default function ContactPage() {
         <GridBackground />
         <Container>
           <Reveal>
-            <span className="border-border bg-surface/50 text-muted-foreground inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium tracking-[0.18em] uppercase">
-              <Mail className="text-primary h-3 w-3" /> Contact
-            </span>
+            <Eyebrow label="Contact" icon={Mail} />
             <h1 className="font-display mt-4 text-5xl font-bold tracking-tight md:text-7xl">
               <span className="text-foreground">Let's build </span>
               <span className="text-gradient-aurora">something great</span>
@@ -71,9 +70,9 @@ export default function ContactPage() {
                   <label className="text-muted-foreground mb-1.5 block text-xs font-semibold tracking-widest uppercase">{t('contact.message')}</label>
                   <Textarea required name="message" rows={6} className="bg-surface/40 rounded-xl" />
                 </div>
-                <MagneticButton variant="primary" disabled={loading}>
+                <PrimaryButton variant="primary" disabled={loading}>
                   {loading ? 'Sending…' : t('contact.send')} <Send className="h-4 w-4" />
-                </MagneticButton>
+                </PrimaryButton>
               </div>
             </motion.form>
 

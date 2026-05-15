@@ -5,16 +5,16 @@ import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const spaceGrotesk = Space_Grotesk({
+  variable: '--font-sans',
   subsets: ['latin']
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const jetbrainsMono = JetBrains_Mono({
+  variable: '--font-mono',
   subsets: ['latin']
 })
 
@@ -28,7 +28,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const messages = await getMessages()
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`} suppressHydrationWarning>
+    <html lang={locale} className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider messages={messages}>
           <NextThemesProvider attribute="class" defaultTheme="dark" enableSystem={false}>

@@ -7,35 +7,60 @@
     "contact": "Contact",
     "cta": "Let's Talk"
   },
-  "hero": {
-    "eyebrow": "Available for new projects",
-    "title": "Crafting digital experiences with code & creativity",
-    "subtitle": "Hi, I'm Octavyan Putra Ramadhan — a Fullstack Developer building modern, performant web products with a love for motion and detail.",
-    "ctaPrimary": "View Projects",
-    "ctaSecondary": "Download CV",
-    "role": "Fullstack Developer",
-    "location": "Based in Indonesia"
-  },
   "home": {
-    "aboutTitle": "About Me",
-    "aboutBody": "I design and build products end-to-end — from pixel-perfect interfaces to robust APIs. I care deeply about craft, motion, and user experience. Currently focused on Next.js, TanStack, and modern animation systems.",
-    "statsProjects": "Projects shipped",
-    "statsClients": "Happy clients",
-    "statsYears": "Years of experience",
-    "statsCommits": "Commits this year",
-    "servicesTitle": "What I Do",
-    "servicesSubtitle": "Capabilities I bring to every collaboration",
-    "featuredTitle": "Featured Work",
-    "featuredSubtitle": "A selection of recent projects",
-    "viewAll": "View all projects"
+    "hero": {
+      "greeting": "Hello, I'm",
+      "eyebrow": "Available for new projects",
+      "title": "Crafting digital experiences with code & creativity",
+      "subtitle": "Fullstack Developer focused on building modern, responsive, and scalable web experiences through clean code, thoughtful design, and reliable performance.",
+      "ctaPrimary": "View Projects",
+      "ctaSecondary": "Download CV",
+      "role": "Fullstack Developer",
+      "location": "Based in Indonesia"
+    },
+    "about": {
+      "title": "About Me",
+      "body": "I design and build products end-to-end — from pixel-perfect interfaces to robust APIs. I care deeply about craft, motion, and user experience. Currently focused on Next.js, TanStack, and modern animation systems."
+    },
+    "stats": {
+      "projects": "Projects shipped",
+      "clients": "Happy clients",
+      "years": "Years of experience",
+      "commits": "Commits this year"
+    },
+    "services": {
+      "title": "What I Do",
+      "subtitle": "Capabilities I bring to every collaboration"
+    },
+    "projects": {
+      "title": "Featured Work",
+      "subtitle": "A selection of recent projects",
+      "viewAll": "View all projects"
+    },
+    "cta": {
+      "eyebrow": "Open for work",
+      "title": "Got an idea?",
+      "titleHighlight": "Let's build it.",
+      "subtitle": "From landing pages to complex platforms — I help startups and creators ship fast and look incredible doing it.",
+      "ctaPrimary": "Let's Talk",
+      "ctaSecondary": "See projects"
+    }
   },
-  "exp": {
-    "heroTitle": "Experience & Journey",
-    "heroSubtitle": "A timeline of roles, education and certifications that shaped my craft.",
-    "timeline": "Work Timeline",
-    "education": "Education",
-    "certificates": "Certificates",
-    "viewCert": "View certificate"
+  "experience": {
+    "hero": {
+      "title": "Experience & Journey",
+      "subtitle": "A timeline of roles, education and certifications that shaped my craft."
+    },
+    "timeline": {
+      "title": "Work Timeline"
+    },
+    "education": {
+      "title": "Education"
+    },
+    "certificates": {
+      "title": "Certificates",
+      "view": "View certificate"
+    }
   },
   "skills": {
     "heroTitle": "Skills & Toolbox",

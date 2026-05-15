@@ -1,4 +1,4 @@
-import { Logo } from '@/components/logo'
+import { Logo } from '@/components/common/logo'
 import { SocialLinks } from '@/components/social-links'
 import { Heart } from 'lucide-react'
 import { useTranslations } from 'next-intl'
@@ -50,6 +50,7 @@ export function Footer() {
               </li>
             </ul>
           </div>
+
           <div>
             <p className="text-muted-foreground mb-3 text-xs font-semibold tracking-widest uppercase">Contact</p>
             <ul className="text-muted-foreground space-y-2 text-sm">
@@ -61,6 +62,7 @@ export function Footer() {
               <li>Indonesia · Remote</li>
             </ul>
           </div>
+
           <div>
             <p className="text-muted-foreground mb-3 text-xs font-semibold tracking-widest uppercase">Stack</p>
             <ul className="text-muted-foreground space-y-2 text-sm">

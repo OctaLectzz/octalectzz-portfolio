@@ -7,35 +7,60 @@
     "contact": "Kontak",
     "cta": "Hubungi Saya"
   },
-  "hero": {
-    "eyebrow": "Tersedia untuk proyek baru",
-    "title": "Membangun pengalaman digital dengan kode & kreativitas",
-    "subtitle": "Halo, saya Octavyan Putra Ramadhan — Fullstack Developer yang membangun produk web modern dan performan dengan cinta pada detail dan animasi.",
-    "ctaPrimary": "Lihat Proyek",
-    "ctaSecondary": "Unduh CV",
-    "role": "Fullstack Developer",
-    "location": "Berbasis di Indonesia"
-  },
   "home": {
-    "aboutTitle": "Tentang Saya",
-    "aboutBody": "Saya merancang dan membangun produk dari ujung ke ujung — dari antarmuka yang rapi hingga API yang andal. Saya peduli pada kualitas, animasi, dan pengalaman pengguna. Saat ini fokus pada Next.js, TanStack, dan sistem animasi modern.",
-    "statsProjects": "Proyek selesai",
-    "statsClients": "Klien puas",
-    "statsYears": "Tahun pengalaman",
-    "statsCommits": "Commit tahun ini",
-    "servicesTitle": "Yang Saya Lakukan",
-    "servicesSubtitle": "Kemampuan yang saya bawa ke setiap kolaborasi",
-    "featuredTitle": "Karya Pilihan",
-    "featuredSubtitle": "Sejumlah proyek terbaru",
-    "viewAll": "Lihat semua proyek"
+    "hero": {
+      "greeting": "Halo, Saya",
+      "eyebrow": "Tersedia untuk proyek baru",
+      "title": "Membangun pengalaman digital dengan kode & kreativitas",
+      "subtitle": "Fullstack Developer yang berfokus membangun pengalaman web modern, responsif, dan scalable melalui kode yang rapi, desain yang terarah, serta performa yang andal.",
+      "ctaPrimary": "Lihat Proyek",
+      "ctaSecondary": "Unduh CV",
+      "role": "Fullstack Developer",
+      "location": "Berbasis di Indonesia"
+    },
+    "about": {
+      "title": "Tentang Saya",
+      "body": "Saya merancang dan membangun produk dari ujung ke ujung — dari antarmuka yang rapi hingga API yang andal. Saya peduli pada kualitas, animasi, dan pengalaman pengguna. Saat ini fokus pada Next.js, TanStack, dan sistem animasi modern."
+    },
+    "stats": {
+      "projects": "Proyek selesai",
+      "clients": "Klien puas",
+      "years": "Tahun pengalaman",
+      "commits": "Commit tahun ini"
+    },
+    "services": {
+      "title": "Yang Saya Lakukan",
+      "subtitle": "Kemampuan yang saya bawa ke setiap kolaborasi"
+    },
+    "projects": {
+      "title": "Karya Pilihan",
+      "subtitle": "Sejumlah proyek terbaru",
+      "viewAll": "Lihat semua proyek"
+    },
+    "cta": {
+      "eyebrow": "Terbuka untuk pekerjaan",
+      "title": "Punya ide?",
+      "titleHighlight": "Mari kita bangun.",
+      "subtitle": "Dari landing page hingga platform kompleks — saya membantu startup dan kreator meluncurkan produk dengan cepat dan terlihat luar biasa.",
+      "ctaPrimary": "Hubungi Saya",
+      "ctaSecondary": "Lihat proyek"
+    }
   },
-  "exp": {
-    "heroTitle": "Pengalaman & Perjalanan",
-    "heroSubtitle": "Lini masa peran, pendidikan, dan sertifikasi yang membentuk keahlian saya.",
-    "timeline": "Lini Masa Pekerjaan",
-    "education": "Pendidikan",
-    "certificates": "Sertifikat",
-    "viewCert": "Lihat sertifikat"
+  "experience": {
+    "hero": {
+      "title": "Pengalaman & Perjalanan",
+      "subtitle": "Lini masa peran, pendidikan, dan sertifikasi yang membentuk keahlian saya."
+    },
+    "timeline": {
+      "title": "Lini Masa Pekerjaan"
+    },
+    "education": {
+      "title": "Pendidikan"
+    },
+    "certificates": {
+      "title": "Sertifikat",
+      "view": "Lihat sertifikat"
+    }
   },
   "skills": {
     "heroTitle": "Keahlian & Perangkat",

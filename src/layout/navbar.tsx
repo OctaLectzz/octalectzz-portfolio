@@ -1,6 +1,7 @@
 'use client'
 
-import { Logo } from '@/components/logo'
+import { Logo } from '@/components/common/logo'
+import { PrimaryButton } from '@/components/common/primary-button'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Languages, Menu, Moon, Sun, X } from 'lucide-react'
@@ -98,6 +99,7 @@ export function Navbar() {
               <Languages className="h-3.5 w-3.5" />
               {locale}
             </button>
+
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               aria-label="Toggle theme"
@@ -105,12 +107,11 @@ export function Navbar() {
             >
               {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
-            <Link
-              href="/contact"
-              className="bg-gradient-primary text-primary-foreground glow hidden items-center rounded-lg px-4 py-2 text-sm font-semibold transition-transform hover:scale-105 md:inline-flex"
-            >
+
+            <PrimaryButton asChildHref="/contact" variant="primary" size="default" className="hidden md:inline-flex">
               {t('nav.cta')}
-            </Link>
+            </PrimaryButton>
+
             <button
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle menu"

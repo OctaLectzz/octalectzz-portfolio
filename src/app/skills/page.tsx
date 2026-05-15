@@ -1,8 +1,9 @@
 'use client'
 
 import { BeamsBackground, DotsBackground, GridBackground, MeshBackground, SpotlightBackground } from '@/components/backgrounds'
+import { Eyebrow } from '@/components/common/eyebrow'
+import { Container, Section, SectionHeader } from '@/components/common/section'
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/reveal'
-import { Container, Section, SectionHeader } from '@/components/section'
 import { skillGroups } from '@/data'
 import { motion } from 'framer-motion'
 import { Cpu } from 'lucide-react'
@@ -20,9 +21,7 @@ export default function SkillsPage() {
         <GridBackground />
         <Container>
           <Reveal>
-            <span className="border-border bg-surface/50 text-muted-foreground inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium tracking-[0.18em] uppercase">
-              <Cpu className="text-primary h-3 w-3" /> Toolbox
-            </span>
+            <Eyebrow label="Toolbox" icon={Cpu} />
             <h1 className="font-display mt-4 text-5xl font-bold tracking-tight md:text-7xl">
               <span className="text-foreground">{t('skills.heroTitle').split(' ').slice(0, 1).join(' ')} </span>
               <span className="text-gradient-aurora">{t('skills.heroTitle').split(' ').slice(1).join(' ')}</span>
@@ -38,7 +37,7 @@ export default function SkillsPage() {
           <Section key={group.id} className={gi === skillGroups.length - 1 ? 'pb-32' : ''}>
             <Bg />
             <Container>
-              <SectionHeader eyebrow={`Stack · ${gi + 1}`} title={<>{t(group.titleKey)}</>} />
+              <SectionHeader eyebrow={`Stack · ${gi + 1}`} icon={Cpu} title={<>{t(group.titleKey)}</>} />
               <StaggerContainer className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                 {group.skills.map((s) => {
                   const Icon = s.icon

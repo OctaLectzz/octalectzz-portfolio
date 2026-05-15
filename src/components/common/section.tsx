@@ -14,17 +14,37 @@ export function Container({ className, children }: { className?: string; childre
   return <div className={cn('relative mx-auto w-full max-w-7xl px-6 md:px-8', className)}>{children}</div>
 }
 
+import type { LucideIcon } from 'lucide-react'
+import { Eyebrow } from './eyebrow'
+import { PrimaryText } from './primary-text'
+
 export function SectionHeader({
   eyebrow,
+  icon,
   title,
+  highlight,
   subtitle,
   align = 'center'
 }: {
   eyebrow?: string
-  title: ReactNode
+  icon?: LucideIcon
+  title: string
+  highlight?: string
   subtitle?: string
   align?: 'center' | 'left'
 }) {
+  // If highlight is explicitly provided, use it.
+  // Otherwise, if title has multiple words, highlight the last word automatically.
+  // If title is a single word, just render it as foreground (or highlight it? usually foreground).
+  let renderTitle = title
+  let renderHighlight = highlight
+
+  if (!highlight && title.includes(' ')) {
+    const words = title.split(' ')
+    renderHighlight = words.pop()
+    renderTitle = words.join(' ')
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -33,13 +53,16 @@ export function SectionHeader({
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={cn('mb-14 max-w-3xl', align === 'center' ? 'mx-auto text-center' : '')}
     >
-      {eyebrow && (
-        <span className="border-border bg-surface/50 text-muted-foreground mb-3 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium tracking-[0.18em] uppercase backdrop-blur">
-          <span className="bg-primary animate-pulse-glow h-1.5 w-1.5 rounded-full" />
-          {eyebrow}
-        </span>
-      )}
-      <h2 className="font-display text-foreground text-3xl font-bold tracking-tight md:text-5xl">{title}</h2>
+      {eyebrow && <Eyebrow label={eyebrow} icon={icon} pulse={!icon} />}
+      <h2 className="font-display text-3xl font-bold tracking-tight md:text-5xl">
+        <span className="text-foreground">{renderTitle}</span>
+        {renderHighlight && (
+          <>
+            {renderTitle ? ' ' : ''}
+            <PrimaryText text={renderHighlight} />
+          </>
+        )}
+      </h2>
       {subtitle && <p className="text-muted-foreground mt-4 text-base md:text-lg">{subtitle}</p>}
     </motion.div>
   )
