@@ -4,22 +4,24 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Download } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
-import { GridBackground, MeshBackground } from '@/components/backgrounds'
+import { GridBackground, MeshBackground } from '@/components/common/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
 import { PrimaryButton } from '@/components/common/primary-button'
 import { PrimaryText } from '@/components/common/primary-text'
+import { Reveal } from '@/components/common/reveal'
 import { Container, Section } from '@/components/common/section'
 import { HeroPhoto } from '@/components/hero-photo'
-import { Reveal } from '@/components/reveal'
 import { SocialLinks } from '@/components/social-links'
+import { Meteors } from '@/components/ui/meteors'
 
 export function HeroSection() {
   const t = useTranslations('home.hero')
 
   return (
-    <Section className="pt-10 md:pt-16">
+    <Section className="pt-20 md:pt-28">
       <MeshBackground />
       <GridBackground />
+      <Meteors number={10} />
 
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_1fr]">

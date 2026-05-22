@@ -1,6 +1,6 @@
-import { BeamsBackground } from '@/components/backgrounds'
+import { BeamsBackground } from '@/components/common/backgrounds'
+import { StaggerContainer, StaggerItem } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'
-import { StaggerContainer, StaggerItem } from '@/components/reveal'
 import { education } from '@/data'
 import { GraduationCap } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'

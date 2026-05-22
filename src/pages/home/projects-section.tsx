@@ -4,10 +4,10 @@ import { ArrowUpRight, Rocket } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
-import { SpotlightBackground } from '@/components/backgrounds'
+import { SpotlightBackground } from '@/components/common/backgrounds'
 import { ProjectCard } from '@/components/common/project-card'
+import { StaggerContainer, StaggerItem } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'
-import { StaggerContainer, StaggerItem } from '@/components/reveal'
 import { projects } from '@/data'
 
 export function ProjectsSection() {

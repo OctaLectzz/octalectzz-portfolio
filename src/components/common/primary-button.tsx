@@ -27,9 +27,11 @@ export function PrimaryButton({ variant = 'primary', size = 'lg', className, chi
       whileTap={{ scale: 0.96 }}
       className={cn(
         buttonVariants({ variant: shadcnVariant as any, size, className }),
-        isPrimary && 'bg-gradient-primary text-primary-foreground glow border-transparent transition-all',
-        variant === 'outline' && 'border-border bg-surface/40 text-foreground hover:border-primary',
-        'relative overflow-hidden'
+        isPrimary &&
+          'animate-aurora text-primary-foreground glow border-transparent bg-[linear-gradient(120deg,var(--primary),var(--primary),var(--secondary),var(--primary))] bg-size-[200%_200%] transition-all hover:shadow-[0_0_25px_color-mix(in_oklab,var(--primary)_50%,transparent)]',
+        variant === 'outline' &&
+          'border-border bg-surface/40 text-foreground hover:border-primary hover:shadow-[0_0_15px_color-mix(in_oklab,var(--primary)_30%,transparent)]',
+        'group relative cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-0.5'
       )}
       {...props}
     >

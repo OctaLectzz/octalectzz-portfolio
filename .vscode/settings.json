@@ -18,5 +18,7 @@
     "javascript": "(?<=class(Name)?=\\{?\"?)([^\"{]*)(?=\"?\\}?)",
     "typescriptreact": "(?<=class(Name)?=\\{?\"?)([^\"{]*)(?=\"?\\}?)"
   },
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+
+  "ai-localizer.disabled": true
 }

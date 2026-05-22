@@ -4,7 +4,20 @@ import createNextIntlPlugin from 'next-intl/plugin'
 const withNextIntl = createNextIntlPlugin()
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    rules: {
+      '*.glb': {
+        type: 'asset'
+      }
+    }
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.(glb|gltf)$/,
+      type: 'asset/resource'
+    })
+    return config
+  }
 }
 
 export default withNextIntl(nextConfig)

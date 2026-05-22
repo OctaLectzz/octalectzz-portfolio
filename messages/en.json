@@ -20,7 +20,8 @@
     },
     "about": {
       "title": "About Me",
-      "body": "I design and build products end-to-end — from pixel-perfect interfaces to robust APIs. I care deeply about craft, motion, and user experience. Currently focused on Next.js, TanStack, and modern animation systems."
+      "body1": "I design and build products end-to-end — from pixel-perfect interfaces to robust APIs. I care deeply about craft, motion, and user experience. Currently focused on Next.js, TanStack, and modern animation systems.",
+      "body2": "I design and build products end-to-end — from pixel-perfect interfaces to robust APIs. I care deeply about craft, motion, and user experience. Currently focused on Next.js, TanStack, and modern animation systems."
     },
     "stats": {
       "projects": "Projects shipped",

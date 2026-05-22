@@ -1,6 +1,6 @@
-import { MeshBackground } from '@/components/backgrounds'
+import { MeshBackground } from '@/components/common/backgrounds'
+import { StaggerContainer, StaggerItem } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'
-import { StaggerContainer, StaggerItem } from '@/components/reveal'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { certificates } from '@/data'
 import { Award } from 'lucide-react'

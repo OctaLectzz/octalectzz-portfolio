@@ -20,7 +20,8 @@
     },
     "about": {
       "title": "Tentang Saya",
-      "body": "Saya merancang dan membangun produk dari ujung ke ujung — dari antarmuka yang rapi hingga API yang andal. Saya peduli pada kualitas, animasi, dan pengalaman pengguna. Saat ini fokus pada Next.js, TanStack, dan sistem animasi modern."
+      "body1": "Saya merancang dan membangun produk dari ujung ke ujung — dari antarmuka yang rapi hingga API yang andal. Saya peduli pada kualitas, animasi, dan pengalaman pengguna. Saat ini fokus pada Next.js, TanStack, dan sistem animasi modern.",
+      "body2": "Saya merancang dan membangun produk dari ujung ke ujung — dari antarmuka yang rapi hingga API yang andal. Saya peduli pada kualitas, animasi, dan pengalaman pengguna. Saat ini fokus pada Next.js, TanStack, dan sistem animasi modern."
     },
     "stats": {
       "projects": "Proyek selesai",

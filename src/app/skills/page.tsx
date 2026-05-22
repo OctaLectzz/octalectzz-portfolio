@@ -1,9 +1,9 @@
 'use client'
 
-import { BeamsBackground, DotsBackground, GridBackground, MeshBackground, SpotlightBackground } from '@/components/backgrounds'
+import { BeamsBackground, DotsBackground, GridBackground, MeshBackground, SpotlightBackground } from '@/components/common/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
+import { Reveal, StaggerContainer, StaggerItem } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'
-import { Reveal, StaggerContainer, StaggerItem } from '@/components/reveal'
 import { skillGroups } from '@/data'
 import { motion } from 'framer-motion'
 import { Cpu } from 'lucide-react'

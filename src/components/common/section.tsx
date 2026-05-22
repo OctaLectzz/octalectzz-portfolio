@@ -24,7 +24,8 @@ export function SectionHeader({
   title,
   highlight,
   subtitle,
-  align = 'center'
+  align = 'center',
+  className
 }: {
   eyebrow?: string
   icon?: LucideIcon
@@ -32,6 +33,7 @@ export function SectionHeader({
   highlight?: string
   subtitle?: string
   align?: 'center' | 'left'
+  className?: string
 }) {
   // If highlight is explicitly provided, use it.
   // Otherwise, if title has multiple words, highlight the last word automatically.
@@ -51,7 +53,7 @@ export function SectionHeader({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={cn('mb-14 max-w-3xl', align === 'center' ? 'mx-auto text-center' : '')}
+      className={cn('mb-14 max-w-3xl', align === 'center' ? 'mx-auto text-center' : '', className)}
     >
       {eyebrow && <Eyebrow label={eyebrow} icon={icon} pulse={!icon} />}
       <h2 className="font-display text-3xl font-bold tracking-tight md:text-5xl">

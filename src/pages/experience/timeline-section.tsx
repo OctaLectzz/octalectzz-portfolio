@@ -1,4 +1,4 @@
-import { DotsBackground } from '@/components/backgrounds'
+import { DotsBackground } from '@/components/common/backgrounds'
 import { Container, Section, SectionHeader } from '@/components/common/section'
 import { experience } from '@/data'
 import { motion } from 'framer-motion'

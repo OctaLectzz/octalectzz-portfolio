@@ -1,10 +1,10 @@
 'use client'
 
-import { BeamsBackground, GridBackground, MeshBackground } from '@/components/backgrounds'
+import { BeamsBackground, GridBackground, MeshBackground } from '@/components/common/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
 import { PrimaryButton } from '@/components/common/primary-button'
+import { Reveal } from '@/components/common/reveal'
 import { Container, Section } from '@/components/common/section'
-import { Reveal } from '@/components/reveal'
 import { SocialLinks } from '@/components/social-links'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'

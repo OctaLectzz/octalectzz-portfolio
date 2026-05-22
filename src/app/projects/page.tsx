@@ -1,9 +1,9 @@
 'use client'
 
-import { DotsBackground, GridBackground, MeshBackground } from '@/components/backgrounds'
+import { DotsBackground, GridBackground, MeshBackground } from '@/components/common/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
+import { Reveal } from '@/components/common/reveal'
 import { Container, Section } from '@/components/common/section'
-import { Reveal } from '@/components/reveal'
 import { Input } from '@/components/ui/input'
 import { projects } from '@/data'
 import { cn } from '@/lib/utils'

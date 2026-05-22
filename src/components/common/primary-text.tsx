@@ -9,7 +9,7 @@ interface PrimaryTextProps {
 
 export function PrimaryText({ text, className }: PrimaryTextProps) {
   return (
-    <AuroraText colors={['var(--primary)', 'var(--secondary)', 'var(--accent)']} speed={1.5} className={className}>
+    <AuroraText colors={['var(--primary)', 'var(--primary)', 'var(--secondary)', 'var(--primary)']} speed={1.5} className={className}>
       {text}
     </AuroraText>
   )

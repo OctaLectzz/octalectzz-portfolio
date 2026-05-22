@@ -35,7 +35,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             <SmoothScroll>
               <Navbar />
 
-              <main className="pt-24">{children}</main>
+              <main>{children}</main>
 
               <Footer />
             </SmoothScroll>
