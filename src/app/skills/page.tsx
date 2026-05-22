@@ -37,7 +37,8 @@ export default function SkillsPage() {
           <Section key={group.id} className={gi === skillGroups.length - 1 ? 'pb-32' : ''}>
             <Bg />
             <Container>
-              <SectionHeader eyebrow={`Stack · ${gi + 1}`} icon={Cpu} title={<>{t(group.titleKey)}</>} />
+              <SectionHeader eyebrow={`Stack · ${gi + 1}`} icon={Cpu} title={t(group.titleKey)} />
+
               <StaggerContainer className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                 {group.skills.map((s) => {
                   const Icon = s.icon

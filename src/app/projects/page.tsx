@@ -1,30 +1,39 @@
 'use client'
 
-import { DotsBackground, GridBackground, MeshBackground } from '@/components/common/backgrounds'
+import { CyberGridBackground } from '@/components/common/cyber-grid-background'
 import { Eyebrow } from '@/components/common/eyebrow'
+import { NebulaBackground } from '@/components/common/nebula-background'
+import { ProjectCard } from '@/components/common/project-card'
 import { Reveal } from '@/components/common/reveal'
 import { Container, Section } from '@/components/common/section'
 import { Input } from '@/components/ui/input'
-import { projects } from '@/data'
+import { categories, projects } from '@/data'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowUpRight, Layers, Search } from 'lucide-react'
+import { Layers, Search } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
 import { useMemo, useState } from 'react'
-import { FaGithub } from 'react-icons/fa6'
-
-const categories = ['All', 'Web', 'Mobile', 'UI/UX', 'Open Source'] as const
 
 export default function ProjectsPage() {
   const t = useTranslations()
   const lang = useLocale()
-  const [category, setCategory] = useState<(typeof categories)[number]>('All')
+  const [selectedCategoryId, setSelectedCategoryId] = useState<string>('all')
   const [searchQuery, setSearchQuery] = useState('')
+
+  const categoryOptions = useMemo(() => {
+    return [
+      { id: 'all', label: t('projects.all') },
+      ...categories.map((c) => ({
+        id: c.id,
+        label: lang === 'en' ? c.nameEn : c.nameId
+      }))
+    ]
+  }, [lang, t])
 
   const filtered = useMemo(() => {
     const term = searchQuery.trim().toLowerCase()
     return projects.filter((project) => {
-      if (category !== 'All' && project.category !== category) return false
+      if (selectedCategoryId !== 'all' && project.categoryId !== selectedCategoryId) return false
       if (!term) return true
       return (
         project.title.toLowerCase().includes(term) ||
@@ -33,13 +42,14 @@ export default function ProjectsPage() {
         project.description.id.toLowerCase().includes(term)
       )
     })
-  }, [category, searchQuery])
+  }, [selectedCategoryId, searchQuery])
 
   return (
     <>
-      <Section className="pt-10 pb-12 md:pt-16">
-        <MeshBackground />
-        <GridBackground />
+      {/* Hero Section */}
+      <Section className="relative overflow-hidden pt-10 pb-12 md:pt-16">
+        <NebulaBackground />
+
         <Container>
           <Reveal>
             <Eyebrow label="Portfolio" icon={Layers} />
@@ -50,37 +60,38 @@ export default function ProjectsPage() {
             <p className="text-muted-foreground mt-5 max-w-2xl text-lg">{t('projects.heroSubtitle')}</p>
           </Reveal>
 
-          {/* Search + Filters */}
+          {/* Search + Filters with glassmorphism */}
           <div className="mt-12 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div className="relative w-full md:max-w-md">
-              <Search className="text-muted-foreground pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
+              <Search className="text-muted-foreground/75 pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transition-colors" />
               <Input
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t('projects.searchPlaceholder')}
-                className="border-border bg-surface/40 h-12 rounded-xl pl-10 text-base"
+                className="border-border/60 bg-surface/30 focus:border-primary/50 focus:ring-primary/20 h-12 rounded-xl pl-10 text-base backdrop-blur-md transition-all"
               />
             </div>
+
             <div className="flex flex-wrap gap-2">
-              {categories.map((categoryItem) => (
+              {categoryOptions.map((opt) => (
                 <button
-                  key={categoryItem}
-                  onClick={() => setCategory(categoryItem)}
+                  key={opt.id}
+                  onClick={() => setSelectedCategoryId(opt.id)}
                   className={cn(
-                    'relative rounded-full border px-4 py-1.5 text-xs font-semibold transition-colors',
-                    category === categoryItem
+                    'relative rounded-full border px-4 py-1.5 text-xs font-semibold transition-colors duration-300',
+                    selectedCategoryId === opt.id
                       ? 'text-primary-foreground border-transparent'
-                      : 'border-border text-muted-foreground hover:text-foreground'
+                      : 'border-border/60 text-muted-foreground hover:border-primary/30 hover:text-foreground bg-surface/20 backdrop-blur-sm'
                   )}
                 >
-                  {category === categoryItem && (
+                  {selectedCategoryId === opt.id && (
                     <motion.span
                       layoutId="cat-pill"
                       className="bg-gradient-primary glow absolute inset-0 rounded-full"
                       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                     />
                   )}
-                  <span className="relative">{categoryItem === 'All' ? t('projects.all') : categoryItem}</span>
+                  <span className="relative z-10">{opt.label}</span>
                 </button>
               ))}
             </div>
@@ -88,81 +99,38 @@ export default function ProjectsPage() {
         </Container>
       </Section>
 
-      <Section className="pt-0 pb-32">
-        <DotsBackground />
+      {/* Grid Section */}
+      <Section className="relative overflow-hidden pt-0 pb-32">
+        <CyberGridBackground />
+
         <Container>
           <AnimatePresence mode="popLayout">
             {filtered.length === 0 ? (
-              <motion.p
+              <motion.div
                 key="empty"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="text-muted-foreground py-20 text-center"
+                className="flex flex-col items-center justify-center py-20 text-center"
               >
-                {t('projects.empty')}
-              </motion.p>
+                <div className="border-border bg-surface/30 mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border shadow-[0_0_15px_rgba(var(--primary-glow),0.1)] backdrop-blur-md">
+                  <Search className="text-muted-foreground/60 h-6 w-6" />
+                </div>
+                <p className="text-muted-foreground max-w-sm">{t('projects.empty')}</p>
+              </motion.div>
             ) : (
               <motion.div layout className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {filtered.map((project) => (
-                  <motion.article
+                {filtered.map((project, idx) => (
+                  <motion.div
                     key={project.id}
                     layout
-                    initial={{ opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.45 }}
-                    whileHover={{ y: -6 }}
-                    className="group border-border bg-card hover:border-primary/60 hover:shadow-glow relative overflow-hidden rounded-2xl border transition-colors"
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.96 }}
+                    transition={{ duration: 0.3 }}
                   >
-                    <div className="relative aspect-16/10 overflow-hidden">
-                      <img
-                        src={project.cover}
-                        alt={project.title}
-                        loading="lazy"
-                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div aria-hidden className="from-card via-card/0 absolute inset-0 bg-linear-to-t to-transparent" />
-                      <span className="border-border bg-background/70 text-foreground absolute top-3 right-3 rounded-full border px-2.5 py-0.5 text-[10px] font-semibold tracking-widest uppercase backdrop-blur">
-                        {project.category}
-                      </span>
-                    </div>
-                    <div className="p-5">
-                      <h3 className="font-display text-lg font-semibold">{project.title}</h3>
-                      <p className="text-muted-foreground mt-1 line-clamp-2 text-sm">
-                        {lang === 'en' ? project.description.en : project.description.id}
-                      </p>
-                      <div className="mt-3 flex flex-wrap gap-1.5">
-                        {project.tags.map((tag) => (
-                          <span key={tag} className="border-border bg-surface/40 text-muted-foreground rounded-md border px-2 py-0.5 text-[11px]">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="mt-4 flex items-center gap-3">
-                        {project.live && (
-                          <a
-                            href={project.live}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary inline-flex items-center gap-1 text-xs font-semibold transition-all hover:gap-2"
-                          >
-                            {t('projects.live')} <ArrowUpRight className="h-3.5 w-3.5" />
-                          </a>
-                        )}
-                        {project.repo && (
-                          <a
-                            href={project.repo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-xs font-semibold"
-                          >
-                            <FaGithub className="h-3.5 w-3.5" /> {t('projects.code')}
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </motion.article>
+                    <ProjectCard project={project} index={idx} />
+                  </motion.div>
                 ))}
               </motion.div>
             )}

@@ -1,3 +1,4 @@
+export * from './category'
 export * from './certificate'
 export * from './education'
 export * from './experience'
