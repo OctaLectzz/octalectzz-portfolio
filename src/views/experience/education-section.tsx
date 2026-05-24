@@ -1,4 +1,4 @@
-import { BeamsBackground } from '@/components/common/backgrounds'
+import { BeamsBackground } from '@/components/backgrounds/backgrounds'
 import { StaggerContainer, StaggerItem } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'
 import { education } from '@/data'

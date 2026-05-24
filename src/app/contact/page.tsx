@@ -1,6 +1,6 @@
 'use client'
 
-import { BeamsBackground, GridBackground, MeshBackground } from '@/components/common/backgrounds'
+import { BeamsBackground, GridBackground, MeshBackground } from '@/components/backgrounds/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
 import { PrimaryButton } from '@/components/common/primary-button'
 import { Reveal } from '@/components/common/reveal'

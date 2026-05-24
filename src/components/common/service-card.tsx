@@ -1,5 +1,6 @@
 'use client'
 
+import { BorderBeam } from '@/components/ui/border-beam'
 import { cn } from '@/lib/utils'
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 import type { MouseEvent, ReactNode } from 'react'
@@ -46,7 +47,17 @@ export function ServiceCard({ icon, title, description, index = 0, className }: 
       />
 
       {/* Card body */}
-      <div className="border-border/50 bg-card/60 group-hover:shadow-primary/20 relative h-full overflow-hidden rounded-2xl border backdrop-blur-xl transition-all duration-500 group-hover:border-transparent group-hover:shadow-[0_0_40px_-8px]">
+      <div className="border-border/50 bg-card/30 group-hover:shadow-primary/20 relative h-full overflow-hidden rounded-2xl border backdrop-blur-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:border-transparent group-hover:shadow-[0_0_40px_-8px]">
+        <BorderBeam
+          size={200}
+          duration={12}
+          delay={index}
+          colorFrom="hsl(var(--primary))"
+          colorTo="hsl(var(--secondary))"
+          borderWidth={1.5}
+          className="opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        />
+
         {/* Mouse spotlight */}
         <motion.div
           className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
@@ -59,24 +70,24 @@ export function ServiceCard({ icon, title, description, index = 0, className }: 
         </div>
 
         {/* Card inner content */}
-        <div className="relative z-10 flex h-full flex-col p-6 md:p-7">
+        <div className="relative z-10 flex h-full flex-col p-8 md:p-10">
           {/* Icon container with animated glow */}
-          <div className="relative mb-5">
-            <div className="bg-gradient-primary group-hover:shadow-primary/30 relative grid h-12 w-12 place-items-center rounded-xl text-xl shadow-lg transition-all duration-500 group-hover:shadow-[0_0_25px_-4px]">
-              <span className="text-primary-foreground text-lg">{icon}</span>
+          <div className="relative mb-6">
+            <div className="bg-gradient-primary group-hover:shadow-primary/40 relative grid h-14 w-14 place-items-center rounded-xl text-xl shadow-lg transition-all duration-500 group-hover:shadow-[0_0_30px_-4px]">
+              <span className="text-primary-foreground text-2xl">{icon}</span>
             </div>
             {/* Icon pulse ring */}
             <div
-              className="bg-primary/20 absolute inset-0 h-12 w-12 animate-ping rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-30"
+              className="bg-primary/20 absolute inset-0 h-14 w-14 animate-ping rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-30"
               style={{ animationDuration: '2s' }}
             />
           </div>
 
           {/* Title */}
-          <h3 className="font-display group-hover:text-primary mb-2 text-lg font-semibold tracking-tight transition-colors duration-300">{title}</h3>
+          <h3 className="font-display group-hover:text-primary mb-3 text-2xl font-bold tracking-tight transition-colors duration-300">{title}</h3>
 
           {/* Description */}
-          <p className="text-muted-foreground flex-1 text-sm leading-relaxed">{description}</p>
+          <p className="text-muted-foreground flex-1 text-base leading-relaxed">{description}</p>
 
           {/* Bottom decorative line */}
           <div className="bg-border/30 mt-5 h-px w-full overflow-hidden rounded-full">

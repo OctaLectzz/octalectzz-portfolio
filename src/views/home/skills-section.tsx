@@ -1,6 +1,6 @@
 'use client'
 
-import { SpotlightBackground } from '@/components/common/backgrounds'
+import { SpotlightBackground } from '@/components/backgrounds/backgrounds'
 import { Marquee } from '@/components/common/marquee'
 import { skillGroups } from '@/data'
 

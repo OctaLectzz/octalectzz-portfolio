@@ -1,4 +1,4 @@
-import { MeshBackground } from '@/components/common/backgrounds'
+import { MeshBackground } from '@/components/backgrounds/backgrounds'
 import { StaggerContainer, StaggerItem } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'

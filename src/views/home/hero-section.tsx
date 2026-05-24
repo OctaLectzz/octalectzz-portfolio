@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Download } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
-import { GridBackground, MeshBackground } from '@/components/common/backgrounds'
+import { GridBackground, MeshBackground } from '@/components/backgrounds/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
 import { PrimaryButton } from '@/components/common/primary-button'
 import { PrimaryText } from '@/components/common/primary-text'

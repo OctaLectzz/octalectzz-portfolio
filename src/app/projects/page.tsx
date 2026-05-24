@@ -1,8 +1,8 @@
 'use client'
 
-import { CyberGridBackground } from '@/components/common/cyber-grid-background'
+import { CyberFrameBackground } from '@/components/backgrounds/cyber-frame-background'
+import { CyberGridBackground } from '@/components/backgrounds/cyber-grid-background'
 import { Eyebrow } from '@/components/common/eyebrow'
-import { NebulaBackground } from '@/components/common/nebula-background'
 import { ProjectCard } from '@/components/common/project-card'
 import { Reveal } from '@/components/common/reveal'
 import { Container, Section } from '@/components/common/section'
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
     <>
       {/* Hero Section */}
       <Section className="relative overflow-hidden pt-10 pb-12 md:pt-16">
-        <NebulaBackground />
+        <CyberFrameBackground />
 
         <Container>
           <Reveal>

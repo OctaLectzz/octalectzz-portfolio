@@ -1,6 +1,6 @@
 'use client'
 
-import { BeamsBackground, DotsBackground, GridBackground, MeshBackground, SpotlightBackground } from '@/components/common/backgrounds'
+import { BeamsBackground, DotsBackground, GridBackground, MeshBackground, SpotlightBackground } from '@/components/backgrounds/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'

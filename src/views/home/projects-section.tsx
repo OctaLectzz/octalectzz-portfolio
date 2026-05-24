@@ -4,7 +4,7 @@ import { ArrowUpRight, Rocket } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
-import { NebulaBackground } from '@/components/common/nebula-background'
+import { CyberFrameBackground } from '@/components/backgrounds/cyber-frame-background'
 import { ProjectCard } from '@/components/common/project-card'
 import { Container, Section, SectionHeader } from '@/components/common/section'
 import { projects } from '@/data'
@@ -14,8 +14,8 @@ export function ProjectsSection() {
   const featured = projects.filter((p) => p.featured)
 
   return (
-    <Section className="relative overflow-hidden">
-      <NebulaBackground />
+    <Section>
+      <CyberFrameBackground />
 
       <Container>
         <div className="mb-10 flex items-end justify-between gap-4">

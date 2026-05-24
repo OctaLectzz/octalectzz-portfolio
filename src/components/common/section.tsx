@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 
 export function Section({ id, className, children }: { id?: string; className?: string; children: ReactNode }) {
   return (
-    <section id={id} className={cn('relative isolate overflow-hidden py-24 md:py-32', className)}>
+    <section id={id} className={cn('relative isolate overflow-x-clip py-16 md:py-24', className)}>
       {children}
     </section>
   )
