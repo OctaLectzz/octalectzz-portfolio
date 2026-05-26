@@ -9,7 +9,9 @@ import { useTranslations } from 'next-intl'
 
 export default function ExperiencePage() {
   const t = useTranslations('experience.hero')
-  const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Experience' }]
+  const tNav = useTranslations('nav')
+
+  const breadcrumbs = [{ label: tNav('home'), href: '/' }, { label: tNav('experience') }]
 
   return (
     <>
@@ -23,7 +25,9 @@ export default function ExperiencePage() {
       />
 
       <TimelineSection />
+
       <EducationSection />
+
       <CertificatesSection />
     </>
   )

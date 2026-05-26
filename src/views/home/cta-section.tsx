@@ -3,7 +3,7 @@
 import { ArrowRight, Layers, Rocket } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
-import { CtaTechBackground } from '@/components/backgrounds/cta-tech-background'
+import { CtaTechBackground } from '@/components/backgrounds'
 import { PrimaryButton } from '@/components/common/primary-button'
 import { Reveal } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'

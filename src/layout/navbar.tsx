@@ -121,7 +121,7 @@ export function Navbar() {
               animate={{ opacity: 1, height: 'auto', y: 0 }}
               exit={{ opacity: 0, height: 0, y: -8 }}
               transition={{ duration: 0.25, ease: 'easeInOut' }}
-              className="bg-background/50 border-border/40 mt-2 grid gap-1 overflow-hidden rounded-2xl border p-3 shadow-lg backdrop-blur-lg md:hidden"
+              className="border-border/40 mt-2 grid gap-1 overflow-hidden rounded-2xl border p-3 shadow-lg backdrop-blur-lg md:hidden"
             >
               {links.map((l, i) => (
                 <motion.div

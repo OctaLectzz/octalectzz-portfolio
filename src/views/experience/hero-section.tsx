@@ -1,4 +1,4 @@
-import { GridBackground, MeshBackground } from '@/components/backgrounds/backgrounds'
+import { GridBackground, MeshBackground } from '@/components/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
 import { PrimaryText } from '@/components/common/primary-text'
 import { Reveal } from '@/components/common/reveal'

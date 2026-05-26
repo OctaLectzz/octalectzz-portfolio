@@ -4,7 +4,7 @@ import { ArrowUpRight, Rocket } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
-import { CyberFrameBackground } from '@/components/backgrounds/cyber-frame-background'
+import { CyberFrameBackground } from '@/components/backgrounds'
 import { ProjectCard } from '@/components/common/project-card'
 import { Container, Section, SectionHeader } from '@/components/common/section'
 import { ParticleField } from '@/components/ui/particle-field'

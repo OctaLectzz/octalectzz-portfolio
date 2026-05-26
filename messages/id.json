@@ -53,10 +53,24 @@
       "subtitle": "Lini masa peran, pendidikan, dan sertifikasi yang membentuk keahlian saya."
     },
     "timeline": {
-      "title": "Lini Masa Pekerjaan"
+      "title": "Lini Masa Pekerjaan",
+      "status": {
+        "Full Time": "Penuh Waktu",
+        "Part Time": "Paruh Waktu",
+        "Internship": "Magang",
+        "Freelance": "Lepas"
+      },
+      "readMore": "Baca selengkapnya",
+      "showLess": "Tampilkan lebih sedikit",
+      "journeyContinues": "Perjalanan berlanjut..."
     },
     "education": {
-      "title": "Pendidikan"
+      "title": "Pendidikan",
+      "status": {
+        "Completed": "Lulus",
+        "In Progress": "Sedang Berjalan"
+      },
+      "focus": "Fokus Utama"
     },
     "certificates": {
       "title": "Sertifikat",

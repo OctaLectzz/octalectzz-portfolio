@@ -1,6 +1,6 @@
 'use client'
 
-import { BeamsBackground, DotsBackground, MeshBackground, SpotlightBackground } from '@/components/backgrounds/backgrounds'
+import { BeamsBackground, DotsBackground, MeshBackground, SpotlightBackground } from '@/components/backgrounds'
 import { PageHeroSection } from '@/components/common/page-hero-section'
 import { StaggerContainer, StaggerItem } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'
@@ -13,7 +13,7 @@ const bgs = [SpotlightBackground, BeamsBackground, DotsBackground, MeshBackgroun
 
 export default function SkillsPage() {
   const t = useTranslations()
-  const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Skills' }]
+  const breadcrumbs = [{ label: t('nav.home'), href: '/' }, { label: t('nav.skills') }]
 
   return (
     <>

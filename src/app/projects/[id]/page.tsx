@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 import * as React from 'react'
 import { useMemo } from 'react'
 
-import { NeonGridBackground } from '@/components/backgrounds/neon-grid-background'
+import { NeonGridBackground } from '@/components/backgrounds'
 import { AppBreadcrumb } from '@/components/common/app-breadcrumb'
 import { PrimaryButton } from '@/components/common/primary-button'
 import { Container, Section } from '@/components/common/section'

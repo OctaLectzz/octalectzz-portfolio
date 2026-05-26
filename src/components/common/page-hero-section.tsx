@@ -1,4 +1,4 @@
-import { GridBackground, MeshBackground } from '@/components/backgrounds/backgrounds'
+import { GridBackground, MeshBackground } from '@/components/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
 import { PrimaryText } from '@/components/common/primary-text'
 import { Reveal } from '@/components/common/reveal'
@@ -53,6 +53,10 @@ export function PageHeroSection({
   return (
     <Section className={cn('relative overflow-hidden pt-20 pb-12 md:pt-28', className)}>
       {background ?? <DefaultBackground />}
+
+      {/* Bottom fade overlay to transition seamlessly into subsequent sections */}
+      <div className="from-background pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t to-transparent" />
+
       <Container className="relative z-10">
         {/* Breadcrumb */}
         <nav aria-label="breadcrumb" className="mb-4">
@@ -65,9 +69,11 @@ export function PageHeroSection({
             ))}
           </ol>
         </nav>
+
         {/* Hero content */}
         <Reveal>
           {eyebrow && <Eyebrow label={eyebrow} icon={eyebrowIcon} />}
+
           <h1 className="font-display text-foreground mt-4 text-5xl font-bold tracking-tight md:text-7xl">
             {highlight ? (
               <>
@@ -79,6 +85,7 @@ export function PageHeroSection({
               title
             )}
           </h1>
+
           <motion.p
             className="text-muted-foreground mt-5 max-w-2xl text-lg"
             initial={{ opacity: 0, y: 20 }}
@@ -88,6 +95,7 @@ export function PageHeroSection({
             {subtitle}
           </motion.p>
         </Reveal>
+
         {children}
       </Container>
     </Section>

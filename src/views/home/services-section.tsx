@@ -3,7 +3,7 @@
 import { Layers } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
 
-import { GlowLinesBackground } from '@/components/backgrounds/glow-lines-background'
+import { GlowLinesBackground } from '@/components/backgrounds'
 import { Container, Section, SectionHeader } from '@/components/common/section'
 import { ServiceCard } from '@/components/common/service-card'
 import { services } from '@/data'

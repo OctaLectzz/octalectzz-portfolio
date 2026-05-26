@@ -1,6 +1,6 @@
 'use client'
 
-import { BeamsBackground } from '@/components/backgrounds/backgrounds'
+import { BeamsBackground } from '@/components/backgrounds'
 import { PageHeroSection } from '@/components/common/page-hero-section'
 import { PrimaryButton } from '@/components/common/primary-button'
 import { Container, Section } from '@/components/common/section'
@@ -17,6 +17,8 @@ export default function ContactPage() {
   const t = useTranslations()
   const [loading, setLoading] = useState(false)
 
+  const breadcrumbs = [{ label: t('nav.home'), href: '/' }, { label: t('nav.contact') }]
+
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
@@ -26,8 +28,6 @@ export default function ContactPage() {
       ;(e.target as HTMLFormElement).reset()
     }, 900)
   }
-
-  const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Contact' }]
 
   return (
     <>
@@ -41,7 +41,8 @@ export default function ContactPage() {
       />
 
       <Section className="pt-0 pb-32">
-        <BeamsBackground />s
+        <BeamsBackground />
+
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr]">
             <motion.form

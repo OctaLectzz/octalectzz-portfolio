@@ -53,10 +53,24 @@
       "subtitle": "A timeline of roles, education and certifications that shaped my craft."
     },
     "timeline": {
-      "title": "Work Timeline"
+      "title": "Work Timeline",
+      "status": {
+        "Full Time": "Full Time",
+        "Part Time": "Part Time",
+        "Internship": "Internship",
+        "Freelance": "Freelance"
+      },
+      "readMore": "Read more",
+      "showLess": "Show less",
+      "journeyContinues": "The journey continues..."
     },
     "education": {
-      "title": "Education"
+      "title": "Education",
+      "status": {
+        "Completed": "Graduated",
+        "In Progress": "In Progress"
+      },
+      "focus": "Core Focus"
     },
     "certificates": {
       "title": "Certificates",

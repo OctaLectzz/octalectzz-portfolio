@@ -1,6 +1,6 @@
 'use client'
 
-import { CyberGridBackground } from '@/components/backgrounds/cyber-grid-background'
+import { CyberGridBackground } from '@/components/backgrounds'
 import { PageHeroSection } from '@/components/common/page-hero-section'
 import { ProjectCard } from '@/components/common/project-card'
 import { Container, Section } from '@/components/common/section'
@@ -17,6 +17,8 @@ export default function ProjectsPage() {
   const lang = useLocale()
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>('all')
   const [searchQuery, setSearchQuery] = useState('')
+
+  const breadcrumbs = [{ label: t('nav.home'), href: '/' }, { label: t('nav.projects') }]
 
   const categoryOptions = useMemo(() => {
     return [
@@ -41,8 +43,6 @@ export default function ProjectsPage() {
       )
     })
   }, [selectedCategoryId, searchQuery])
-
-  const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Projects' }]
 
   return (
     <>
