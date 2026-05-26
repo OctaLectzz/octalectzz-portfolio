@@ -40,6 +40,26 @@ export function CyberFrameBackground({ className }: { className?: string }) {
         .animate-floating-spark {
           animation: floating-spark linear infinite;
         }
+
+        /* Large desktop (lg and xl) centering frame optimization */
+        @media (min-width: 1440px) {
+          .cyber-frame-left {
+            left: calc(50% - 640px - 140px) !important;
+            width: 200px !important;
+          }
+          .cyber-frame-right {
+            right: calc(50% - 640px - 140px) !important;
+            width: 200px !important;
+          }
+          .cyber-glow-left {
+            left: calc(50% - 640px - 220px) !important;
+            width: 350px !important;
+          }
+          .cyber-glow-right {
+            right: calc(50% - 640px - 220px) !important;
+            width: 350px !important;
+          }
+        }
       `}</style>
 
       {/* Modern Circular Dot Pattern Background */}
@@ -55,7 +75,7 @@ export function CyberFrameBackground({ className }: { className?: string }) {
       <div className="absolute inset-0 overflow-hidden">
         {/* Left Side Glow */}
         <div
-          className="pointer-events-none absolute top-1/2 left-0 h-[80%] w-[350px] -translate-y-1/2 rounded-full blur-[130px]"
+          className="cyber-glow-left pointer-events-none absolute top-1/2 left-0 h-[80%] w-[350px] -translate-y-1/2 rounded-full blur-[130px]"
           style={{
             background: 'radial-gradient(ellipse at left, var(--primary) 0%, transparent 70%)',
             opacity: 0.22
@@ -63,7 +83,7 @@ export function CyberFrameBackground({ className }: { className?: string }) {
         />
         {/* Right Side Glow */}
         <div
-          className="pointer-events-none absolute top-1/2 right-0 h-[80%] w-[350px] -translate-y-1/2 rounded-full blur-[130px]"
+          className="cyber-glow-right pointer-events-none absolute top-1/2 right-0 h-[80%] w-[350px] -translate-y-1/2 rounded-full blur-[130px]"
           style={{
             background: 'radial-gradient(ellipse at right, var(--primary) 0%, transparent 70%)',
             opacity: 0.22
@@ -73,7 +93,7 @@ export function CyberFrameBackground({ className }: { className?: string }) {
 
       {/* Left Glowing Cyber Frame SVG (Angled Neon Border) */}
       <svg
-        className="pointer-events-none absolute top-0 left-0 h-full w-[14vw] max-w-[260px] min-w-[140px] overflow-visible opacity-70"
+        className="cyber-frame-left pointer-events-none absolute top-0 left-0 h-full w-[14vw] max-w-[260px] min-w-[140px] overflow-visible opacity-70"
         viewBox="0 0 200 1000"
         preserveAspectRatio="none"
       >
@@ -103,7 +123,7 @@ export function CyberFrameBackground({ className }: { className?: string }) {
 
       {/* Right Glowing Cyber Frame SVG (Angled Neon Border) */}
       <svg
-        className="pointer-events-none absolute top-0 right-0 h-full w-[14vw] max-w-[260px] min-w-[140px] overflow-visible opacity-70"
+        className="cyber-frame-right pointer-events-none absolute top-0 right-0 h-full w-[14vw] max-w-[260px] min-w-[140px] overflow-visible opacity-70"
         viewBox="0 0 200 1000"
         preserveAspectRatio="none"
       >

@@ -4,7 +4,7 @@ export const experience: ExperienceItem[] = [
   {
     role: 'Fullstack Developer',
     company: 'Freelance / Independent',
-    period: '2023 — Present',
+    period: '2023 - Present',
     location: 'Remote',
     description: {
       en: 'Designing and shipping end-to-end web products for clients across SaaS, e-commerce and creative agencies. Focus on motion-rich UI, performance and accessibility.',
@@ -15,7 +15,7 @@ export const experience: ExperienceItem[] = [
   {
     role: 'Frontend Engineer',
     company: 'Tech Startup',
-    period: '2022 — 2023',
+    period: '2022 - 2023',
     location: 'Jakarta, ID',
     description: {
       en: 'Built a real-time dashboard and component library used across 4 internal products. Led the migration from CRA to Next.js with a 38% perf improvement.',
@@ -26,7 +26,7 @@ export const experience: ExperienceItem[] = [
   {
     role: 'Web Developer Intern',
     company: 'Digital Agency',
-    period: '2021 — 2022',
+    period: '2021 - 2022',
     location: 'Surabaya, ID',
     description: {
       en: 'Delivered 10+ marketing sites and a custom CMS. Introduced motion design as a baseline for hero sections.',

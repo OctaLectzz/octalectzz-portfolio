@@ -20,8 +20,8 @@
     },
     "about": {
       "title": "Tentang Saya",
-      "body1": "Saya merancang dan membangun produk dari ujung ke ujung — dari antarmuka yang rapi hingga API yang andal. Saya peduli pada kualitas, animasi, dan pengalaman pengguna. Saat ini fokus pada Next.js, TanStack, dan sistem animasi modern.",
-      "body2": "Saya merancang dan membangun produk dari ujung ke ujung — dari antarmuka yang rapi hingga API yang andal. Saya peduli pada kualitas, animasi, dan pengalaman pengguna. Saat ini fokus pada Next.js, TanStack, dan sistem animasi modern.",
+      "body1": "Saya merancang dan membangun produk dari ujung ke ujung - dari antarmuka yang rapi hingga API yang andal. Saya peduli pada kualitas, animasi, dan pengalaman pengguna. Saat ini fokus pada Next.js, TanStack, dan sistem animasi modern.",
+      "body2": "Saya merancang dan membangun produk dari ujung ke ujung - dari antarmuka yang rapi hingga API yang andal. Saya peduli pada kualitas, animasi, dan pengalaman pengguna. Saat ini fokus pada Next.js, TanStack, dan sistem animasi modern.",
       "stats": {
         "projects": "Proyek selesai",
         "clients": "Klien puas",
@@ -42,7 +42,7 @@
       "eyebrow": "Terbuka untuk pekerjaan",
       "title": "Punya ide?",
       "titleHighlight": "Mari kita bangun.",
-      "subtitle": "Dari landing page hingga platform kompleks — saya membantu startup dan kreator meluncurkan produk dengan cepat dan terlihat luar biasa.",
+      "subtitle": "Dari landing page hingga platform kompleks - saya membantu startup dan kreator meluncurkan produk dengan cepat dan terlihat luar biasa.",
       "ctaPrimary": "Hubungi Saya",
       "ctaSecondary": "Lihat proyek"
     }
@@ -112,12 +112,12 @@
   },
   "contact": {
     "heroTitle": "Mari bangun sesuatu yang hebat",
-    "heroSubtitle": "Punya proyek? Kirim pesan — saya biasanya balas dalam 24 jam.",
+    "heroSubtitle": "Punya proyek? Kirim pesan - saya biasanya balas dalam 24 jam.",
     "name": "Nama Anda",
     "email": "Alamat email",
     "message": "Ceritakan tentang proyek Anda",
     "send": "Kirim pesan",
-    "sent": "Pesan terkirim — sampai jumpa!",
+    "sent": "Pesan terkirim - sampai jumpa!",
     "or": "atau hubungi langsung"
   },
   "footer": {

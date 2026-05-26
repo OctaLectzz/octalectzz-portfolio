@@ -29,7 +29,7 @@ export function Terminal() {
         <span className="bg-destructive/60 h-2.5 w-2.5 rounded-full" />
         <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/60" />
         <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/60" />
-        <span className="text-muted-foreground ml-2 text-[10px] font-medium opacity-70">octalectzz@dev — zsh</span>
+        <span className="text-muted-foreground ml-2 text-[10px] font-medium opacity-70">octalectzz@dev - zsh</span>
       </div>
       <div className="space-y-1">
         {lines.slice(0, li).map((l, i) => (

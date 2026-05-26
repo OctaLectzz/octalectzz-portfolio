@@ -8,6 +8,7 @@ import { PrimaryButton } from '@/components/common/primary-button'
 import { Reveal } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'
 import { BorderBeam } from '@/components/ui/border-beam'
+import { ParticleField } from '@/components/ui/particle-field'
 
 export function CtaSection() {
   const t = useTranslations('home.cta')
@@ -33,12 +34,19 @@ export function CtaSection() {
       <Container>
         <Reveal>
           {/* Glassmorphic Bento Card with Glowing Border Beam & 3D Floating Motion */}
-          <div className="animate-cta-float from-card/65 to-card/45 relative overflow-hidden rounded-3xl border border-black/8 bg-linear-to-b p-10 text-center shadow-[0_0_50px_-12px_rgba(var(--primary-glow),0.12)] backdrop-blur-xl md:p-16 dark:border-white/8">
+          <div className="animate-cta-float glass glow relative overflow-hidden rounded-3xl p-10 text-center transition-all duration-300 md:p-16">
             {/* Border Beam gliding slowly around rounded corners */}
-            <BorderBeam size={300} duration={8} borderWidth={1.5} colorFrom="var(--primary)" colorTo="var(--secondary)" />
+            <BorderBeam size={350} duration={8} borderWidth={1.5} colorFrom="var(--primary)" colorTo="var(--secondary)" />
+            <ParticleField />
+
+            {/* Subtle inner spotlight gradient for premium depth */}
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,color-mix(in_oklab,var(--primary)_12%,transparent),transparent_60%)]"
+            />
 
             {/* Fine internal tech pattern */}
-            <div aria-hidden className="dot-pattern absolute inset-0 opacity-[0.18]" />
+            <div aria-hidden className="dot-pattern absolute inset-0 opacity-[0.12] dark:opacity-[0.18]" />
 
             <div className="relative z-10">
               <SectionHeader eyebrow={t('eyebrow')} icon={Rocket} title={t('title')} highlight={t('titleHighlight')} subtitle={t('subtitle')} />

@@ -7,8 +7,6 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 
-import './lanyard.css'
-
 // Extend Three elements to include MeshLine elements
 extend({ MeshLineGeometry, MeshLineMaterial })
 
@@ -143,18 +141,54 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }: BandProps) {
         z: vec.z - dragged.z
       })
     }
-    if (fixed.current) {
+    if (fixed.current && j1.current && j2.current && j3.current && card.current) {
+      const tFixed = fixed.current.translation()
+      const tJ1 = j1.current.translation()
+      const tJ2 = j2.current.translation()
+      const tJ3 = j3.current.translation()
+
+      // Safeguard: check if any translations contain NaN
+      if (
+        !tFixed ||
+        isNaN(tFixed.x) ||
+        isNaN(tFixed.y) ||
+        isNaN(tFixed.z) ||
+        !tJ1 ||
+        isNaN(tJ1.x) ||
+        isNaN(tJ1.y) ||
+        isNaN(tJ1.z) ||
+        !tJ2 ||
+        isNaN(tJ2.x) ||
+        isNaN(tJ2.y) ||
+        isNaN(tJ2.z) ||
+        !tJ3 ||
+        isNaN(tJ3.x) ||
+        isNaN(tJ3.y) ||
+        isNaN(tJ3.z)
+      ) {
+        return
+      }
+
+      // Cap delta to prevent massive jumps/explosions on tab reactivation or frame drops
+      const clampedDelta = Math.min(0.03, delta)
+
       ;[j1, j2].forEach((ref) => {
         if (!ref.current.lerped) ref.current.lerped = new THREE.Vector3().copy(ref.current.translation())
         const clampedDistance = Math.max(0.1, Math.min(1, ref.current.lerped.distanceTo(ref.current.translation())))
-        ref.current.lerped.lerp(ref.current.translation(), delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed)))
+        // Ensure lerp alpha is strictly between 0 and 1 to prevent overshoot explosion
+        const lerpAlpha = Math.min(1, Math.max(0, clampedDelta * (minSpeed + clampedDistance * (maxSpeed - minSpeed))))
+        ref.current.lerped.lerp(ref.current.translation(), lerpAlpha)
       })
-      curve.points[0].copy(j3.current.translation())
+      curve.points[0].copy(tJ3)
       curve.points[1].copy(j2.current.lerped)
       curve.points[2].copy(j1.current.lerped)
-      curve.points[3].copy(fixed.current.translation())
-      // @ts-ignore
-      band.current.geometry.setPoints(curve.getPoints(isMobile ? 16 : 32))
+      curve.points[3].copy(tFixed)
+
+      const hasNaN = curve.points.some((p) => isNaN(p.x) || isNaN(p.y) || isNaN(p.z))
+      if (!hasNaN && band.current?.geometry) {
+        // @ts-ignore
+        band.current.geometry.setPoints(curve.getPoints(isMobile ? 16 : 32))
+      }
       ang.copy(card.current.angvel())
       rot.copy(card.current.rotation())
 

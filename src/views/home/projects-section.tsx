@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { CyberFrameBackground } from '@/components/backgrounds/cyber-frame-background'
 import { ProjectCard } from '@/components/common/project-card'
 import { Container, Section, SectionHeader } from '@/components/common/section'
+import { ParticleField } from '@/components/ui/particle-field'
 import { projects } from '@/data'
 
 export function ProjectsSection() {
@@ -16,6 +17,7 @@ export function ProjectsSection() {
   return (
     <Section>
       <CyberFrameBackground />
+      <ParticleField />
 
       <Container>
         <div className="mb-10 flex items-end justify-between gap-4">

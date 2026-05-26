@@ -67,25 +67,33 @@
     }
   }
 
-  --animate-meteor: meteor 5s linear infinite
-;
+  --animate-meteor: meteor 5s linear infinite;
   @keyframes meteor {
-  0% {
-    transform: rotate(var(--angle)) translateX(0);
-    opacity: 1;}
-  70% {
-    opacity: 1;}
-  100% {
-    transform: rotate(var(--angle)) translateX(-500px);
-    opacity: 0;}}
+    0% {
+      transform: rotate(var(--angle)) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(var(--angle)) translateX(-500px);
+      opacity: 0;
+    }
+  }
   --animate-shine: shine var(--duration) infinite linear;
   @keyframes shine {
-  0% {
-    background-position: 0% 0%;}
-  50% {
-    background-position: 100% 100%;}
-  to {
-    background-position: 0% 0%;}}}
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
+  }
+}
 
 @keyframes aurora {
   0% {
@@ -293,6 +301,7 @@
     color: transparent;
     animation: aurora 8s linear infinite;
   }
+
   .bg-gradient-primary {
     background: var(--gradient-primary);
   }
@@ -301,6 +310,7 @@
     background-size: 200% 200%;
     animation: aurora 12s linear infinite;
   }
+
   .glow {
     box-shadow: var(--shadow-glow);
   }
@@ -322,6 +332,7 @@
       0 1px 3px color-mix(in oklab, var(--foreground) 4%, transparent),
       inset 0 1px 0 color-mix(in oklab, var(--foreground) 6%, transparent);
   }
+
   .grid-pattern {
     background-image:
       linear-gradient(to right, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px),
@@ -332,6 +343,7 @@
     background-image: radial-gradient(color-mix(in oklab, var(--foreground) 14%, transparent) 1px, transparent 1px);
     background-size: 22px 22px;
   }
+
   .noise::before {
     content: '';
     position: absolute;
@@ -341,6 +353,7 @@
     pointer-events: none;
     mix-blend-mode: overlay;
   }
+
   .mask-fade-b {
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
@@ -349,8 +362,37 @@
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   }
+
+  /* Lanyard */
+  .lanyard-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 450px;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transform-origin: center;
+    cursor: grab;
+  }
+  @media (max-width: 768px) {
+    .lanyard-wrapper {
+      height: 300px;
+    }
+  }
+  .lanyard-wrapper:active {
+    cursor: grabbing;
+  }
+  .lanyard-canvas {
+    outline: none;
+  }
 }
 
-::view-transition-old(root), ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}

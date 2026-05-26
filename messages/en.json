@@ -20,8 +20,8 @@
     },
     "about": {
       "title": "About Me",
-      "body1": "I design and build products end-to-end — from pixel-perfect interfaces to robust APIs. I care deeply about craft, motion, and user experience. Currently focused on Next.js, TanStack, and modern animation systems.",
-      "body2": "I design and build products end-to-end — from pixel-perfect interfaces to robust APIs. I care deeply about craft, motion, and user experience. Currently focused on Next.js, TanStack, and modern animation systems.",
+      "body1": "I design and build products end-to-end - from pixel-perfect interfaces to robust APIs. I care deeply about craft, motion, and user experience. Currently focused on Next.js, TanStack, and modern animation systems.",
+      "body2": "I design and build products end-to-end - from pixel-perfect interfaces to robust APIs. I care deeply about craft, motion, and user experience. Currently focused on Next.js, TanStack, and modern animation systems.",
       "stats": {
         "projects": "Projects shipped",
         "clients": "Happy clients",
@@ -42,7 +42,7 @@
       "eyebrow": "Open for work",
       "title": "Got an idea?",
       "titleHighlight": "Let's build it.",
-      "subtitle": "From landing pages to complex platforms — I help startups and creators ship fast and look incredible doing it.",
+      "subtitle": "From landing pages to complex platforms - I help startups and creators ship fast and look incredible doing it.",
       "ctaPrimary": "Let's Talk",
       "ctaSecondary": "See projects"
     }
@@ -112,12 +112,12 @@
   },
   "contact": {
     "heroTitle": "Let's build something great",
-    "heroSubtitle": "Have a project in mind? Drop a message — I usually reply within 24 hours.",
+    "heroSubtitle": "Have a project in mind? Drop a message - I usually reply within 24 hours.",
     "name": "Your name",
     "email": "Email address",
     "message": "Tell me about your project",
     "send": "Send message",
-    "sent": "Message sent — talk soon!",
+    "sent": "Message sent - talk soon!",
     "or": "or reach me directly"
   },
   "footer": {
