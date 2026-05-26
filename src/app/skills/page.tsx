@@ -1,8 +1,8 @@
 'use client'
 
-import { BeamsBackground, DotsBackground, GridBackground, MeshBackground, SpotlightBackground } from '@/components/backgrounds/backgrounds'
-import { Eyebrow } from '@/components/common/eyebrow'
-import { Reveal, StaggerContainer, StaggerItem } from '@/components/common/reveal'
+import { BeamsBackground, DotsBackground, MeshBackground, SpotlightBackground } from '@/components/backgrounds/backgrounds'
+import { PageHeroSection } from '@/components/common/page-hero-section'
+import { StaggerContainer, StaggerItem } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'
 import { skillGroups } from '@/data'
 import { motion } from 'framer-motion'
@@ -13,23 +13,18 @@ const bgs = [SpotlightBackground, BeamsBackground, DotsBackground, MeshBackgroun
 
 export default function SkillsPage() {
   const t = useTranslations()
+  const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Skills' }]
 
   return (
     <>
-      <Section className="pt-10 pb-12 md:pt-16">
-        <MeshBackground />
-        <GridBackground />
-        <Container>
-          <Reveal>
-            <Eyebrow label="Toolbox" icon={Cpu} />
-            <h1 className="font-display mt-4 text-5xl font-bold tracking-tight md:text-7xl">
-              <span className="text-foreground">{t('skills.heroTitle').split(' ').slice(0, 1).join(' ')} </span>
-              <span className="text-gradient-aurora">{t('skills.heroTitle').split(' ').slice(1).join(' ')}</span>
-            </h1>
-            <p className="text-muted-foreground mt-5 max-w-2xl text-lg">{t('skills.heroSubtitle')}</p>
-          </Reveal>
-        </Container>
-      </Section>
+      <PageHeroSection
+        title={t('skills.heroTitle')}
+        highlight={t('skills.heroTitle').split(' ').slice(1).join(' ')}
+        subtitle={t('skills.heroSubtitle')}
+        breadcrumbs={breadcrumbs}
+        eyebrow="Toolbox"
+        eyebrowIcon={Cpu}
+      />
 
       {skillGroups.map((group, gi) => {
         const Bg = bgs[gi % bgs.length]

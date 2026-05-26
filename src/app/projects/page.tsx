@@ -1,10 +1,8 @@
 'use client'
 
-import { CyberFrameBackground } from '@/components/backgrounds/cyber-frame-background'
 import { CyberGridBackground } from '@/components/backgrounds/cyber-grid-background'
-import { Eyebrow } from '@/components/common/eyebrow'
+import { PageHeroSection } from '@/components/common/page-hero-section'
 import { ProjectCard } from '@/components/common/project-card'
-import { Reveal } from '@/components/common/reveal'
 import { Container, Section } from '@/components/common/section'
 import { Input } from '@/components/ui/input'
 import { categories, projects } from '@/data'
@@ -44,60 +42,56 @@ export default function ProjectsPage() {
     })
   }, [selectedCategoryId, searchQuery])
 
+  const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Projects' }]
+
   return (
     <>
       {/* Hero Section */}
-      <Section className="relative overflow-hidden pt-10 pb-12 md:pt-16">
-        <CyberFrameBackground />
-
-        <Container>
-          <Reveal>
-            <Eyebrow label="Portfolio" icon={Layers} />
-            <h1 className="font-display mt-4 text-5xl font-bold tracking-tight md:text-7xl">
-              <span className="text-foreground">Selected </span>
-              <span className="text-gradient-aurora">Projects</span>
-            </h1>
-            <p className="text-muted-foreground mt-5 max-w-2xl text-lg">{t('projects.heroSubtitle')}</p>
-          </Reveal>
-
-          {/* Search + Filters with glassmorphism */}
-          <div className="mt-12 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <div className="relative w-full md:max-w-md">
-              <Search className="text-muted-foreground/75 pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transition-colors" />
-              <Input
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder={t('projects.searchPlaceholder')}
-                className="border-border/60 bg-surface/30 focus:border-primary/50 focus:ring-primary/20 h-12 rounded-xl pl-10 text-base backdrop-blur-md transition-all"
-              />
-            </div>
-
-            <div className="flex flex-wrap gap-2">
-              {categoryOptions.map((opt) => (
-                <button
-                  key={opt.id}
-                  onClick={() => setSelectedCategoryId(opt.id)}
-                  className={cn(
-                    'relative rounded-full border px-4 py-1.5 text-xs font-semibold transition-colors duration-300',
-                    selectedCategoryId === opt.id
-                      ? 'text-primary-foreground border-transparent'
-                      : 'border-border/60 text-muted-foreground hover:border-primary/30 hover:text-foreground bg-surface/20 backdrop-blur-sm'
-                  )}
-                >
-                  {selectedCategoryId === opt.id && (
-                    <motion.span
-                      layoutId="cat-pill"
-                      className="bg-gradient-primary glow absolute inset-0 rounded-full"
-                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                    />
-                  )}
-                  <span className="relative z-10">{opt.label}</span>
-                </button>
-              ))}
-            </div>
+      <PageHeroSection
+        title="Selected Projects"
+        highlight="Projects"
+        subtitle={t('projects.heroSubtitle')}
+        breadcrumbs={breadcrumbs}
+        eyebrow="Portfolio"
+        eyebrowIcon={Layers}
+      >
+        {/* Search + Filters with glassmorphism */}
+        <div className="mt-12 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="relative w-full md:max-w-md">
+            <Search className="text-muted-foreground/75 pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transition-colors" />
+            <Input
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={t('projects.searchPlaceholder')}
+              className="border-border/60 bg-surface/30 focus:border-primary/50 focus:ring-primary/20 h-12 rounded-xl pl-10 text-base backdrop-blur-md transition-all"
+            />
           </div>
-        </Container>
-      </Section>
+
+          <div className="flex flex-wrap gap-2">
+            {categoryOptions.map((opt) => (
+              <button
+                key={opt.id}
+                onClick={() => setSelectedCategoryId(opt.id)}
+                className={cn(
+                  'relative rounded-full border px-4 py-1.5 text-xs font-semibold transition-colors duration-300',
+                  selectedCategoryId === opt.id
+                    ? 'text-primary-foreground border-transparent'
+                    : 'border-border/60 text-muted-foreground hover:border-primary/30 hover:text-foreground bg-surface/20 backdrop-blur-sm'
+                )}
+              >
+                {selectedCategoryId === opt.id && (
+                  <motion.span
+                    layoutId="cat-pill"
+                    className="bg-gradient-primary glow absolute inset-0 rounded-full"
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10">{opt.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </PageHeroSection>
 
       {/* Grid Section */}
       <Section className="relative overflow-hidden pt-0 pb-32">

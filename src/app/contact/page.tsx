@@ -1,9 +1,8 @@
 'use client'
 
-import { BeamsBackground, GridBackground, MeshBackground } from '@/components/backgrounds/backgrounds'
-import { Eyebrow } from '@/components/common/eyebrow'
+import { BeamsBackground } from '@/components/backgrounds/backgrounds'
+import { PageHeroSection } from '@/components/common/page-hero-section'
 import { PrimaryButton } from '@/components/common/primary-button'
-import { Reveal } from '@/components/common/reveal'
 import { Container, Section } from '@/components/common/section'
 import { SocialLinks } from '@/components/social-links'
 import { Input } from '@/components/ui/input'
@@ -28,25 +27,21 @@ export default function ContactPage() {
     }, 900)
   }
 
+  const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Contact' }]
+
   return (
     <>
-      <Section className="pt-10 pb-16 md:pt-16">
-        <MeshBackground />
-        <GridBackground />
-        <Container>
-          <Reveal>
-            <Eyebrow label="Contact" icon={Mail} />
-            <h1 className="font-display mt-4 text-5xl font-bold tracking-tight md:text-7xl">
-              <span className="text-foreground">Let's build </span>
-              <span className="text-gradient-aurora">something great</span>
-            </h1>
-            <p className="text-muted-foreground mt-5 max-w-2xl text-lg">{t('contact.heroSubtitle')}</p>
-          </Reveal>
-        </Container>
-      </Section>
+      <PageHeroSection
+        title="Let's build something great"
+        highlight="something great"
+        subtitle={t('contact.heroSubtitle')}
+        breadcrumbs={breadcrumbs}
+        eyebrow="Contact"
+        eyebrowIcon={Mail}
+      />
 
       <Section className="pt-0 pb-32">
-        <BeamsBackground />
+        <BeamsBackground />s
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr]">
             <motion.form
