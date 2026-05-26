@@ -1,7 +1,6 @@
-'use client'
-
 import { Home } from 'lucide-react'
 import Link from 'next/link'
+import { Fragment } from 'react'
 
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 
@@ -39,7 +38,7 @@ export function AppBreadcrumb({ homeLabel, items, className }: AppBreadcrumbProp
         {items.map((item, idx) => {
           const isLast = idx === items.length - 1
           return (
-            <span key={idx} className="contents">
+            <Fragment key={idx}>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 {isLast || !item.href ? (
@@ -52,7 +51,7 @@ export function AppBreadcrumb({ homeLabel, items, className }: AppBreadcrumbProp
                   </BreadcrumbLink>
                 )}
               </BreadcrumbItem>
-            </span>
+            </Fragment>
           )
         })}
       </BreadcrumbList>

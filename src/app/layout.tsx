@@ -1,10 +1,10 @@
 import { SmoothScroll } from '@/components/smooth-scroll'
+import { ThemeProvider } from '@/components/theme-provider'
 import { Footer } from '@/layout/footer'
 import { Navbar } from '@/layout/navbar'
 import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
-import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
@@ -19,8 +19,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'OctaLectzz — Fullstack Developer Portfolio',
-  description: 'Portfolio of Octavyan Putra Ramadhan — fullstack developer building modern, motion-rich web experiences.'
+  title: 'OctaLectzz - Fullstack Developer Portfolio',
+  description: 'Portfolio of Octavyan Putra Ramadhan - fullstack developer building modern, motion-rich web experiences.'
 }
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -31,7 +31,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     <html lang={locale} className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider messages={messages}>
-          <NextThemesProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
             <SmoothScroll>
               <Navbar />
 
@@ -39,7 +39,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
 
               <Footer />
             </SmoothScroll>
-          </NextThemesProvider>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

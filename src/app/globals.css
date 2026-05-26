@@ -162,7 +162,7 @@
   }
 }
 
-/* DARK (default) — pure black w/ neon */
+/* DARK (default) - pure black w/ neon */
 :root,
 .dark {
   --radius: 0.875rem;

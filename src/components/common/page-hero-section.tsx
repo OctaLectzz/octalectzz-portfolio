@@ -3,11 +3,12 @@ import { Eyebrow } from '@/components/common/eyebrow'
 import { PrimaryText } from '@/components/common/primary-text'
 import { Reveal } from '@/components/common/reveal'
 import { Container, Section } from '@/components/common/section'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { ParticleField } from '@/components/ui/particle-field'
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import type { LucideIcon } from 'lucide-react'
+import { Fragment } from 'react'
 
 interface BreadcrumbItemProps {
   label: string
@@ -59,16 +60,18 @@ export function PageHeroSection({
 
       <Container className="relative z-10">
         {/* Breadcrumb */}
-        <nav aria-label="breadcrumb" className="mb-4">
-          <ol className="text-muted-foreground flex items-center text-sm">
+        <Breadcrumb className="mb-4">
+          <BreadcrumbList>
             {breadcrumbs.map((item, idx) => (
-              <BreadcrumbItem key={idx} className="flex items-center">
-                {item.href ? <BreadcrumbLink href={item.href}>{item.label}</BreadcrumbLink> : <span>{item.label}</span>}
+              <Fragment key={idx}>
+                <BreadcrumbItem>
+                  {item.href ? <BreadcrumbLink href={item.href}>{item.label}</BreadcrumbLink> : <span className="text-foreground">{item.label}</span>}
+                </BreadcrumbItem>
                 {idx < breadcrumbs.length - 1 && <BreadcrumbSeparator />}
-              </BreadcrumbItem>
+              </Fragment>
             ))}
-          </ol>
-        </nav>
+          </BreadcrumbList>
+        </Breadcrumb>
 
         {/* Hero content */}
         <Reveal>

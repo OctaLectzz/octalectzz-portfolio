@@ -52,7 +52,7 @@ export function Navbar() {
       className={cn('fixed inset-x-0 top-0 z-50 px-4 transition-all duration-300 md:px-6', scrolled ? 'py-2' : 'py-4')}
     >
       <div className="mx-auto w-full max-w-7xl">
-        {/* Aceternity Menu — the main navbar */}
+        {/* Aceternity Menu - the main navbar */}
         <Menu setActive={setActive} scrolled={scrolled}>
           {/* Logo */}
           <Logo />
