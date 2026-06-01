@@ -1,7 +1,12 @@
+import { usePerformance } from '@/providers/performance-provider'
 import { useEffect, useRef } from 'react'
 
 export function ParticleField() {
+  const { performanceMode } = usePerformance()
   const ref = useRef<HTMLCanvasElement>(null)
+
+  if (performanceMode) return null
+
   useEffect(() => {
     const canvas = ref.current
     if (!canvas) return

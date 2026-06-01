@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState, type ComponentPropsWithoutRef } from 'react'
 
 import { cn } from '@/lib/utils'
+import { usePerformance } from '@/providers/performance-provider'
 
 interface MousePosition {
   x: number
@@ -84,6 +85,9 @@ export const Particles: React.FC<ParticlesProps> = ({
   vy = 0,
   ...props
 }) => {
+  const { performanceMode } = usePerformance()
+  if (performanceMode) return null
+
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const canvasContainerRef = useRef<HTMLDivElement>(null)
   const context = useRef<CanvasRenderingContext2D | null>(null)

@@ -3,6 +3,7 @@
 import { Logo } from '@/components/common/logo'
 import { PrimaryButton } from '@/components/common/primary-button'
 import { LanguageToggle } from '@/components/language-toggle'
+import { PerformanceToggle } from '@/components/performance-toggle'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { Menu, MenuItem } from '@/components/ui/navbar-menu'
 import { cn } from '@/lib/utils'
@@ -49,7 +50,7 @@ export function Navbar() {
       initial={{ y: -32, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className={cn('fixed inset-x-0 top-0 z-50 px-4 transition-all duration-300 md:px-6', scrolled ? 'py-2' : 'py-4')}
+      className={cn('fixed inset-x-0 top-0 z-999 px-4 transition-all duration-300 md:px-6', scrolled ? 'py-2' : 'py-4')}
     >
       <div className="mx-auto w-full max-w-7xl">
         {/* Aceternity Menu - the main navbar */}
@@ -79,6 +80,9 @@ export function Navbar() {
 
           {/* Right-side actions */}
           <div className="flex items-center gap-2">
+            {/* Performance toggle */}
+            <PerformanceToggle />
+
             {/* Language toggle */}
             <LanguageToggle />
 

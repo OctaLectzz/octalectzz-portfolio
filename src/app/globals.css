@@ -396,3 +396,30 @@
   animation: none;
   mix-blend-mode: normal;
 }
+
+/* Performance Mode optimizations */
+.performance-mode {
+  /* Disable heavy infinite keyframe animations */
+  --animate-aurora: none !important;
+  --animate-float: none !important;
+  --animate-shimmer: none !important;
+  --animate-spin-slow: none !important;
+  --animate-grid-pan: none !important;
+  --animate-pulse-glow: none !important;
+  --animate-orbit: none !important;
+  --animate-meteor: none !important;
+  --animate-shine: none !important;
+
+  /* Pause marquee and other custom animations */
+  .mask-fade-x > div,
+  .animate-pulse-glow,
+  .animate-aurora,
+  .animate-float,
+  .animate-shine,
+  .animate-orbit,
+  .animate-grid-pan,
+  .animate-marquee,
+  .animate-meteor {
+    animation: none !important;
+  }
+}

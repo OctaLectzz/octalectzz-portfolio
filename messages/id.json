@@ -9,7 +9,12 @@
   },
   "common": {
     "previous": "Sebelumnya",
-    "next": "Selanjutnya"
+    "next": "Selanjutnya",
+    "performanceMode": {
+      "label": "Mode Spek Rendah",
+      "tooltipOn": "Aktifkan Mode Spek Rendah (kurangi animasi)",
+      "tooltipOff": "Matikan Mode Spek Rendah (tampilkan animasi)"
+    }
   },
   "home": {
     "hero": {

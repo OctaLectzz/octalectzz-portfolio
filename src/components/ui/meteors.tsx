@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { cn } from '@/lib/utils'
+import { usePerformance } from '@/providers/performance-provider'
 
 interface MeteorsProps {
   number?: number
@@ -15,7 +16,10 @@ interface MeteorsProps {
 }
 
 export const Meteors = ({ number = 20, minDelay = 0.2, maxDelay = 1.2, minDuration = 2, maxDuration = 10, angle = 215, className }: MeteorsProps) => {
+  const { performanceMode } = usePerformance()
   const [meteorStyles, setMeteorStyles] = useState<Array<React.CSSProperties>>([])
+
+  if (performanceMode) return null
 
   useEffect(() => {
     const styles = [...new Array(number)].map(() => ({

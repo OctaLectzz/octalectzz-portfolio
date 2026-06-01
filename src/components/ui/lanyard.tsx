@@ -7,6 +7,9 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 
+import { usePerformance } from '@/providers/performance-provider'
+import { LanyardFallback } from './lanyard-fallback'
+
 // Extend Three elements to include MeshLine elements
 extend({ MeshLineGeometry, MeshLineMaterial })
 
@@ -28,6 +31,7 @@ interface LanyardProps {
 }
 
 export default function Lanyard({ position = [0, 0, 10], gravity = [0, -50, 0], fov = 40, transparent = true }: LanyardProps) {
+  const { performanceMode } = usePerformance()
   const [isMobile, setIsMobile] = useState<boolean>(() => typeof window !== 'undefined' && window.innerWidth < 768)
   const [mounted, setMounted] = useState(false)
 
@@ -37,6 +41,10 @@ export default function Lanyard({ position = [0, 0, 10], gravity = [0, -50, 0], 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
+
+  if (performanceMode) {
+    return <LanyardFallback />
+  }
 
   if (!mounted) {
     // Return a nice organic transparent loading placeholder

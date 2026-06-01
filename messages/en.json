@@ -9,7 +9,12 @@
   },
   "common": {
     "previous": "Previous",
-    "next": "Next"
+    "next": "Next",
+    "performanceMode": {
+      "label": "Low-spec Mode",
+      "tooltipOn": "Turn on Low-spec Mode (reduce animations)",
+      "tooltipOff": "Turn off Low-spec Mode (show animations)"
+    }
   },
   "home": {
     "hero": {

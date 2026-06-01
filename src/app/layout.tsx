@@ -1,6 +1,8 @@
-import { ThemeProvider } from '@/components/theme-provider'
+import { SmoothScroll } from '@/components/smooth-scroll'
 import { Footer } from '@/layout/footer'
 import { Navbar } from '@/layout/navbar'
+import { PerformanceProvider } from '@/providers/performance-provider'
+import { ThemeProvider } from '@/providers/theme-provider'
 import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
@@ -30,13 +32,17 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     <html lang={locale} className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-            <Navbar />
+          <PerformanceProvider>
+            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+              <SmoothScroll>
+                <Navbar />
 
-            <main>{children}</main>
+                <main>{children}</main>
 
-            <Footer />
-          </ThemeProvider>
+                <Footer />
+              </SmoothScroll>
+            </ThemeProvider>
+          </PerformanceProvider>
         </NextIntlClientProvider>
       </body>
     </html>
