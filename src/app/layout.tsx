@@ -1,4 +1,3 @@
-import { SmoothScroll } from '@/components/smooth-scroll'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Footer } from '@/layout/footer'
 import { Navbar } from '@/layout/navbar'
@@ -32,13 +31,11 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-            <SmoothScroll>
-              <Navbar />
+            <Navbar />
 
-              <main>{children}</main>
+            <main>{children}</main>
 
-              <Footer />
-            </SmoothScroll>
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
