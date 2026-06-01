@@ -13,7 +13,6 @@ import { Container, Section } from '@/components/common/section'
 import { HeroPhoto } from '@/components/hero-photo'
 import { SocialLinks } from '@/components/social-links'
 import { Meteors } from '@/components/ui/meteors'
-import { ParticleField } from '@/components/ui/particle-field'
 
 export function HeroSection() {
   const t = useTranslations('home.hero')
@@ -23,7 +22,6 @@ export function HeroSection() {
       <MeshBackground />
       <GridBackground />
       <Meteors number={10} />
-      <ParticleField />
 
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_1fr]">

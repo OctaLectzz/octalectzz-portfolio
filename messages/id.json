@@ -78,12 +78,14 @@
     }
   },
   "skills": {
-    "heroTitle": "Keahlian & Perangkat",
-    "heroSubtitle": "Teknologi, framework, dan tools yang saya gunakan untuk mewujudkan ide.",
+    "heroTitle": "Teknologi & Ekosistem",
+    "heroSubtitle": "Kumpulan framework, infrastruktur, dan kecerdasan buatan (AI) yang saya gunakan untuk menciptakan masa depan.",
     "frontend": "Frontend",
     "backend": "Backend",
+    "database": "Database & ORM",
     "tools": "Tools & DevOps",
-    "design": "Desain"
+    "design": "Desain",
+    "ai": "AI & Machine Learning"
   },
   "projects": {
     "heroTitle": "Proyek Pilihan",

@@ -53,11 +53,11 @@ export function CyberFrameBackground({ className }: { className?: string }) {
           }
           .cyber-glow-left {
             left: calc(50% - 640px - 220px) !important;
-            width: 350px !important;
+            width: 150px !important;
           }
           .cyber-glow-right {
             right: calc(50% - 640px - 220px) !important;
-            width: 350px !important;
+            width: 150px !important;
           }
         }
       `}</style>
@@ -75,18 +75,18 @@ export function CyberFrameBackground({ className }: { className?: string }) {
       <div className="absolute inset-0 overflow-hidden">
         {/* Left Side Glow */}
         <div
-          className="cyber-glow-left pointer-events-none absolute top-1/2 left-0 h-[80%] w-[350px] -translate-y-1/2 rounded-full blur-[130px]"
+          className="cyber-glow-left pointer-events-none absolute top-1/2 left-0 h-[80%] w-[200px] -translate-y-1/2 rounded-full blur-[100px]"
           style={{
             background: 'radial-gradient(ellipse at left, var(--primary) 0%, transparent 70%)',
-            opacity: 0.22
+            opacity: 0.12
           }}
         />
         {/* Right Side Glow */}
         <div
-          className="cyber-glow-right pointer-events-none absolute top-1/2 right-0 h-[80%] w-[350px] -translate-y-1/2 rounded-full blur-[130px]"
+          className="cyber-glow-right pointer-events-none absolute top-1/2 right-0 h-[80%] w-[200px] -translate-y-1/2 rounded-full blur-[100px]"
           style={{
             background: 'radial-gradient(ellipse at right, var(--primary) 0%, transparent 70%)',
-            opacity: 0.22
+            opacity: 0.12
           }}
         />
       </div>
@@ -102,23 +102,23 @@ export function CyberFrameBackground({ className }: { className?: string }) {
           d={leftPath}
           fill="none"
           stroke="var(--primary)"
-          strokeWidth="10"
+          strokeWidth="6"
           strokeLinecap="round"
           strokeLinejoin="round"
-          style={{ filter: 'blur(8px)', opacity: 0.2 }}
+          style={{ filter: 'blur(5px)', opacity: 0.15 }}
         />
         {/* Tier 2: Medium blur inner glow */}
         <path
           d={leftPath}
           fill="none"
           stroke="var(--primary)"
-          strokeWidth="4"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          style={{ filter: 'blur(2px)', opacity: 0.55 }}
+          style={{ filter: 'blur(1px)', opacity: 0.35 }}
         />
         {/* Tier 3: Sharp core high-intensity glow */}
-        <path d={leftPath} fill="none" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.95 }} />
+        <path d={leftPath} fill="none" stroke="#ffffff" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.8 }} />
       </svg>
 
       {/* Right Glowing Cyber Frame SVG (Angled Neon Border) */}
@@ -132,23 +132,23 @@ export function CyberFrameBackground({ className }: { className?: string }) {
           d={rightPath}
           fill="none"
           stroke="var(--primary)"
-          strokeWidth="10"
+          strokeWidth="6"
           strokeLinecap="round"
           strokeLinejoin="round"
-          style={{ filter: 'blur(8px)', opacity: 0.2 }}
+          style={{ filter: 'blur(5px)', opacity: 0.15 }}
         />
         {/* Tier 2: Medium blur inner glow */}
         <path
           d={rightPath}
           fill="none"
           stroke="var(--primary)"
-          strokeWidth="4"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          style={{ filter: 'blur(2px)', opacity: 0.55 }}
+          style={{ filter: 'blur(1px)', opacity: 0.35 }}
         />
         {/* Tier 3: Sharp core high-intensity glow */}
-        <path d={rightPath} fill="none" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.95 }} />
+        <path d={rightPath} fill="none" stroke="#ffffff" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.8 }} />
       </svg>
 
       {/* Dynamic Floating Sparks (Keeping Particle Effects) */}
@@ -162,13 +162,13 @@ export function CyberFrameBackground({ className }: { className?: string }) {
           return (
             <div
               key={i}
-              className="animate-floating-spark bg-primary absolute h-1.5 w-1.5 rounded-full"
+              className="animate-floating-spark bg-primary absolute h-1 w-1 rounded-full"
               style={{
                 left,
                 top,
                 animationDelay: delay,
                 animationDuration: duration,
-                boxShadow: '0 0 10px 2px var(--primary-glow)'
+                boxShadow: '0 0 6px 1.5px var(--primary-glow)'
               }}
             />
           )

@@ -3,7 +3,6 @@
 import { Sparkles } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
-import { BeamsBackground } from '@/components/backgrounds'
 import { Reveal, StaggerContainer, StaggerItem } from '@/components/common/reveal'
 import { Container, Section, SectionHeader } from '@/components/common/section'
 import { ShineCard } from '@/components/common/shine-card'
@@ -31,7 +30,6 @@ export function AboutSection() {
         color="#ffffff"
         refresh
       />
-      <BeamsBackground className="opacity-30" />
 
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">

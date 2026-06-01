@@ -78,12 +78,14 @@
     }
   },
   "skills": {
-    "heroTitle": "Skills & Toolbox",
-    "heroSubtitle": "The technologies, frameworks and tools I use to bring ideas to life.",
+    "heroTitle": "Tech & Ecosystem",
+    "heroSubtitle": "The frameworks, infrastructure, and artificial intelligence (AI) I use to architect the future.",
     "frontend": "Frontend",
     "backend": "Backend",
+    "database": "Database & ORM",
     "tools": "Tools & DevOps",
-    "design": "Design"
+    "design": "Design",
+    "ai": "AI & Machine Learning"
   },
   "projects": {
     "heroTitle": "Selected Projects",
