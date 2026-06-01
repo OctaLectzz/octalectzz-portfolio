@@ -1,6 +1,5 @@
 'use client'
 
-import { SpotlightBackground } from '@/components/backgrounds'
 import { Marquee } from '@/components/common/marquee'
 import { skillGroups } from '@/data'
 
@@ -8,9 +7,7 @@ export function SkillsSection() {
   const allSkills = Array.from(new Map(skillGroups.flatMap((g) => g.skills).map((s) => [s.name, s])).values())
 
   return (
-    <section className="border-border bg-surface/30 relative overflow-hidden border-y py-8">
-      <SpotlightBackground />
-
+    <section className="border-border bg-surface/30 relative z-50 overflow-hidden border-y py-8 backdrop-blur-lg">
       <Marquee speed={36}>
         {allSkills.map((skill) => {
           const Icon = skill.icon

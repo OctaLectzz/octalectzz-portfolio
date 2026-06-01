@@ -4,13 +4,16 @@ import { socials } from '@/data'
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import type { IconType } from 'react-icons'
-import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter, FaYoutube } from 'react-icons/fa6'
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTelegram, FaTiktok, FaXTwitter, FaYoutube } from 'react-icons/fa6'
 import { HiOutlineMail } from 'react-icons/hi'
 
 const iconMap: Record<string, IconType> = {
   github: FaGithub,
   linkedin: FaLinkedin,
   instagram: FaInstagram,
+  tiktok: FaTiktok,
+  facebook: FaFacebook,
+  telegram: FaTelegram,
   x: FaXTwitter,
   youtube: FaYoutube,
   email: HiOutlineMail
@@ -36,7 +39,7 @@ export function SocialLinks({ className, size = 'md' }: { className?: string; si
             whileHover={{ y: -4, scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
             className={cn(
-              'group border-border bg-surface/40 hover:border-primary/60 hover:text-primary relative grid place-items-center rounded-xl border backdrop-blur transition-colors',
+              'group border-border bg-surface/40 hover:border-primary/60 hover:text-primary relative grid place-items-center rounded-xl border backdrop-blur transition-colors hover:z-50',
               sizes[size]
             )}
           >

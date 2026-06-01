@@ -1,4 +1,4 @@
-import { GridBackground, MeshBackground } from '@/components/backgrounds'
+import { GridBackground } from '@/components/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
 import { PrimaryText } from '@/components/common/primary-text'
 import { Reveal } from '@/components/common/reveal'
@@ -11,7 +11,6 @@ export function HeroSection() {
 
   return (
     <Section className="pt-10 pb-12 md:pt-16">
-      <MeshBackground />
       <GridBackground />
 
       <Container>

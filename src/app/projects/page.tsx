@@ -1,6 +1,7 @@
 'use client'
 
-import { CyberGridBackground } from '@/components/backgrounds'
+import { CyberFrameBackground } from '@/components/backgrounds'
+import { AppPagination } from '@/components/common/app-pagination'
 import { PageHeroSection } from '@/components/common/page-hero-section'
 import { ProjectCard } from '@/components/common/project-card'
 import { Container, Section } from '@/components/common/section'
@@ -10,13 +11,17 @@ import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Layers, Search } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
+
+const ITEMS_PER_PAGE = 6
 
 export default function ProjectsPage() {
   const t = useTranslations()
   const lang = useLocale()
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>('all')
   const [searchQuery, setSearchQuery] = useState('')
+  const [currentPage, setCurrentPage] = useState(1)
+  const projectsStartRef = useRef<HTMLDivElement>(null)
 
   const breadcrumbs = [{ label: t('nav.home'), href: '/' }, { label: t('nav.projects') }]
 
@@ -44,15 +49,40 @@ export default function ProjectsPage() {
     })
   }, [selectedCategoryId, searchQuery])
 
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE)
+
+  // Ensure active page is within bounds
+  const activePage = Math.min(currentPage, Math.max(1, totalPages))
+
+  const paginated = useMemo(() => {
+    const start = (activePage - 1) * ITEMS_PER_PAGE
+    return filtered.slice(start, start + ITEMS_PER_PAGE)
+  }, [filtered, activePage])
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page)
+    projectsStartRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  const handleCategoryChange = (id: string) => {
+    setSelectedCategoryId(id)
+    setCurrentPage(1)
+  }
+
+  const handleSearchChange = (val: string) => {
+    setSearchQuery(val)
+    setCurrentPage(1)
+  }
+
   return (
     <>
       {/* Hero Section */}
       <PageHeroSection
-        title="Selected Projects"
-        highlight="Projects"
+        title={t('projects.heroTitle')}
+        highlight={t('projects.heroTitle').split(' ').slice(1).join(' ')}
         subtitle={t('projects.heroSubtitle')}
         breadcrumbs={breadcrumbs}
-        eyebrow="Portfolio"
+        eyebrow={t('projects.heroEyebrow')}
         eyebrowIcon={Layers}
       >
         {/* Search + Filters with glassmorphism */}
@@ -61,7 +91,7 @@ export default function ProjectsPage() {
             <Search className="text-muted-foreground/75 pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transition-colors" />
             <Input
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => handleSearchChange(e.target.value)}
               placeholder={t('projects.searchPlaceholder')}
               className="border-border/60 bg-surface/30 focus:border-primary/50 focus:ring-primary/20 h-12 rounded-xl pl-10 text-base backdrop-blur-md transition-all"
             />
@@ -71,7 +101,7 @@ export default function ProjectsPage() {
             {categoryOptions.map((opt) => (
               <button
                 key={opt.id}
-                onClick={() => setSelectedCategoryId(opt.id)}
+                onClick={() => handleCategoryChange(opt.id)}
                 className={cn(
                   'relative rounded-full border px-4 py-1.5 text-xs font-semibold transition-colors duration-300',
                   selectedCategoryId === opt.id
@@ -93,9 +123,12 @@ export default function ProjectsPage() {
         </div>
       </PageHeroSection>
 
+      {/* Target for scrolling to top of projects grid */}
+      <div ref={projectsStartRef} className="scroll-mt-24" />
+
       {/* Grid Section */}
       <Section className="relative overflow-hidden pt-0 pb-32">
-        <CyberGridBackground />
+        <CyberFrameBackground />
 
         <Container>
           <AnimatePresence mode="popLayout">
@@ -113,20 +146,24 @@ export default function ProjectsPage() {
                 <p className="text-muted-foreground max-w-sm">{t('projects.empty')}</p>
               </motion.div>
             ) : (
-              <motion.div layout className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {filtered.map((project, idx) => (
-                  <motion.div
-                    key={project.id}
-                    layout
-                    initial={{ opacity: 0, scale: 0.96 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.96 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <ProjectCard project={project} index={idx} />
-                  </motion.div>
-                ))}
-              </motion.div>
+              <div className="flex flex-col gap-10">
+                <motion.div layout className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  {paginated.map((project, idx) => (
+                    <motion.div
+                      key={project.id}
+                      layout
+                      initial={{ opacity: 0, scale: 0.96 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.96 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ProjectCard project={project} index={idx} />
+                    </motion.div>
+                  ))}
+                </motion.div>
+
+                <AppPagination currentPage={activePage} totalPages={totalPages} onPageChange={handlePageChange} />
+              </div>
             )}
           </AnimatePresence>
         </Container>

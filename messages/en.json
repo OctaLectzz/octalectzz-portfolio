@@ -7,6 +7,10 @@
     "contact": "Contact",
     "cta": "Let's Talk"
   },
+  "common": {
+    "previous": "Previous",
+    "next": "Next"
+  },
   "home": {
     "hero": {
       "greeting": "Hello, I'm",
@@ -89,6 +93,7 @@
   },
   "projects": {
     "heroTitle": "Selected Projects",
+    "heroEyebrow": "Portfolio",
     "heroSubtitle": "A curated archive of products, experiments and open-source work.",
     "searchPlaceholder": "Search projects, tags, stack...",
     "all": "All",
@@ -128,12 +133,20 @@
   },
   "contact": {
     "heroTitle": "Let's build something great",
-    "heroSubtitle": "Have a project in mind? Drop a message - I usually reply within 24 hours.",
+    "heroSubtitle": "Have a project in mind? Drop a message - I will reply as soon as possible.",
     "name": "Your name",
     "email": "Email address",
+    "whatsapp": "WhatsApp Number",
+    "optional": "(Optional)",
     "message": "Tell me about your project",
     "send": "Send message",
+    "sending": "Sending...",
     "sent": "Message sent - talk soon!",
+    "error": "Failed to send message. Please try again.",
+    "dialogSuccessTitle": "Message Sent Successfully!",
+    "dialogSuccessDesc": "Thank you for reaching out. I have received your message and will get back to you as soon as possible.",
+    "dialogErrorTitle": "Something went wrong",
+    "dialogErrorDesc": "We couldn't send your message. Please try again or email me directly at {email}.",
     "or": "or reach me directly"
   },
   "footer": {

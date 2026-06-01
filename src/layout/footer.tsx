@@ -1,11 +1,15 @@
 import { Logo } from '@/components/common/logo'
 import { SocialLinks } from '@/components/social-links'
 import { Heart } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
+import { contactInfo } from '@/data'
+
 
 export function Footer() {
   const t = useTranslations()
+  const locale = useLocale()
+
 
   return (
     <footer className="border-border bg-background relative isolate overflow-hidden border-t">
@@ -55,11 +59,11 @@ export function Footer() {
             <p className="text-muted-foreground mb-3 text-xs font-semibold tracking-widest uppercase">Contact</p>
             <ul className="text-muted-foreground space-y-2 text-sm">
               <li>
-                <a href="mailto:hello@octalectzz.dev" className="hover:text-foreground">
-                  hello@octalectzz.dev
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-foreground">
+                  {contactInfo.email}
                 </a>
               </li>
-              <li>Indonesia · Remote</li>
+              <li>{contactInfo.locationFull[locale as 'en' | 'id'] || contactInfo.locationFull.en}</li>
             </ul>
           </div>
 

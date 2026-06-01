@@ -1,4 +1,4 @@
-import { GridBackground, MeshBackground } from '@/components/backgrounds'
+import { GridBackground } from '@/components/backgrounds'
 import { Eyebrow } from '@/components/common/eyebrow'
 import { PrimaryText } from '@/components/common/primary-text'
 import { Reveal } from '@/components/common/reveal'
@@ -33,7 +33,6 @@ interface PageHeroSectionProps {
 function DefaultBackground() {
   return (
     <>
-      <MeshBackground className="-z-20" />
       <GridBackground className="-z-20" />
       <ParticleField />
     </>

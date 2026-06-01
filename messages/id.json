@@ -7,6 +7,10 @@
     "contact": "Kontak",
     "cta": "Hubungi Saya"
   },
+  "common": {
+    "previous": "Sebelumnya",
+    "next": "Selanjutnya"
+  },
   "home": {
     "hero": {
       "greeting": "Halo, Saya",
@@ -89,6 +93,7 @@
   },
   "projects": {
     "heroTitle": "Proyek Pilihan",
+    "heroEyebrow": "Portofolio",
     "heroSubtitle": "Arsip terpilih dari produk, eksperimen, dan kontribusi open-source.",
     "searchPlaceholder": "Cari proyek, tag, teknologi...",
     "all": "Semua",
@@ -128,12 +133,20 @@
   },
   "contact": {
     "heroTitle": "Mari bangun sesuatu yang hebat",
-    "heroSubtitle": "Punya proyek? Kirim pesan - saya biasanya balas dalam 24 jam.",
+    "heroSubtitle": "Punya proyek? Kirim pesan - saya akan segera membalasnya secepat mungkin.",
     "name": "Nama Anda",
     "email": "Alamat email",
+    "whatsapp": "Nomor WhatsApp",
+    "optional": "(Opsional)",
     "message": "Ceritakan tentang proyek Anda",
     "send": "Kirim pesan",
+    "sending": "Mengirim...",
     "sent": "Pesan terkirim - sampai jumpa!",
+    "error": "Gagal mengirim pesan. Silakan coba lagi.",
+    "dialogSuccessTitle": "Pesan Berhasil Terkirim!",
+    "dialogSuccessDesc": "Terima kasih telah menghubungi saya. Saya telah menerima pesan Anda dan akan membalasnya sesegera mungkin.",
+    "dialogErrorTitle": "Terjadi Kesalahan",
+    "dialogErrorDesc": "Pesan Anda gagal dikirim. Silakan coba lagi atau kirim email langsung ke {email}.",
     "or": "atau hubungi langsung"
   },
   "footer": {
