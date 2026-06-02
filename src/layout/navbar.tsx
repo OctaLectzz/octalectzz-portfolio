@@ -4,6 +4,7 @@ import { Logo } from '@/components/common/logo'
 import { PrimaryButton } from '@/components/common/primary-button'
 import { LanguageToggle } from '@/components/language-toggle'
 import { PerformanceToggle } from '@/components/performance-toggle'
+import { SettingsDropdown } from '@/components/settings-dropdown'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { Menu, MenuItem } from '@/components/ui/navbar-menu'
 import { cn } from '@/lib/utils'
@@ -23,7 +24,7 @@ const links = [
 ] as const
 
 export function Navbar() {
-  const t = useTranslations()
+  const translations = useTranslations()
   const pathname = usePathname()
 
   const [active, setActive] = useState<string | null>(null)
@@ -59,12 +60,12 @@ export function Navbar() {
           <Logo />
 
           {/* Desktop nav links */}
-          <div className="hidden items-center gap-1 md:flex">
-            {links.map((l) => {
-              const label = t(l.key)
-              const isActive = pathname === l.href
+          <div className="hidden items-center gap-1 lg:flex">
+            {links.map((navLink) => {
+              const label = translations(navLink.key)
+              const isActive = pathname === navLink.href
               return (
-                <Link key={l.href} href={l.href} className="relative rounded-full px-3.5 py-2">
+                <Link key={navLink.href} href={navLink.href} className="relative rounded-full px-3.5 py-2">
                   <MenuItem setActive={setActive} active={active} item={label} className={cn(isActive && 'text-foreground')} />
                   {isActive && (
                     <motion.span
@@ -80,27 +81,30 @@ export function Navbar() {
 
           {/* Right-side actions */}
           <div className="flex items-center gap-2">
-            {/* Performance toggle */}
-            <PerformanceToggle />
+            {/* Desktop / Tablet settings toggles - hidden on xs screens */}
+            <div className="xs:flex hidden items-center gap-2">
+              <PerformanceToggle />
+              <LanguageToggle />
+              <ThemeToggle />
+            </div>
 
-            {/* Language toggle */}
-            <LanguageToggle />
-
-            {/* Theme toggle */}
-            <ThemeToggle />
+            {/* Mobile settings dropdown - visible only on xs screens */}
+            <div className="xs:hidden flex">
+              <SettingsDropdown />
+            </div>
 
             {/* CTA */}
             <PrimaryButton asChildHref="/contact" variant="primary" size="default" className="hidden md:inline-flex">
-              {t('nav.cta')}
+              {translations('nav.cta')}
             </PrimaryButton>
 
             {/* Mobile menu toggle */}
             <PrimaryButton
               variant="outline"
               size="icon"
-              onClick={() => setOpen((v) => !v)}
+              onClick={() => setOpen((prevOpenState) => !prevOpenState)}
               aria-label="Toggle menu"
-              className="h-9 w-9 rounded-lg md:hidden"
+              className="h-9 w-9 rounded-lg lg:hidden"
             >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span
@@ -125,23 +129,23 @@ export function Navbar() {
               animate={{ opacity: 1, height: 'auto', y: 0 }}
               exit={{ opacity: 0, height: 0, y: -8 }}
               transition={{ duration: 0.25, ease: 'easeInOut' }}
-              className="border-border/40 mt-2 grid gap-1 overflow-hidden rounded-2xl border p-3 shadow-lg backdrop-blur-lg md:hidden"
+              className="border-border/40 mt-2 grid gap-1 overflow-hidden rounded-2xl border p-3 shadow-lg backdrop-blur-lg lg:hidden"
             >
-              {links.map((l, i) => (
+              {links.map((navLink, index) => (
                 <motion.div
-                  key={l.href}
+                  key={navLink.href}
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05, duration: 0.2 }}
+                  transition={{ delay: index * 0.05, duration: 0.2 }}
                 >
                   <Link
-                    href={l.href}
+                    href={navLink.href}
                     className={cn(
                       'block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
-                      pathname === l.href ? 'bg-surface text-foreground' : 'text-muted-foreground hover:bg-surface hover:text-foreground'
+                      pathname === navLink.href ? 'bg-surface text-foreground' : 'text-muted-foreground hover:bg-surface hover:text-foreground'
                     )}
                   >
-                    {t(l.key)}
+                    {translations(navLink.key)}
                   </Link>
                 </motion.div>
               ))}

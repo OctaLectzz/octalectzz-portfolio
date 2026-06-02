@@ -4,7 +4,7 @@ import { Environment, Lightformer, useGLTF, useTexture } from '@react-three/drei
 import { Canvas, extend, useFrame } from '@react-three/fiber'
 import { BallCollider, CuboidCollider, Physics, RigidBody, RigidBodyProps, useRopeJoint, useSphericalJoint } from '@react-three/rapier'
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 
 import { usePerformance } from '@/providers/performance-provider'
@@ -116,6 +116,32 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }: BandProps) {
   // Load static assets from the public folder
   const { nodes, materials } = useGLTF('/assets/lanyard/card.glb') as any
   const texture = useTexture('/assets/lanyard/lanyard.png')
+
+  // Load custom front and back textures
+  const frontTexture = useTexture('/assets/lanyard/front.png')
+  const backTexture = useTexture('/assets/lanyard/back.png')
+
+  // Compute card dimensions from the GLB geometry bounding box for accurate plane overlays
+  const cardDimensions = useMemo(() => {
+    const geo = nodes.card.geometry
+    geo.computeBoundingBox()
+    const bbox = geo.boundingBox as THREE.Box3
+    const width = bbox.max.x - bbox.min.x
+    const height = bbox.max.y - bbox.min.y
+    const centerX = (bbox.max.x + bbox.min.x) / 2
+    const centerY = (bbox.max.y + bbox.min.y) / 2
+    const centerZ = (bbox.max.z + bbox.min.z) / 2
+    return { width, height, centerX, centerY, centerZ }
+  }, [nodes.card.geometry])
+
+  // Configure textures for correct orientation
+  useEffect(() => {
+    frontTexture.flipY = true
+    frontTexture.needsUpdate = true
+    backTexture.flipY = true
+    backTexture.needsUpdate = true
+  }, [frontTexture, backTexture])
+
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]))
   const [dragged, drag] = useState<false | THREE.Vector3>(false)
   const [hovered, hover] = useState(false)
@@ -217,6 +243,8 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }: BandProps) {
   curve.curveType = 'chordal'
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping
 
+  const { width: cardW, height: cardH, centerX, centerY, centerZ } = cardDimensions
+
   return (
     <>
       <group position={[0, 5, 0]}>
@@ -255,14 +283,34 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }: BandProps) {
               drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation())))
             }}
           >
+            {/* Base card geometry (dark backing for edges/thickness) */}
             <mesh geometry={nodes.card.geometry}>
+              <meshPhysicalMaterial color="#0a0a1a" roughness={0.9} metalness={0.8} />
+            </mesh>
+            {/* Card front face - PlaneGeometry overlay with full front.png */}
+            <mesh position={[centerX, centerY, centerZ + 0.005]}>
+              <planeGeometry args={[cardW, cardH]} />
               <meshPhysicalMaterial
-                map={materials.base.map}
+                map={frontTexture}
                 map-anisotropy={16}
                 clearcoat={isMobile ? 0 : 1}
                 clearcoatRoughness={0.15}
-                roughness={0.9}
-                metalness={0.8}
+                roughness={0.3}
+                metalness={0.1}
+                side={THREE.FrontSide}
+              />
+            </mesh>
+            {/* Card back face - PlaneGeometry overlay with full back.png */}
+            <mesh position={[centerX, centerY, centerZ - 0.005]} rotation={[0, Math.PI, 0]}>
+              <planeGeometry args={[cardW, cardH]} />
+              <meshPhysicalMaterial
+                map={backTexture}
+                map-anisotropy={16}
+                clearcoat={isMobile ? 0 : 1}
+                clearcoatRoughness={0.15}
+                roughness={0.3}
+                metalness={0.1}
+                side={THREE.FrontSide}
               />
             </mesh>
             <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
@@ -289,5 +337,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }: BandProps) {
 }
 
 // Preload the static assets
-useGLTF.preload('/assets/lanyard/profile.png')
+useGLTF.preload('/assets/lanyard/card.glb')
 useTexture.preload('/assets/lanyard/lanyard.png')
+useTexture.preload('/assets/lanyard/front.png')
+useTexture.preload('/assets/lanyard/back.png')

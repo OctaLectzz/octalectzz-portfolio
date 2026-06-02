@@ -14,6 +14,17 @@
       "label": "Mode Spek Rendah",
       "tooltipOn": "Aktifkan Mode Spek Rendah (kurangi animasi)",
       "tooltipOff": "Matikan Mode Spek Rendah (tampilkan animasi)"
+    },
+    "settings": {
+      "title": "Preferensi",
+      "theme": "Tema",
+      "language": "Bahasa",
+      "performance": "Mode Performa",
+      "performanceDesc": "Kurangi animasi untuk hemat baterai",
+      "light": "Terang",
+      "dark": "Gelap",
+      "active": "Aktif",
+      "inactive": "Nonaktif"
     }
   },
   "home": {

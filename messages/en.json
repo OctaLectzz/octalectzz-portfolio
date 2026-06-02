@@ -14,6 +14,17 @@
       "label": "Low-spec Mode",
       "tooltipOn": "Turn on Low-spec Mode (reduce animations)",
       "tooltipOff": "Turn off Low-spec Mode (show animations)"
+    },
+    "settings": {
+      "title": "Preferences",
+      "theme": "Theme",
+      "language": "Language",
+      "performance": "Performance Mode",
+      "performanceDesc": "Reduce animations to save battery",
+      "light": "Light",
+      "dark": "Dark",
+      "active": "Active",
+      "inactive": "Inactive"
     }
   },
   "home": {

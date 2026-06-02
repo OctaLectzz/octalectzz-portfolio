@@ -1,53 +1,81 @@
 'use client'
 
-import profile from '@/assets/profile.jpg'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import { useState } from 'react'
 
 export function LanyardFallback() {
   const t = useTranslations('home.hero')
+  const [isFlipped, setIsFlipped] = useState(false)
 
   return (
     <div className="flex w-full items-center justify-center py-4 select-none">
-      <div className="glass border-primary/20 shadow-glow hover:border-primary/40 relative flex h-[380px] w-[260px] flex-col items-center rounded-2xl border p-5 transition-all duration-300 hover:-translate-y-1 hover:rotate-1">
-        {/* Lanyard clip placeholder at the top */}
-        <div className="bg-border/85 absolute -top-3 left-1/2 h-6 w-10 -translate-x-1/2 rounded-md shadow-inner">
-          <div className="bg-background mx-auto mt-1.5 h-2 w-4 rounded-full" />
-        </div>
+      {/* Lanyard strap */}
+      <div className="flex flex-col items-center">
+        {/* Strap line */}
+        <div className="bg-primary/40 h-8 w-1 rounded-full" />
 
-        {/* Branding */}
-        <div className="mt-2 text-center">
-          <p className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">OCTALECTZZ</p>
-          <div className="bg-primary/20 mx-auto mt-1.5 h-0.5 w-8 rounded-full" />
-        </div>
-
-        {/* Avatar */}
-        <div className="border-border shadow-violet relative mt-6 h-28 w-28 overflow-hidden rounded-full border-2">
-          <Image src={profile} alt="Octavyan Putra Ramadhan" className="h-full w-full object-cover" width={112} height={112} priority />
-          <div className="from-primary/10 to-secondary/20 absolute inset-0 bg-linear-to-tr via-transparent mix-blend-overlay" />
-        </div>
-
-        {/* Info */}
-        <div className="mt-5 text-center">
-          <h3 className="font-display text-foreground text-base font-bold tracking-tight">Octavyan Putra R.</h3>
-          <p className="text-muted-foreground mt-1 text-xs font-medium">{t('role')}</p>
-        </div>
-
-        {/* Barcode / Footer */}
-        <div className="mt-auto flex w-full flex-col items-center gap-2">
+        {/* Card with flip animation */}
+        <div className="group cursor-pointer" style={{ perspective: '1000px' }} onClick={() => setIsFlipped(!isFlipped)}>
           <div
-            className="h-7 w-full opacity-60"
+            className="relative h-[380px] w-[260px] transition-transform duration-700 ease-out"
             style={{
-              backgroundImage:
-                'repeating-linear-gradient(90deg, var(--color-foreground) 0px, var(--color-foreground) 2px, transparent 2px, transparent 6px, var(--color-foreground) 6px, var(--color-foreground) 7px, transparent 7px, transparent 9px)',
-              backgroundSize: '100% 100%'
+              transformStyle: 'preserve-3d',
+              transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
             }}
-          />
-          <div className="text-muted-foreground flex w-full justify-between font-mono text-[8px] opacity-60">
-            <span>DEPT: DEV</span>
-            <span>ID: 010626</span>
+          >
+            {/* Front side */}
+            <div className="absolute inset-0 overflow-hidden rounded-xl shadow-2xl" style={{ backfaceVisibility: 'hidden' }}>
+              {/* Clip at the top */}
+              <div className="absolute top-0 left-1/2 z-10 -translate-x-1/2">
+                <div className="flex h-5 w-10 items-center justify-center rounded-b-md bg-zinc-700/90 shadow-md">
+                  <div className="h-2 w-5 rounded-full bg-zinc-500/60" />
+                </div>
+              </div>
+              <Image
+                src="/assets/lanyard/front.png"
+                alt="Octavyan Putra Ramadhan - Front"
+                width={520}
+                height={760}
+                className="h-full w-full object-cover"
+                priority
+              />
+              {/* Subtle shine overlay */}
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-white/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            </div>
+
+            {/* Back side */}
+            <div
+              className="absolute inset-0 overflow-hidden rounded-xl shadow-2xl"
+              style={{
+                backfaceVisibility: 'hidden',
+                transform: 'rotateY(180deg)'
+              }}
+            >
+              {/* Clip at the top */}
+              <div className="absolute top-0 left-1/2 z-10 -translate-x-1/2">
+                <div className="flex h-5 w-10 items-center justify-center rounded-b-md bg-zinc-700/90 shadow-md">
+                  <div className="h-2 w-5 rounded-full bg-zinc-500/60" />
+                </div>
+              </div>
+              <Image
+                src="/assets/lanyard/back.png"
+                alt="Octavyan Putra Ramadhan - Back"
+                width={520}
+                height={760}
+                className="h-full w-full object-cover"
+                priority
+              />
+              {/* Subtle shine overlay */}
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-br from-white/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            </div>
           </div>
         </div>
+
+        {/* Tap to flip hint */}
+        <p className="text-muted-foreground mt-3 animate-pulse text-xs font-medium">
+          {isFlipped ? '← ' : ''}Tap to flip{isFlipped ? '' : ' →'}
+        </p>
       </div>
     </div>
   )
