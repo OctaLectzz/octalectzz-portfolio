@@ -8,6 +8,7 @@ import { Container, Section } from '@/components/common/section'
 import { Input } from '@/components/ui/input'
 import { categories, projects } from '@/data'
 import { cn } from '@/lib/utils'
+import { getLocalizedValue } from '@/utils/locale'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Layers, Search } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
@@ -17,7 +18,7 @@ const ITEMS_PER_PAGE = 6
 
 export default function ProjectsPage() {
   const t = useTranslations()
-  const lang = useLocale()
+  const locale = useLocale()
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
@@ -28,26 +29,26 @@ export default function ProjectsPage() {
   const categoryOptions = useMemo(() => {
     return [
       { id: 'all', label: t('projects.all') },
-      ...categories.map((c) => ({
-        id: c.id,
-        label: lang === 'en' ? c.nameEn : c.nameId
+      ...categories.map((category) => ({
+        id: category.id,
+        label: locale === 'en' ? category.nameEn : category.nameId
       }))
     ]
-  }, [lang, t])
+  }, [locale, t])
 
   const filtered = useMemo(() => {
-    const term = searchQuery.trim().toLowerCase()
+    const searchTerm = searchQuery.trim().toLowerCase()
     return projects.filter((project) => {
-      if (selectedCategoryId !== 'all' && project.categoryId !== selectedCategoryId) return false
-      if (!term) return true
+      if (selectedCategoryId !== 'all' && project.category_id !== selectedCategoryId) return false
+      if (!searchTerm) return true
+      const localizedDescription = getLocalizedValue(project.description, locale)
       return (
-        project.title.toLowerCase().includes(term) ||
-        project.tags.some((tag) => tag.toLowerCase().includes(term)) ||
-        project.description.en.toLowerCase().includes(term) ||
-        project.description.id.toLowerCase().includes(term)
+        project.title.toLowerCase().includes(searchTerm) ||
+        project.tags.some((tag) => tag.toLowerCase().includes(searchTerm)) ||
+        (localizedDescription?.toLowerCase().includes(searchTerm) ?? false)
       )
     })
-  }, [selectedCategoryId, searchQuery])
+  }, [selectedCategoryId, searchQuery, locale])
 
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE)
 
@@ -64,13 +65,13 @@ export default function ProjectsPage() {
     projectsStartRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  const handleCategoryChange = (id: string) => {
-    setSelectedCategoryId(id)
+  const handleCategoryChange = (categoryId: string) => {
+    setSelectedCategoryId(categoryId)
     setCurrentPage(1)
   }
 
-  const handleSearchChange = (val: string) => {
-    setSearchQuery(val)
+  const handleSearchChange = (searchValue: string) => {
+    setSearchQuery(searchValue)
     setCurrentPage(1)
   }
 
@@ -98,25 +99,25 @@ export default function ProjectsPage() {
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {categoryOptions.map((opt) => (
+            {categoryOptions.map((option) => (
               <button
-                key={opt.id}
-                onClick={() => handleCategoryChange(opt.id)}
+                key={option.id}
+                onClick={() => handleCategoryChange(option.id)}
                 className={cn(
                   'relative rounded-full border px-4 py-1.5 text-xs font-semibold transition-colors duration-300',
-                  selectedCategoryId === opt.id
+                  selectedCategoryId === option.id
                     ? 'text-primary-foreground border-transparent'
                     : 'border-border/60 text-muted-foreground hover:border-primary/30 hover:text-foreground bg-surface/20 backdrop-blur-sm'
                 )}
               >
-                {selectedCategoryId === opt.id && (
+                {selectedCategoryId === option.id && (
                   <motion.span
                     layoutId="cat-pill"
                     className="bg-gradient-primary glow absolute inset-0 rounded-full"
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
                 )}
-                <span className="relative z-10">{opt.label}</span>
+                <span className="relative z-10">{option.label}</span>
               </button>
             ))}
           </div>
@@ -148,7 +149,7 @@ export default function ProjectsPage() {
             ) : (
               <div className="flex flex-col gap-10">
                 <motion.div layout className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {paginated.map((project, idx) => (
+                  {paginated.map((project, index) => (
                     <motion.div
                       key={project.id}
                       layout
@@ -157,7 +158,7 @@ export default function ProjectsPage() {
                       exit={{ opacity: 0, scale: 0.96 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <ProjectCard project={project} index={idx} />
+                      <ProjectCard project={project} index={index} />
                     </motion.div>
                   ))}
                 </motion.div>

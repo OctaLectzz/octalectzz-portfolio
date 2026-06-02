@@ -9,7 +9,7 @@ import { ProjectActionButtons } from '@/views/projects/show/action-buttons'
 
 interface SidebarSectionProps {
   client?: string
-  completedAt?: string
+  completed_at?: string
   categoryLabel?: string
   tags: string[]
   live?: string
@@ -17,7 +17,7 @@ interface SidebarSectionProps {
 }
 
 /** Right column sticky sidebar: metadata card, action buttons, and sidebar CTA. */
-export function SidebarSection({ client, completedAt, categoryLabel, tags, live, repo }: SidebarSectionProps) {
+export function SidebarSection({ client, completed_at, categoryLabel, tags, live, repo }: SidebarSectionProps) {
   const t = useTranslations('projects')
 
   return (
@@ -42,13 +42,13 @@ export function SidebarSection({ client, completedAt, categoryLabel, tags, live,
             </div>
           )}
 
-          {completedAt && (
+          {completed_at && (
             <div className="border-border/15 flex items-center justify-between gap-3 border-b pb-3">
               <span className="text-muted-foreground flex items-center gap-1.5 text-xs">
                 <Calendar className="text-primary h-3.5 w-3.5" />
                 {t('date')}
               </span>
-              <span className="text-foreground font-mono text-sm font-semibold">{completedAt}</span>
+              <span className="text-foreground font-mono text-sm font-semibold">{completed_at}</span>
             </div>
           )}
 

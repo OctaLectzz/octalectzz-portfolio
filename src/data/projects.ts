@@ -1,13 +1,13 @@
 import type { Project } from '@/types'
 
-const projCover = (label: string, from: string, to: string) =>
+const generateProjectCover = (label: string, gradientFrom: string, gradientTo: string) =>
   'data:image/svg+xml;utf8,' +
   encodeURIComponent(
     `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'>
       <defs>
         <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
-          <stop offset='0' stop-color='${from}'/>
-          <stop offset='1' stop-color='${to}'/>
+          <stop offset='0' stop-color='${gradientFrom}'/>
+          <stop offset='1' stop-color='${gradientTo}'/>
         </linearGradient>
       </defs>
       <rect width='800' height='500' fill='#020617'/>
@@ -19,371 +19,252 @@ const projCover = (label: string, from: string, to: string) =>
 
 export const projects: Project[] = [
   {
-    id: 'nexspace',
-    title: 'Nexspace Studio',
+    id: 'wheelsrent',
+    title: 'Wheelsrent',
     description: {
-      en: 'Marketing site for a futuristic creative agency with rich scroll animations.',
-      id: 'Situs marketing untuk agensi kreatif futuristik dengan animasi scroll yang kaya.'
+      en: 'A premium car rental web application with an interactive catalog, booking system, and secure payment integration.',
+      id: 'Aplikasi web rental mobil premium dengan katalog interaktif, sistem pemesanan, dan integrasi pembayaran yang aman.'
     },
-    tags: ['Next.js', 'Framer Motion', 'Tailwind'],
-    categoryId: 'web',
+    tags: ['Laravel', 'Tailwind CSS', 'MySQL', 'Midtrans'],
+    category_id: 'web',
     featured: true,
-    cover: projCover('Nexspace', '#22d3ee', '#a855f7'),
-    live: 'https://example.com',
-    repo: 'https://github.com',
-    client: 'Nexspace Agency Co.',
-    completedAt: 'May 2026',
+    cover: '/assets/projects/wheelsrent/index.png',
+    live: 'https://wheelsrent.octalectzz.my.id',
+    repo: 'https://github.com/octalectzz/wheelsrent',
+    client: 'Wheelsrent Indonesia',
+    completed_at: new Date('2024-03-01'),
     features: {
       en: [
-        'Smooth 60FPS scroll-triggered layout transitions',
-        'Immersive custom shader webGL background animations',
-        'Multi-language localization out of the box',
-        'Interactive dynamic component layouts'
+        'Interactive vehicle catalog featuring multi-tiered search and filtering options',
+        'End-to-end booking flow including duration and pricing calculation algorithms',
+        'Seamless integration with Midtrans payment gateway for reliable transaction handling',
+        'Admin dashboard for fleet monitoring, transaction reports, and booking status controls',
+        'Dynamic notification and verification alert updates'
       ],
       id: [
-        'Transisi tata letak yang dipicu scroll 60FPS mulus',
-        'Animasi latar belakang WebGL shader kustom yang mendalam',
-        'Lokalisasi multi-bahasa langsung siap pakai',
-        'Tata letak komponen dinamis interaktif'
+        'Katalog kendaraan interaktif dengan opsi pencarian dan pemfilteran bertingkat',
+        'Alur pemesanan ujung ke ujung termasuk algoritma perhitungan durasi dan harga',
+        'Integrasi tanpa hambatan dengan payment gateway Midtrans untuk penanganan transaksi yang andal',
+        'Dasbor admin untuk pemantauan armada, laporan transaksi, dan kontrol status pemesanan',
+        'Pembaruan notifikasi dinamis dan peringatan verifikasi'
       ]
     },
     advantages: {
       en: [
-        'Ultra-fast performance scoring 100/100 on Lighthouse tests',
-        'Clean structure supporting swift modular scaling',
-        'Aesthetic neon color palettes tailored for high visual engagement'
+        'Responsive layout designed specifically for optimal mobile and desktop experiences',
+        'Optimized Next.js image components minimizing catalog load times and layout shifts',
+        'Relational database architecture guaranteeing data consistency across booking states'
       ],
       id: [
-        'Performa ultra cepat mencetak skor 100/100 pada tes Lighthouse',
-        'Struktur rapi yang mendukung skalabilitas modular yang cepat',
-        'Palet warna neon estetis yang dirancang untuk keterlibatan visual tinggi'
+        'Tata letak responsif yang dirancang khusus untuk pengalaman seluler dan desktop yang optimal',
+        'Komponen gambar Next.js yang dioptimalkan meminimalkan waktu muat katalog dan pergeseran tata letak',
+        'Arsitektur database relasional menjamin konsistensi data di seluruh status pemesanan'
       ]
     },
     problem: {
-      en: 'The client needed a digital presence that stood out in a competitive field, loaded instantly, and communicated complex tech services without overwhelming visitors.',
-      id: 'Klien membutuhkan kehadiran digital yang menonjol di bidang yang kompetitif, memuat secara instan, dan menyampaikan layanan teknologi yang kompleks tanpa membebani pengunjung.'
+      en: 'The client needed to shift from manual WhatsApp-based booking records to an automated, scalable web platform that showcases their vehicle fleet professionally and minimizes booking conflicts.',
+      id: 'Klien perlu beralih dari catatan pemesanan manual berbasis WhatsApp ke platform web otomatis berskala tinggi yang menampilkan armada kendaraan mereka secara profesional dan meminimalkan konflik pemesanan.'
     },
     solution: {
-      en: 'We designed a WebGL-enhanced homepage featuring smooth text reveals, structured cards showcasing specialized services, and an interactive workspace mockup.',
-      id: 'Kami merancang halaman beranda yang disempurnakan dengan WebGL yang menampilkan teks reveal yang halus, kartu terstruktur yang memamerkan layanan khusus, dan mockup ruang kerja interaktif.'
+      en: 'We built a high-performance Laravel application integrated with a MySQL database, featuring an automated booking engine and administrative panel for fleet tracking.',
+      id: 'Kami membangun aplikasi Laravel berkinerja tinggi yang terintegrasi dengan database MySQL, menampilkan mesin pemesanan otomatis dan panel administratif untuk pelacakan armada.'
     },
     impact: {
-      en: 'Boosted user retention by 45% and generated over 150 project leads within the first week of deployment.',
-      id: 'Meningkatkan retensi pengguna sebesar 45% dan menghasilkan lebih dari 150 prospek proyek dalam minggu pertama peluncuran.'
+      en: 'Eliminated overlapping reservations, reduced staff administration overhead by 70%, and grew booking conversions by 40% in the first quarter post-launch.',
+      id: 'Mengeliminasi pemesanan tumpang tindih, mengurangi beban administrasi staf sebesar 70%, dan meningkatkan konversi pemesanan sebesar 40% di kuartal pertama setelah peluncuran.'
     },
-    gallery: [projCover('Nexspace Detail 1', '#22d3ee', '#8b5cf6'), projCover('Nexspace Detail 2', '#a855f7', '#ec4899')]
+    gallery: [
+      '/assets/projects/wheelsrent/1.png',
+      '/assets/projects/wheelsrent/2.png',
+      '/assets/projects/wheelsrent/3.png',
+      '/assets/projects/wheelsrent/4.png',
+      '/assets/projects/wheelsrent/5.png',
+      '/assets/projects/wheelsrent/6.png',
+      '/assets/projects/wheelsrent/7.png',
+      '/assets/projects/wheelsrent/8.png'
+    ]
   },
   {
-    id: 'auralink',
-    title: 'Auralink Dashboard',
+    id: 'pplg-2-class',
+    title: 'PPLG 2 Class Website',
     description: {
-      en: 'Real-time analytics dashboard for IoT devices with live charts and theming.',
-      id: 'Dasbor analitik real-time untuk perangkat IoT dengan grafik langsung dan theming.'
+      en: 'A class community portal for XII PPLG 2 at SMK Muhammadiyah 01 Sukoharjo, featuring schedules, structure, a photo gallery, and an anonymous messaging system.',
+      id: 'Portal komunitas kelas untuk XII PPLG 2 di SMK Muhammadiyah 01 Sukoharjo, menampilkan jadwal, struktur kelas, galeri foto, dan sistem pesan anonim.'
     },
-    tags: ['React', 'TanStack Query', 'Recharts'],
-    categoryId: 'web',
+    tags: ['React', 'Material-UI', 'Tailwind CSS', 'Firebase', 'AOS'],
+    category_id: 'web',
     featured: true,
-    cover: projCover('Auralink', '#10b981', '#06b6d4'),
-    live: 'https://example.com',
-    client: 'Auralink Networks Inc.',
-    completedAt: 'March 2026',
+    cover: '/assets/projects/pplg-2-class/index.png',
+    live: 'https://pepeelgedua.vercel.app/',
+    repo: 'https://github.com/OctaLectzz/pplg2-class',
+    client: 'XII PPLG 2 Class',
+    completed_at: new Date('2023-10-01'),
     features: {
       en: [
-        'Dynamic live chart visualization utilizing WebSocket endpoints',
-        'Custom light/dark/system theme triggers',
-        'Smart data caching and instant revalidation keys'
+        'Interactive organizational class structure display mapping students roles',
+        'School subject schedules and classroom cleaning duty (piket) calendars',
+        'Slick JS powered media gallery showcasing class documentation and activities',
+        'Real-time anonymous messaging (text anonim) system utilizing Firebase Firestore',
+        'Smooth scroll entrance animations configured with AOS'
       ],
       id: [
-        'Visualisasi grafik langsung dinamis menggunakan endpoint WebSocket',
-        'Pemicu tema kustom light/dark/system',
-        'Caching data cerdas dan kunci revalidasi instan'
-      ]
-    },
-    advantages: {
-      en: ['Highly responsive structure handling millions of data points', 'Clean state machine flow decoupling UI from data layers'],
-      id: ['Struktur yang sangat responsif menangani jutaan titik data', 'Aliran state machine yang rapi memisahkan UI dari lapisan data']
-    },
-    problem: {
-      en: 'Displaying complex real-time telemetry from thousands of smart sensors without degrading browser performance.',
-      id: 'Menampilkan telemetri real-time yang kompleks dari ribuan sensor pintar tanpa menurunkan performa browser.'
-    },
-    solution: {
-      en: 'Implemented virtualized grid rows and optimized render paths using canvas-based charts instead of standard SVG rendering.',
-      id: 'Mengimplementasikan baris grid virtual dan mengoptimalkan jalur render menggunakan bagan berbasis kanvas sebagai pengganti rendering SVG standar.'
-    },
-    impact: {
-      en: 'Render latency reduced by 80%, allowing continuous data streaming on lower-end mobile devices.',
-      id: 'Latensi render berkurang sebesar 80%, memungkinkan streaming data terus-menerus pada perangkat seluler berspesifikasi rendah.'
-    },
-    gallery: [projCover('Auralink Analytics', '#10b981', '#3b82f6'), projCover('Auralink Config', '#06b6d4', '#8b5cf6')]
-  },
-  {
-    id: 'lumen-shop',
-    title: 'Lumen Commerce',
-    description: {
-      en: 'Headless e-commerce storefront with cinematic product pages.',
-      id: 'Storefront e-commerce headless dengan halaman produk sinematik.'
-    },
-    tags: ['Next.js', 'Stripe', 'Sanity'],
-    categoryId: 'web',
-    cover: projCover('Lumen', '#f59e0b', '#ef4444'),
-    live: 'https://example.com',
-    client: 'Lumen Studios',
-    completedAt: 'January 2026',
-    features: {
-      en: ['Cinematic immersive product zoom gallery', 'Secure multi-currency Stripe checkouts', 'Flexible Sanity CMS studio configuration'],
-      id: [
-        'Galeri zoom produk sinematik yang mendalam',
-        'Pembayaran Stripe multi-mata uang yang aman',
-        'Konfigurasi studio CMS Sanity yang fleksibel'
+        'Tampilan struktur organisasi kelas interaktif yang memetakan peran siswa',
+        'Jadwal mata pelajaran sekolah dan kalender piket kebersihan kelas',
+        'Galeri media bertenaga Slick JS yang menampilkan dokumentasi dan aktivitas kelas',
+        'Sistem pesan anonim (teks anonim) waktu nyata menggunakan Firebase Firestore',
+        'Animasi masuk gulir halus yang dikonfigurasi dengan AOS'
       ]
     },
     advantages: {
       en: [
-        'Incremental Static Regeneration ensuring real-time stock updates',
-        'SEO-optimized meta configuration matching global marketplace layouts'
+        'Unified class communication hub fostering interactive digital engagement',
+        'Mobile-first responsive design matching the school community needs',
+        'Secure backend configuration on Firebase for message retrieval and storage'
       ],
       id: [
-        'Regenerasi Statis Inkremental memastikan pembaruan stok real-time',
-        'Konfigurasi meta yang dioptimalkan untuk SEO yang cocok dengan tata letak pasar global'
+        'Pusat komunikasi kelas terpadu yang memupuk keterlibatan digital interaktif',
+        'Desain responsif ramah seluler yang cocok dengan kebutuhan komunitas sekolah',
+        'Konfigurasi backend Firebase yang aman untuk penyimpanan dan pengambilan pesan'
       ]
     },
     problem: {
-      en: 'The design agency needed a boutique shop displaying luxury prints with extreme detail while keeping page load speeds under 1 second.',
-      id: 'Agensi desain membutuhkan toko butik yang menampilkan cetakan mewah dengan detail ekstrem sambil menjaga kecepatan muat halaman di bawah 1 detik.'
+      en: 'The students of XII PPLG 2 at SMK Muhammadiyah 01 Sukoharjo needed a centralized portal to easily view school schedules, understand structural responsibilities, document class highlights, and exchange anonymous class feedback.',
+      id: 'Siswa XII PPLG 2 di SMK Muhammadiyah 01 Sukoharjo membutuhkan portal terpusat untuk dengan mudah melihat jadwal sekolah, memahami tanggung jawab struktural, mendokumentasikan momen kelas, dan bertukar umpan balik kelas secara anonim.'
     },
     solution: {
-      en: 'Built a decoupled storefront leveraging edge CDN servers and optimized multi-layered responsive image assets.',
-      id: 'Membangun storefront terpisah memanfaatkan server edge CDN dan mengoptimalkan aset gambar responsif berlapis-lapis.'
+      en: 'We designed and developed a community class web portal using React, utilizing Firestore for direct anonymous messages, and Tailwind CSS / Material-UI for a modern class dashboard.',
+      id: 'Kami merancang dan mengembangkan portal web kelas komunitas menggunakan React, memanfaatkan Firestore untuk pesan anonim langsung, serta Tailwind CSS / Material-UI untuk dasbor kelas modern.'
     },
     impact: {
-      en: 'Achieved an average of 920ms First Contentful Paint times globally, leading to a 30% increase in checkout conversions.',
-      id: 'Mencapai waktu First Contentful Paint rata-rata 920ms secara global, memicu peningkatan 30% dalam konversi checkout.'
+      en: 'Created a collaborative digital space for 30+ students, streamlined access to class events and duties, and facilitated over 500 anonymous communication entries.',
+      id: 'Menciptakan ruang digital kolaboratif untuk 30+ siswa, menyederhanakan akses ke acara dan tugas kelas, serta memfasilitasi lebih dari 500 entri komunikasi anonim.'
     },
-    gallery: [projCover('Lumen Catalog', '#f59e0b', '#ec4899')]
+    gallery: [
+      '/assets/projects/pplg-2-class/1.png',
+      '/assets/projects/pplg-2-class/2.png',
+      '/assets/projects/pplg-2-class/3.png',
+      '/assets/projects/pplg-2-class/4.png'
+    ]
   },
   {
-    id: 'pulse-ui',
-    title: 'Pulse UI Kit',
+    id: 'absenku',
+    title: 'Absenku',
     description: {
-      en: 'Open-source motion-first UI kit with 60+ components.',
-      id: 'UI kit open-source berbasis motion dengan 60+ komponen.'
+      en: 'A comprehensive corporate employee attendance and payroll management system with real-time biometric fingerprint integration.',
+      id: 'Sistem manajemen kehadiran karyawan dan penggajian perusahaan yang komprehensif dengan integrasi sidik jari biometrik waktu nyata.'
     },
-    tags: ['React', 'Motion', 'Storybook'],
-    categoryId: 'open-source',
+    tags: ['Laravel', 'Quasar Framework', 'Vue 3', 'MySQL', 'ApexCharts'],
+    category_id: 'web',
     featured: true,
-    cover: projCover('Pulse UI', '#a855f7', '#ec4899'),
-    repo: 'https://github.com',
-    client: 'Community Open Source',
-    completedAt: 'February 2026',
+    cover: '/assets/projects/absenku/index.png',
+    client: 'Corporate Internal',
+    completed_at: new Date('2024-05-01'),
     features: {
       en: [
-        'Over 60 pre-configured micro-animated primitives',
-        'Fully accessible structure matching WAI-ARIA standards',
-        'Tailwind custom plugin configuration integration'
+        'Automated check-in and check-out logs tracking daily employee presence',
+        'Overtime and leave management tracking early departures and extra hours',
+        'Automated monthly salary calculation engine based on presence and role-based grades',
+        'Biometric fingerprint device synchronization handling machine connectivity',
+        'Interactive dashboard telemetry visualization utilizing ApexCharts'
       ],
       id: [
-        'Lebih dari 60 primitif animasi mikro yang dikonfigurasi sebelumnya',
-        'Struktur ramah aksesibilitas yang cocok dengan standar WAI-ARIA',
-        'Integrasi konfigurasi plugin kustom Tailwind'
+        'Log masuk dan keluar otomatis yang melacak kehadiran harian karyawan',
+        'Manajemen lembur dan cuti yang melacak kepulangan awal dan jam ekstra',
+        'Mesin kalkulasi gaji bulanan otomatis berdasarkan kehadiran dan tingkatan jabatan',
+        'Sinkronisasi perangkat sidik jari biometrik yang menangani konektivitas mesin',
+        'Visualisasi telemetri dasbor interaktif menggunakan ApexCharts'
       ]
     },
     advantages: {
-      en: ['Extremely lightweight package bundle sized under 8kB gzipped', 'Developer-friendly developer environment inside Storybook setups'],
-      id: ['Ukuran bundel paket yang sangat ringan di bawah 8kB gzipped', 'Lingkungan pengembangan yang ramah pengembang di dalam setup Storybook']
+      en: [
+        'Unified enterprise dashboard consolidating staff distribution, schedules, and payroll metrics',
+        'High-performance backend handling bulk attendance records from multiple biometric terminals',
+        'User-friendly UI crafted with Quasar and Vue 3 supporting light and dark themes'
+      ],
+      id: [
+        'Dasbor perusahaan terpadu yang menggabungkan distribusi staf, jadwal, dan metrik penggajian',
+        'Backend berkinerja tinggi yang menangani catatan kehadiran massal dari beberapa terminal biometrik',
+        'UI ramah pengguna yang dibuat dengan Quasar dan Vue 3 yang mendukung tema terang dan gelap'
+      ]
     },
     problem: {
-      en: 'Web developers faced a tradeoff between installing heavy motion frameworks and manually writing repetitive CSS keyframes.',
-      id: 'Pengembang web menghadapi dilema antara memasang framework motion yang berat dan menulis CSS keyframe berulang secara manual.'
+      en: 'The company required a reliable system to sync attendance logs directly from office fingerprint machines, manage employee shifts, track overtime accurately, and automate the monthly payroll generation process to reduce human administration errors.',
+      id: 'Perusahaan membutuhkan sistem yang andal untuk menyinkronkan log kehadiran langsung dari mesin sidik jari kantor, mengelola shift karyawan, melacak lembur secara akurat, dan mengotomatiskan proses pembuatan payroll bulanan untuk mengurangi kesalahan administrasi manusia.'
     },
     solution: {
-      en: 'Packaged common UI micro-interactions into highly modular Tailwind-compatible React primitives utilizing Framer Motion.',
-      id: 'Mengemas mikro-interaksi UI umum ke dalam primitif React modular kompatibel Tailwind memanfaatkan Framer Motion.'
+      en: 'We designed a robust system composed of a Laravel REST API coupled with a Quasar-based SPA dashboard, providing seamless biometric device synchronization, attendance trend analytics, and automatic payroll calculation.',
+      id: 'Kami merancang sistem andal yang terdiri dari Laravel REST API dipadukan dengan dasbor SPA berbasis Quasar, menyediakan sinkronisasi perangkat biometrik tanpa hambatan, analitik tren kehadiran, dan perhitungan gaji otomatis.'
     },
     impact: {
-      en: 'Gained over 1,200 GitHub stars and simplified the codebase workflows for thousands of open-source projects.',
-      id: 'Meraih lebih dari 1.200 bintang GitHub dan menyederhanakan alur kerja kode untuk ribuan proyek open-source.'
+      en: 'Reduced manual payroll processing time from days to minutes, synchronized real-time biometric logs for over 100 employees, and minimized human error in overtime salary calculations.',
+      id: 'Mengurangi waktu pemrosesan gaji manual dari beberapa hari menjadi hitungan menit, menyinkronkan log biometrik waktu nyata untuk lebih dari 100 karyawan, dan meminimalkan kesalahan manusia dalam perhitungan gaji lembur.'
     },
-    gallery: [projCover('Pulse Components', '#a855f7', '#6366f1')]
+    gallery: [
+      '/assets/projects/absenku/1.png',
+      '/assets/projects/absenku/2.png',
+      '/assets/projects/absenku/3.png',
+      '/assets/projects/absenku/4.png',
+      '/assets/projects/absenku/5.png',
+      '/assets/projects/absenku/6.png',
+      '/assets/projects/absenku/7.png',
+      '/assets/projects/absenku/8.png',
+      '/assets/projects/absenku/9.png',
+      '/assets/projects/absenku/10.png'
+    ]
   },
   {
-    id: 'mindmap-ai',
-    title: 'MindMap AI',
+    id: 'edukarya',
+    title: 'Edukarya',
     description: {
-      en: 'AI-powered mindmap canvas with collaborative editing.',
-      id: 'Kanvas mindmap bertenaga AI dengan editing kolaboratif.'
+      en: 'An educational web platform containing localized events, structured teaching materials, and digital certificate verification.',
+      id: 'Platform web edukasi yang berisi informasi kegiatan/event, bahan ajar terstruktur, dan verifikasi sertifikat digital.'
     },
-    tags: ['React', 'Canvas', 'OpenAI'],
-    categoryId: 'web',
-    cover: projCover('MindMap AI', '#0ea5e9', '#1e40af'),
-    client: 'MindLabs Corp',
-    completedAt: 'April 2026',
+    tags: ['Laravel', 'Quasar Framework', 'Vue 3', 'MySQL'],
+    category_id: 'web',
+    featured: true,
+    cover: '/assets/projects/edukarya/index.png',
+    client: 'Muhammadiyah Kota Semarang',
+    completed_at: new Date('2024-02-01'),
     features: {
       en: [
-        'Infinite canvas system leveraging HTML5 context structures',
-        'Automatic node clustering using localized AI analysis layout maps',
-        'Simultaneous collaborative workspace workspaces'
+        'Interactive event catalog showcasing educational training, workshops, and webinars',
+        'Downloadable structured teaching materials (bahan ajar) organized by category',
+        'Online digital certificate search and validation module for participants',
+        'Admin dashboard for managing events, uploading study resources, and issuing certificates',
+        'Unified authentication system for users and administrators'
       ],
       id: [
-        'Sistem kanvas tanpa batas memanfaatkan struktur konteks HTML5',
-        'Klasterisasi node otomatis menggunakan peta tata letak analisis AI lokal',
-        'Ruang kerja kolaboratif simultan'
-      ]
-    },
-    advantages: {
-      en: ['Instant load architecture processing over 500 connected maps concurrently', 'Intuitive interface minimizing workflow frictions'],
-      id: [
-        'Arsitektur pemuatan instan memproses lebih dari 500 peta terhubung secara bersamaan',
-        'Antarmuka intuitif meminimalkan hambatan alur kerja'
-      ]
-    },
-    problem: {
-      en: 'Traditional mind-mapping systems required tedious manual alignment, slowing down fast brainstorming sessions.',
-      id: 'Sistem pemetaan pikiran tradisional membutuhkan penyelarasan manual yang membosankan, memperlambat sesi brainstorming yang cepat.'
-    },
-    solution: {
-      en: 'Integrated OpenAI layout prompt formats with auto-spring layout canvas logic for real-time diagram rearrangement.',
-      id: 'Mengintegrasikan format prompt tata letak OpenAI dengan logika kanvas tata letak auto-spring untuk penataan ulang diagram secara real-time.'
-    },
-    impact: {
-      en: 'Corporate teams reported a 50% decrease in brain-dump-to-strategy documentation preparation times.',
-      id: 'Tim korporasi melaporkan penurunan 50% dalam waktu persiapan dokumentasi strategi dari hasil brainstorming.'
-    },
-    gallery: [projCover('MindMap Board', '#0ea5e9', '#3b82f6')]
-  },
-  {
-    id: 'trekly',
-    title: 'Trekly Mobile',
-    description: {
-      en: 'Travel companion app with offline maps and trip journaling.',
-      id: 'Aplikasi pendamping perjalanan dengan peta offline dan jurnal trip.'
-    },
-    tags: ['React Native', 'Expo', 'MapBox'],
-    categoryId: 'mobile',
-    cover: projCover('Trekly', '#16a34a', '#0ea5e9'),
-    client: 'Trekly LLC',
-    completedAt: 'December 2025',
-    features: {
-      en: [
-        'Offline MapBox vector map rendering caches',
-        'GPS geolocated automatic journal tags',
-        'Cross-platform iOS and Android synchronization support'
-      ],
-      id: [
-        'Rendering peta vektor offline MapBox terenkripsi',
-        'Tag jurnal otomatis bergeolocated GPS',
-        'Dukungan sinkronisasi lintas platform iOS dan Android'
-      ]
-    },
-    advantages: {
-      en: ['Battery-optimized background tracking using low-power hardware calls', 'Polished native swipe navigation systems'],
-      id: ['Pelacakan latar belakang hemat baterai menggunakan panggilan perangkat keras berdaya rendah', 'Sistem navigasi geser native yang dipoles']
-    },
-    problem: {
-      en: 'Hikers and remote travelers lose internet connectivity, rendering typical travel routing applications useless.',
-      id: 'Pendaki dan pelancong terpencil kehilangan konektivitas internet, membuat aplikasi perutean perjalanan biasa tidak berguna.'
-    },
-    solution: {
-      en: 'Created an offline-first mobile container utilizing SQLite indexing of vector tile routes, keeping data fully local.',
-      id: 'Membuat kontainer seluler offline-first memanfaatkan pengindeksan SQLite dari rute ubin vektor, menjaga data sepenuhnya lokal.'
-    },
-    impact: {
-      en: 'Safely guided over 12,000 active wilderness hikers without requiring single internet handshake connections.',
-      id: 'Membimbing dengan aman lebih dari 12.000 pendaki alam liar aktif tanpa memerlukan koneksi internet sekali pun.'
-    },
-    gallery: [projCover('Trekly Offline Maps', '#16a34a', '#10b981')]
-  },
-  {
-    id: 'studio-os',
-    title: 'Studio OS',
-    description: {
-      en: 'Internal tool replacing 5 SaaS subscriptions for a design agency.',
-      id: 'Tool internal yang menggantikan 5 langganan SaaS untuk agensi desain.'
-    },
-    tags: ['Next.js', 'Prisma', 'tRPC'],
-    categoryId: 'web',
-    cover: projCover('Studio OS', '#64748b', '#0f172a'),
-    client: 'Vertex Design Group',
-    completedAt: 'November 2025',
-    features: {
-      en: [
-        'Consolidated dashboard tracking invoices, assets, task updates, and chats',
-        'Automated document drafts based on client form templates',
-        'End-to-end tRPC type-safe API communication layers'
-      ],
-      id: [
-        'Dasbor terpadu melacak faktur, aset, pembaruan tugas, dan obrolan',
-        'Draf dokumen otomatis berdasarkan templat formulir klien',
-        'Lapisan komunikasi API aman tipe tRPC ujung ke ujung'
+        'Katalog kegiatan interaktif yang menampilkan pelatihan, lokakarya, dan webinar pendidikan',
+        'Unduhan bahan ajar terstruktur yang dikelompokkan berdasarkan kategori',
+        'Modul pencarian dan validasi sertifikat digital online untuk peserta',
+        'Dasbor admin untuk mengelola event, mengunggah materi pembelajaran, dan menerbitkan sertifikat',
+        'Sistem autentikasi terpadu untuk pengguna dan administrator'
       ]
     },
     advantages: {
       en: [
-        'Unified system saving significant operational subscription overheads',
-        'Flexible project scheduling boards dynamically adjusting timeline steps'
+        'Centralized training event and resource database for teachers and students',
+        'Modern Single Page Application user interface built using Quasar Framework and Vue 3',
+        'Scalable and robust REST API architecture powered by Laravel'
       ],
       id: [
-        'Sistem terpadu menghemat pengeluaran langganan operasional yang signifikan',
-        'Papan penjadwalan proyek fleksibel yang menyesuaikan langkah lini masa secara dinamis'
+        'Database kegiatan pelatihan dan sumber daya terpusat untuk guru dan peserta',
+        'Antarmuka Single Page Application modern yang dibangun dengan Quasar Framework dan Vue 3',
+        'Arsitektur REST API yang tangguh dan mudah dikembangkan bertenaga Laravel'
       ]
     },
     problem: {
-      en: 'A growing design group spent hours syncing data across Slack, Trello, Typeform, and QuickBooks, leading to client delivery delays.',
-      id: 'Kelompok desain yang berkembang menghabiskan waktu berjam-jam menyelaraskan data di Slack, Trello, Typeform, dan QuickBooks, menyebabkan keterlambatan pengiriman ke klien.'
+      en: 'The Muhammadiyah educational institution in Semarang required a structured platform to coordinate training events, share educational PDF materials, and provide a secure verification portal for training certificates.',
+      id: 'Instansi pendidikan Muhammadiyah di Semarang membutuhkan platform terstruktur untuk mengoordinasikan kegiatan pelatihan, membagikan dokumen bahan ajar PDF, dan menyediakan portal verifikasi sertifikat pelatihan yang aman.'
     },
     solution: {
-      en: 'Built an unified internal dashboard incorporating clients, work items, and automated invoices in a central system.',
-      id: 'Membangun dasbor internal terpadu yang menggabungkan klien, item pekerjaan, dan faktur otomatis dalam sistem pusat.'
+      en: 'We built Edukarya, a responsive SPA using Quasar and Vue 3, integrated with a Laravel backend API, enabling simple event registration, download centers, and a search directory for generated certificates.',
+      id: 'Kami membangun Edukarya, SPA responsif menggunakan Quasar dan Vue 3, terintegrasi dengan Laravel backend API, memungkinkan registrasi event mudah, pusat unduhan, dan direktori pencarian sertifikat yang diterbitkan.'
     },
     impact: {
-      en: 'Saved $1,200 monthly in software licensing fees and cut project administrative planning loops by 60%.',
-      id: 'Menghemat $1.200 per bulan dalam biaya lisensi perangkat lunak dan memangkas lingkaran perencanaan administratif proyek sebesar 60%.'
+      en: 'Successfully digitized certification workflows for hundreds of workshop attendees, streamlined material distribution, and centralized event administration for the school board.',
+      id: 'Berhasil mendigitalisasi alur kerja sertifikasi untuk ratusan peserta lokakarya, menyederhanakan distribusi bahan ajar, dan memusatkan administrasi kegiatan bagi pengurus instansi.'
     },
-    gallery: [projCover('Studio OS Dashboard', '#64748b', '#475569')]
-  },
-  {
-    id: 'fluxe',
-    title: 'Fluxe Branding',
-    description: {
-      en: 'Brand identity & design system for a fintech startup.',
-      id: 'Identitas brand & design system untuk startup fintech.'
-    },
-    tags: ['Figma', 'Design System'],
-    categoryId: 'ui-ux',
-    cover: projCover('Fluxe', '#ec4899', '#8b5cf6'),
-    client: 'Fluxe Financial Inc',
-    completedAt: 'October 2025',
-    features: {
-      en: [
-        'Complete brand logo mark, iconographies, and visual system frameworks',
-        'Robust UI components with extensive variant definitions inside Figma',
-        'Accessible color combination maps matching WCAG 2.1 criteria'
-      ],
-      id: [
-        'Tanda logo merek lengkap, ikonografi, dan kerangka kerja sistem visual',
-        'Komponen UI yang andal dengan definisi varian yang luas di dalam Figma',
-        'Peta kombinasi warna ramah aksesibilitas yang cocok dengan kriteria WCAG 2.1'
-      ]
-    },
-    advantages: {
-      en: ['Clean designer-to-developer transition guidelines', 'Futuristic fluid neon system aligning brand with cutting-edge tech services'],
-      id: [
-        'Panduan transisi desainer-ke-pengembang yang rapi',
-        'Sistem neon cair futuristik yang menyelaraskan merek dengan layanan teknologi mutakhir'
-      ]
-    },
-    problem: {
-      en: 'A fintech startup needed an authoritative yet highly progressive and tech-forward brand identity to pitch to venture capital boards.',
-      id: 'Sebuah startup fintech membutuhkan identitas merek yang otoritatif namun sangat progresif dan maju secara teknologi untuk dipresentasikan ke dewan modal ventura.'
-    },
-    solution: {
-      en: 'Crafted a dark-mode first design system based on electric pink and cosmic purple tints, representing fluidity and high-yield financial technology.',
-      id: 'Merancang sistem desain khusus mode gelap berbasis warna merah muda elektrik dan ungu kosmik, mewakili fluiditas dan teknologi keuangan hasil tinggi.'
-    },
-    impact: {
-      en: 'Helped secure $3.2M in Seed round funding, with investors citing design aesthetics as a primary confidence driver.',
-      id: 'Membantu mengamankan pendanaan putaran Seed sebesar $3,2 juta, dengan investor menyebut estetika desain sebagai pendorong kepercayaan utama.'
-    },
-    gallery: [projCover('Fluxe Typography', '#ec4899', '#db2777'), projCover('Fluxe Style Guide', '#8b5cf6', '#7c3aed')]
+    gallery: ['/assets/projects/edukarya/1.png', '/assets/projects/edukarya/2.png', '/assets/projects/edukarya/3.png']
   }
 ]

@@ -289,5 +289,5 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }: BandProps) {
 }
 
 // Preload the static assets
-useGLTF.preload('/assets/lanyard/card.glb')
+useGLTF.preload('/assets/lanyard/profile.png')
 useTexture.preload('/assets/lanyard/lanyard.png')

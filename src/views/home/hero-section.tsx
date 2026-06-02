@@ -19,7 +19,7 @@ export function HeroSection() {
   const t = useTranslations('home.hero')
 
   return (
-    <Section className="pt-20 md:pt-28">
+    <Section className="pt-28">
       <GridBackground />
       <Meteors number={10} />
       <ParticleField />
@@ -60,7 +60,7 @@ export function HeroSection() {
                 {t('ctaPrimary')} <ArrowRight className="h-4 w-4" />
               </PrimaryButton>
 
-              <PrimaryButton variant="outline">
+              <PrimaryButton asChildHref="/assets/octavyan-putra-ramadhan-cv.pdf" download="octavyan-putra-ramadhan-cv.pdf" variant="outline">
                 <Download className="h-4 w-4" /> {t('ctaSecondary')}
               </PrimaryButton>
             </motion.div>

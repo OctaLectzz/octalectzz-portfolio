@@ -25,10 +25,10 @@ export function LanguageToggle() {
         variant="outline"
         size="sm"
         aria-label="Switch language"
-        className="hidden h-9 items-center gap-1.5 rounded-lg px-2.5 sm:inline-flex"
+        className="flex h-9 w-9 items-center justify-center gap-1.5 rounded-lg p-0 sm:w-auto sm:px-2.5"
       >
-        <Languages className="h-3.5 w-3.5" />
-        <span className="w-4" />
+        <Languages className="h-4 w-4 sm:h-3.5 sm:w-3.5" />
+        <span className="hidden w-4 sm:inline" />
       </PrimaryButton>
     )
   }
@@ -39,10 +39,10 @@ export function LanguageToggle() {
       size="sm"
       onClick={toggleLanguage}
       aria-label="Switch language"
-      className="hidden h-9 items-center gap-1.5 rounded-lg px-2.5 sm:inline-flex"
+      className="flex h-9 w-9 items-center justify-center gap-1.5 rounded-lg p-0 sm:w-auto sm:px-2.5"
     >
-      <Languages className="h-3.5 w-3.5" />
-      <span className="text-xs font-semibold tracking-wider uppercase">{locale}</span>
+      <Languages className="h-4 w-4 sm:h-3.5 sm:w-3.5" />
+      <span className="hidden text-xs font-semibold tracking-wider uppercase sm:inline">{locale}</span>
     </PrimaryButton>
   )
 }

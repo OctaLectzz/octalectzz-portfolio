@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { certificates } from '@/data'
 import { Award, ExternalLink } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export function CertificatesSection() {
@@ -29,11 +30,12 @@ export function CertificatesSection() {
                 aria-label={`${t('view')} – ${certificate.title}`}
               >
                 <div className="relative aspect-4/3 overflow-hidden rounded-xl">
-                  <img
+                  <Image
                     src={certificate.image}
                     alt={certificate.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div
                     aria-hidden
@@ -72,12 +74,15 @@ export function CertificatesSection() {
         <DialogContent className="border-border/50 bg-card/90 w-[95vw] max-w-[95vw] p-1 backdrop-blur-xl sm:w-[90vw] sm:max-w-[90vw] sm:p-2 md:w-[85vw] md:max-w-[85vw] lg:w-[80vw] lg:max-w-[80vw] xl:w-[75vw] xl:max-w-[75vw]">
           <DialogTitle className="sr-only">{preview?.title ?? 'Certificate'}</DialogTitle>
           {preview && (
-            <div className="group relative flex items-center justify-center overflow-hidden rounded-xl bg-black/10">
+            <div className="group relative flex h-[50vh] w-full items-center justify-center overflow-hidden rounded-xl bg-black/10 sm:h-[65vh] md:h-[75vh] lg:h-[80vh]">
               <div className="from-background/90 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <img
+              <Image
                 src={preview.image}
                 alt={preview.title}
-                className="max-h-[85vh] w-auto max-w-full rounded-lg shadow-2xl transition-transform duration-500"
+                fill
+                priority
+                sizes="(max-width: 640px) 95vw, (max-width: 1024px) 90vw, 80vw"
+                className="rounded-lg object-contain shadow-2xl transition-transform duration-500"
               />
               <div className="absolute right-0 bottom-0 left-0 z-20 translate-y-4 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                 <p className="font-display text-center text-xl font-bold tracking-tight text-white drop-shadow-lg sm:text-2xl lg:text-3xl">

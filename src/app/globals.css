@@ -410,15 +410,13 @@
   --animate-meteor: none !important;
   --animate-shine: none !important;
 
-  /* Pause marquee and other custom animations */
-  .mask-fade-x > div,
+  /* Pause other custom animations (keeping marquee running) */
   .animate-pulse-glow,
   .animate-aurora,
   .animate-float,
   .animate-shine,
   .animate-orbit,
   .animate-grid-pan,
-  .animate-marquee,
   .animate-meteor {
     animation: none !important;
   }

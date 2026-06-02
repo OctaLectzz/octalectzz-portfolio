@@ -51,7 +51,7 @@ export function PageHeroSection({
   children
 }: PageHeroSectionProps) {
   return (
-    <Section className={cn('relative overflow-hidden pt-20 pb-12 md:pt-28', className)}>
+    <Section className={cn('relative overflow-hidden pt-28 pb-12', className)}>
       {background ?? <DefaultBackground />}
 
       {/* Bottom fade overlay to transition seamlessly into subsequent sections */}

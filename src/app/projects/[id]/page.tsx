@@ -13,6 +13,8 @@ import { AppBreadcrumb } from '@/components/common/app-breadcrumb'
 import { PrimaryButton } from '@/components/common/primary-button'
 import { Container, Section } from '@/components/common/section'
 import { categories, projects } from '@/data'
+import { formatDate } from '@/utils/format-date'
+import { getLocalizedValue } from '@/utils/locale'
 
 import { ContentSection } from '@/views/projects/show/content-section'
 import { GallerySection } from '@/views/projects/show/gallery-section'
@@ -31,14 +33,14 @@ export default function ProjectDetailPage({ params }: PageProps) {
   const locale = useLocale()
   const router = useRouter()
 
-  const currentIndex = projects.findIndex((p) => p.id === id)
+  const currentIndex = projects.findIndex((projectItem) => projectItem.id === id)
   const project = projects[currentIndex]
 
   const relatedProjects = useMemo(() => {
     if (!project) return []
-    const sameCategory = projects.filter((p) => p.categoryId === project.categoryId && p.id !== project.id)
+    const sameCategory = projects.filter((projectItem) => projectItem.category_id === project.category_id && projectItem.id !== project.id)
     if (sameCategory.length >= 3) return sameCategory.slice(0, 3)
-    const others = projects.filter((p) => p.id !== project.id && p.categoryId !== project.categoryId)
+    const others = projects.filter((projectItem) => projectItem.id !== project.id && projectItem.category_id !== project.category_id)
     return [...sameCategory, ...others].slice(0, 3)
   }, [project])
 
@@ -62,15 +64,19 @@ export default function ProjectDetailPage({ params }: PageProps) {
   const nextProject = projects[currentIndex + 1] || projects[0]
 
   // Localized data
-  const desc = locale === 'en' ? project.description.en : project.description.id
-  const featuresList = locale === 'en' ? project.features.en : project.features.id
-  const advantagesList = locale === 'en' ? project.advantages.en : project.advantages.id
-  const problemText = locale === 'en' ? project.problem.en : project.problem.id
-  const solutionText = locale === 'en' ? project.solution.en : project.solution.id
-  const impactText = locale === 'en' ? project.impact.en : project.impact.id
+  const projectDescription = getLocalizedValue(project.description, locale)
+  const featuresList = getLocalizedValue(project.features, locale) || []
+  const advantagesList = getLocalizedValue(project.advantages, locale) || []
+  const problemText = getLocalizedValue(project.problem, locale) || ''
+  const solutionText = getLocalizedValue(project.solution, locale) || ''
+  const impactText = getLocalizedValue(project.impact, locale) || ''
 
-  const categoryObj = categories.find((c) => c.id === project.categoryId)
-  const categoryLabel = locale === 'en' ? categoryObj?.nameEn : categoryObj?.nameId
+  const categoryObject = categories.find((category) => category.id === project.category_id)
+  const categoryLabel = locale === 'en' ? categoryObject?.nameEn : categoryObject?.nameId
+
+  const formattedDate = useMemo(() => {
+    return formatDate(project.completed_at, locale)
+  }, [project.completed_at, locale])
 
   return (
     <section className="relative isolate overflow-x-clip pt-0 pb-24 md:pt-0">
@@ -112,17 +118,17 @@ export default function ProjectDetailPage({ params }: PageProps) {
             <span className="border-primary/40 bg-primary/10 text-primary-glow rounded-full border px-3 py-0.5 font-mono text-[10px] font-bold tracking-widest uppercase shadow-[0_0_12px_rgba(var(--primary-glow),0.15)]">
               {categoryLabel}
             </span>
-            {project.completedAt && (
+            {formattedDate && (
               <span className="text-muted-foreground flex items-center gap-1.5 font-mono text-xs">
                 <Calendar className="h-3.5 w-3.5" />
-                {project.completedAt}
+                {formattedDate}
               </span>
             )}
           </div>
 
           <h1 className="font-display text-foreground text-4xl font-extrabold tracking-tight md:text-6xl">{project.title}</h1>
 
-          <p className="text-muted-foreground max-w-4xl text-lg leading-relaxed">{desc}</p>
+          <p className="text-muted-foreground max-w-4xl text-lg leading-relaxed">{projectDescription}</p>
         </motion.div>
 
         {/* Two-Column Grid */}
@@ -137,7 +143,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
 
           <SidebarSection
             client={project.client}
-            completedAt={project.completedAt}
+            completed_at={formattedDate}
             categoryLabel={categoryLabel}
             tags={project.tags}
             live={project.live}

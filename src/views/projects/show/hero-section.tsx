@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 interface HeroSectionProps {
   cover: string
@@ -16,7 +17,7 @@ export function HeroSection({ cover, title }: HeroSectionProps) {
       transition={{ duration: 0.8 }}
       className="relative mb-0 aspect-video w-full overflow-hidden md:aspect-21/8"
     >
-      <img src={cover} alt={title} className="h-full w-full object-cover" />
+      <Image src={cover} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px" priority className="object-cover" />
       <div className="from-background via-background/80 pointer-events-none absolute inset-0 bg-linear-to-t to-transparent" />
       <div className="from-background/40 pointer-events-none absolute inset-0 bg-linear-to-b to-transparent to-30%" />
     </motion.div>

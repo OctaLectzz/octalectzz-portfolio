@@ -13,7 +13,7 @@ export interface Project {
   title: string
   description: LocalizedString
   tags: string[]
-  categoryId: string // references Category.id
+  category_id: string // references Category.id
   cover: string
   live?: string
   repo?: string
@@ -21,7 +21,7 @@ export interface Project {
 
   // New details fields
   client?: string
-  completedAt?: string // e.g. "2026-04" or "April 2026"
+  completed_at?: Date
   features: LocalizedList
   advantages: LocalizedList
   problem: LocalizedString

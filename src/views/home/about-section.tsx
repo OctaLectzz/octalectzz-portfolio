@@ -21,7 +21,7 @@ export function AboutSection() {
   ]
 
   return (
-    <Section className="pt-0!">
+    <Section className="lg:pt-0!">
       {/* Dynamic Particle Background spanning the entire section */}
       <Particles
         className="absolute inset-0 -z-10 h-full w-full opacity-40 transition-opacity duration-1000 ease-in-out"

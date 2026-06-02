@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import React from 'react'
 
 const transition = {
@@ -99,7 +100,7 @@ export const Menu = ({
 export const ProductItem = ({ title, description, href, src }: { title: string; description: string; href: string; src: string }) => {
   return (
     <a href={href} className="flex space-x-2">
-      <img src={src} width={140} height={70} alt={title} className="shrink-0 rounded-md shadow-2xl" />
+      <Image src={src} width={140} height={70} alt={title} className="shrink-0 rounded-md shadow-2xl" />
       <div>
         <h4 className="text-foreground mb-1 text-xl font-bold">{title}</h4>
         <p className="text-muted-foreground max-w-40 text-sm">{description}</p>

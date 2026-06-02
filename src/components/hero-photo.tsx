@@ -1,6 +1,5 @@
 'use client'
 
-import profile from '@/assets/profile.jpg'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
@@ -41,7 +40,7 @@ export function HeroPhoto() {
       {/* Photo Container */}
       <Float duration={6} distance={15} className="relative flex h-full place-items-center items-center justify-center">
         <div className="border-border glow relative aspect-square w-[86%] overflow-hidden rounded-full border">
-          <Image src={profile} alt="Octavyan Putra Ramadhan" width={896} height={896} className="h-full w-full object-cover" priority />
+          <Image src="/assets/profile.png" alt="Octavyan Putra Ramadhan" width={896} height={896} className="h-full w-full object-cover" priority />
           <div aria-hidden className="from-primary/10 to-secondary/20 absolute inset-0 bg-linear-to-tr via-transparent mix-blend-overlay" />
         </div>
       </Float>

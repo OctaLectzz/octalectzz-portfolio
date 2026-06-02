@@ -14,9 +14,10 @@ type Props = HTMLMotionProps<'button'> & {
   size?: ButtonSize
   children: ReactNode
   asChildHref?: string
+  download?: string | boolean
 }
 
-export function PrimaryButton({ variant = 'primary', size = 'lg', className, children, asChildHref, ...props }: Props) {
+export function PrimaryButton({ variant = 'primary', size = 'lg', className, children, asChildHref, download, ...props }: Props) {
   const isPrimary = variant === 'primary'
 
   const shadcnVariant = isPrimary ? 'default' : variant
@@ -45,6 +46,14 @@ export function PrimaryButton({ variant = 'primary', size = 'lg', className, chi
   )
 
   if (asChildHref) {
+    if (download) {
+      return (
+        <a href={asChildHref} download={typeof download === 'string' ? download : ''} className="inline-block">
+          {content}
+        </a>
+      )
+    }
+
     return (
       <Link href={asChildHref} className="inline-block">
         {content}

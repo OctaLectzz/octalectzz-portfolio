@@ -12,7 +12,7 @@ import { projects } from '@/data'
 
 export function ProjectsSection() {
   const t = useTranslations('home.projects')
-  const featured = projects.filter((p) => p.featured)
+  const featuredProjects = projects.filter((projectItem) => projectItem.featured).slice(0, 3)
 
   return (
     <Section>
@@ -34,8 +34,8 @@ export function ProjectsSection() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {featured.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
+          {featuredProjects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 

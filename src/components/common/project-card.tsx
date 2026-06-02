@@ -2,9 +2,11 @@
 
 import { categories } from '@/data'
 import type { Project } from '@/types'
+import { getLocalizedValue } from '@/utils/locale'
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { useLocale } from 'next-intl'
+import Image from 'next/image'
 import Link from 'next/link'
 import type { MouseEvent } from 'react'
 
@@ -18,8 +20,8 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
 
-  const categoryObj = categories.find((c) => c.id === project.categoryId)
-  const categoryName = locale === 'en' ? categoryObj?.nameEn : categoryObj?.nameId
+  const categoryObject = categories.find((category) => category.id === project.category_id)
+  const categoryName = locale === 'en' ? categoryObject?.nameEn : categoryObject?.nameId
 
   function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
     const { left, top } = currentTarget.getBoundingClientRect()
@@ -56,11 +58,12 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
 
         {/* Cover image container */}
         <div className="relative aspect-16/10 overflow-hidden">
-          <img
+          <Image
             src={project.cover}
             alt={project.title}
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
           {/* Futuristic bottom overlay gradient */}
           <div aria-hidden className="from-card via-card/20 absolute inset-0 bg-linear-to-t to-transparent" />
@@ -84,9 +87,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             </div>
           </div>
 
-          <p className="text-muted-foreground mt-2 line-clamp-2 flex-1 text-sm leading-relaxed">
-            {locale === 'en' ? project.description.en : project.description.id}
-          </p>
+          <p className="text-muted-foreground mt-2 line-clamp-2 flex-1 text-sm leading-relaxed">{getLocalizedValue(project.description, locale)}</p>
 
           {/* Tags */}
           <div className="mt-4 flex flex-wrap gap-1.5">
